@@ -726,7 +726,7 @@ subdirectory.
 But be warned that `-R` is a very powerful argument and you may lose
 data you wanted to keep!
 
-### **cat & less**
+### cat & less
 
 You don't need an editor to view the contents of a file.  What you need
 is just to display it.  The `cat` program fits the bill here:
@@ -1285,7 +1285,7 @@ with "task". A single question mark matches files that have a single
 character after "task". The double question mark requires exactly two
 characters in that position.
 
-### **The "[ ]" Wildcards**
+### The "[ ]" Wildcards
 
 The square brackets wildcards can get even more specific, denoting a
 ranges of characters.The following `ls` command includes a `-1` (the
@@ -1549,7 +1549,7 @@ The `-name` argument tells it to look for a file named *somefile*.
 Finally, the `-print` option tells the command to print out on our
 screen the location of any file that matches the name it was given.
 
-## **Wildcards with Find**
+## Wildcards with Find
 
 What if you don\'t remember the name of the file you\'re looking for?
 You might only remember that it starts with \"some\".  Luckily, `find`
@@ -1571,7 +1571,7 @@ have to make sure they remain unaltered by the shell.  To do this you
 can surround the name you\'re searching for, and the wildcards it
 contains, in single quotes.
 
-## **Trimming The Search Path**
+## Trimming The Search Path
 
 With just a name and a location, find will begin searching through every
 directory below its starting point, looking for matches.  Depending on
@@ -1591,7 +1591,7 @@ descend 3 directories from where it started, and so on.  It\'s important
 to note that `-maxdepth` should immediately follow the start location,
 or find will complain.
 
-## **Using Criteria **
+## Using Criteria
 
 The `find` command can search for files based on any criteria the
 filesystem know about files. For instance, you can search for files
@@ -1638,7 +1638,7 @@ has to match all the criteria you specify in order to be printed.\
 We\'ve specified +500k as our `-size` option. The plus sign means
 \"greater than\" and \"500k\" means \"500 kilobytes in size\".\
 
-## **Using Find To Run a Command on Multiple Files**
+## Using Find To Run a Command on Multiple Files
 
 The find command can do much more powerful things than print filenames.
 You can combine it with any other command you want, so that you can
@@ -2236,7 +2236,7 @@ three more commands, you can re-execute the `rm` command through:
 That tells the shell, \"start where I am now, count back four commands,
 and execute the command at that point\".\
 
-### **Repeating arguments**
+### Repeating arguments
 
 You\'ll often find yourself reusing portions of a previous command,
 either because you made a typo, or because you are running a sequence of
@@ -2314,7 +2314,7 @@ echo !^ !!:2  # equivalent to echo cp /etc/apache2/sites-available/siteconfig
 
 A range is also possible with `!!:M-N`.\
 
-### **Editing arguments**
+### Editing arguments
 
 Often you\'ll want to re-execute the previous command, but change one
 string within it. For instance, suppose you run a command on *file1*:
@@ -2351,7 +2351,7 @@ can change only one string in the command through this syntax:\
 We used a caret (\^), the string we wanted to replace, another caret,
 and the string we want to put in its place.\
 
-## Searching through the Command History
+## Searching through the Command History
 
 Use the **Ctrl + R** key combination to perform a \"reverse-i-search\".
 For example, if you wanted to use the command you used the last time you
@@ -2993,7 +2993,7 @@ Running this command brings up the manual page for `ls`.  Upon quitting
 with the **q** key, the `man` command exits successfully and the `echo`
 command runs.
 
-### **Handling command failure**
+### Handling command failure
 
 Adding an `else` clause allows us to specify what to run on failure:
 
@@ -3023,7 +3023,7 @@ list of results for apropos draw
 This time the `man` command failed because there is no `draw` command,
 activating the else clause.
 
-## && and \|\|
+## && and ||
 
 The if-then construct is very useful, but rather verbose for chaining
 together dependent commands.  The \"*&&*\" *(and)* and \"*\|\|*\" *(or)*
@@ -3449,7 +3449,7 @@ the same. You will find some of these useful in later work.
     you first log in.
 -   \_ is the last executed command. In this case, /usr/bin/env.\
 
-## **Controlling Variable Expansion**
+## Controlling Variable Expansion
 
 If you jam a variable up against other characters, the shell won\'t
 recognize it. For instance, the following won\'t work:
@@ -3907,7 +3907,7 @@ variable when you insert it into a command:
 
     $ rm ${curr/file/picture}.jpeg
 
-## **Playing Safe With Variables That Don\'t Exist**
+## Playing Safe With Variables That Don't Exist
 
 Sometimes you might be using variables that have been removed (which you
 can do with the `unset` command) or were never initialized in the first
@@ -3930,7 +3930,7 @@ substituting */home/user/file* in the current `cat` command, if
 VARIABLE_FILE_NAME doesn\'t exist, the shell will also set the variable
 to the alternative text.
 
-## **Cutting Corners With Variable Expansion**
+## Cutting Corners With Variable Expansion
 
 Variable expansion is by no means limited to filenames. It is also a
 handy way to pass complex, frequently used options to commands.
@@ -4919,7 +4919,7 @@ already has the right name just press **Enter**).  For instance:
 You can move around the file and view different parts using the arrow
 keys. This is a very fast and responsive way to explore a file.
 
-##  Help
+## Help
 
 Be sure to read the man page because it has a lot of good hints. There
 is help available in your nano session by typing **ctrl + g** and to get
@@ -5705,7 +5705,7 @@ of information that someone at some time must have thought very useful.
 If the programmer would only have added some hints as to what the
 programs does\...
 
-## Don\'t use long lines
+## Don't use long lines
 
 The first thing you\'ll note is that our example of an unmaintainable
 program is one long line. There\'s really no need for that.  What if the
@@ -6569,18 +6569,18 @@ This will output the following:\
 Let\'s break up this program into its three parts/statements (which we
 have entered on a single command line):
 
-### **First statement**
+### First statement
 
 *pattern*: BEGIN\
 *action*: print \"Together, the five best Donkey Kong players have
 achieved:\"
 
-### **Second statement**
+### Second statement
 
 *pattern:* none (= always execute *action*)\
 *action*: add the value of field no. 1 to the variable *total*
 
-### **Third statement**
+### Third statement
 
 *pattern:* END\
 *action*: print the value of the variable *total*, followed by the
@@ -7333,45 +7333,45 @@ is a great place to find tutorials and documentation.
 
 ##
 
-## **&**
+## &
 
 (ampersand) Execute command in background.
 
-## **\>**
+## >
 
 Redirect standard output.
 
-## **\>\>**
+## >>
 
 Append standard output.\
 
-## **\<**
+## <
 
 Redirect standard input.
 
-## **\|**
+## |
 
 Pipe, connecting the standard output of the preceding program with the
 standard input of the following program. You can break long program
 lines after pipe symbols without changing their effect.
 
-## **.**
+## .
 
 (dot) In a file path, this refers to the current directory. Before a
 shell script name, this means to execute the script as if typed into the
 current shell, rather than starting a new shell and executing the
 command in its environment.\
 
-## **..**
+## ..
 
 (double dot) Parent of the current directory. The parent of the root
 directory `/` is itself.\
 
-## **\~**
+## ~
 
 (tilde) Home directory.
 
-## **/**
+## /
 
 (slash) By itself or at the beginning of a path, the root directory; in
 a path, the directory separator. Thus in `/usr/bin`, it serves both
@@ -7385,21 +7385,21 @@ commands can deal with filenames that contain special characters. This
 allows users to search for text containing special characters, for
 example by using \"\\\*\" to search for \"\*\".\
 
-## **\#**
+## #
 
 (hash) Comment.
 
-## **\***
+## *
 
 (splat) In file globbing, wildcard to match any string. In regular
 expressions, wildcard to match any number of occurrences of the previous
 element.\
 
-## **?**
+## ?
 
 Wildcard to match any character.
 
-## \^
+## ^
 
 (caret) Wildcard to match the beginning of a line.
 
@@ -7426,37 +7426,37 @@ In a command following the `-exec` option of the `find` command, this is
 replaced by the name of a file that was found, so that the given command
 is applied to every found file.\
 
-## **\` \`**
+## \` \`
 
 (backtick backtick) Execute command inline, and replace it with the
 result.
 
-## **\$( )**
+## $( )
 
 Execute command inline, and replace it with the result.
 
-##  \[\\\$( )\]
+## [\$( )]
 
-Execute a command within a prompt.\
+Execute a command within a prompt.
 
-## \$
+## $
 
 (dollar) In a command, indicates that the value of the following
 environment variable should be used, not the name. For example,
 `echo $USER`. In regular expressions, a wildcard to match the end of a
 line. Dollar is also usually the last character in a bash prompt.
 
-## **#!**
+## #!
 
 (hashbang) Marks the beginning of an executable script. Follow with the
 program to execute this file, as in `#!/bin/bash`.\
 
-## **absolute path**
+## absolute path
 
 A file path starting from the root directory, such as `/usr/share/doc`.
 Contrast with **relative path**.\
 
-## **alias**
+## alias
 
 The alias command gives a name to a command string. Aliases can be made
 permanent by putting them in a bash startup script such as `~/.profile`.
@@ -7466,20 +7466,20 @@ permanent by putting them in a bash startup script such as `~/.profile`.
 Advanced Packaging Tool, a user interface command for managing and
 installing gNewSense and Debian packages.
 
-## **aptitude**
+## aptitude
 
 Terminal-mode package manager for Debian-style packages.
 
-## **archive**
+## archive
 
 A file, usually compressed, containing multiple files.\
 
-## **argument**
+## argument
 
 An input value required for a command to process. Also called
 \"parameter\". Contrast with **option**.\
 
-## **ash**
+## ash
 
 A smaller version of the Bourne shell (sh). The ash shell is a clone of
 Berkeley\'s Bourne shell (sh). Ash supports all of the standard sh shell
@@ -7487,7 +7487,7 @@ commands, but is considerably smaller than sh. The ash shell lacks some
 Bourne shell features (for example, command-line histories), but it uses
 a lot less memory.
 
-## **aspell**
+## aspell
 
 GNU Aspell is a free software spell checker designed to eventually
 replace Ispell. It can either be used as a library or as an independent
@@ -7498,7 +7498,7 @@ spell checker.
 A scripting language for data extraction and analysis from structured
 text files.\
 
-## **auto completion**
+## auto completion
 
 When the shell can determine that there is only one file starting with
 the latest text on the command line, pressing **Tab** will fill in the
@@ -7512,7 +7512,7 @@ By adding an ampersand, \"&\", at the end of a command you tell the
 shell to run the program in the background, without terminal input, and
 to give you a prompt so that you can continue to give commands.\
 
-## **bash**
+## bash
 
 The GNU Bourne Again shell, the default shell in the GNU/Linux operating
 system. Bash is an sh-compatible shell that incorporates useful features
@@ -7561,7 +7561,7 @@ Overwrite a file with new data. A common result of forgetting to append
 standard output with \"\>\>\" and instead writing a new file with
 \"\>\".\
 
-## **command**
+## command
 
 Executable file or shell builtin.
 
@@ -7572,13 +7572,13 @@ on the path or in the current directory, and then pressing **Tab**,
 often fills in the rest of the name. If not, pressing **Tab** again
 gives a list of names beginning with the characters so far typed.\
 
-## **coreutils**
+## coreutils
 
 The GNU Core Utilities are the basic file, shell and text manipulation
 utilities of the GNU operating system. These are the core utilities
 which are expected to exist on every operating system.
 
-## **cron job**
+## cron job
 
 A command to be executed automatically on a schedule set with the `cron`
 command or one of its variants, such as `anacron`.
@@ -7591,7 +7591,7 @@ a default value for unset environment variables, for example,
 
     $ cat "${VARIABLE_FILE_NAME:=/home/user/file}"
 
-## **dependency**
+## dependency
 
 Software required to run a particular piece of software. This can
 include other applications, library files, fonts, images, and other
@@ -7602,7 +7602,7 @@ data.
 A special kind of file that lists specific information on the files it
 contains, including owner, group, and permissions.\
 
-## **directory stack**
+## directory stack
 
 A place to store recently used directory paths for easy retrieval with
 the commands `pushd` and `popd`. The command `dirs` displays the
@@ -7615,7 +7615,7 @@ jocularly Escape, Meta, Alt, Control, Shift, from its pervasive reliance
 on key combinations. You can be sure that emacs can do it, you just need
 to find out how.
 
-## **environment variable**
+## environment variable
 
 A string value assigned to a name in the environment of the current
 shell.
@@ -7627,30 +7627,30 @@ of characters that follow it. This is the original use of the Escape
 character. For example, in a text search the character \"\*\" matches a
 wide range of text, while the string \"\\\*\" matches only an asterisk.\
 
-## **exit status**
+## exit status
 
 A value returned by a command to the shell, useful in scripting for
 deciding what to do next.\
 
-## **file**
+## file
 
 Utility for determining file types.
 
-## **filesystem**
+## filesystem
 
 The basic directory layout for a GNU/Linux system.
 
-## **filter**
+## filter
 
 Command-line program that reads standard input and writes standard
 output so that it is suitable for use in a pipeline, where each command
 performs a specific transformation on the data.\
 
-## **findutils**
+## findutils
 
 The GNU versions of find utilities. find, locate, updatedb and xargs.
 
-## **FLOSS**
+## FLOSS
 
 Free/Libre Open Source Software, licensed so as to guarantee the
 essential freedoms of software users to source code and reuse. A
@@ -7662,15 +7662,15 @@ not price.\
 
 The name used in GUIs for directories.\
 
-## **fontconfig**
+## fontconfig
 
 Font configuration and customization library.
 
-## **ftp**
+## ftp
 
 The standard File Transfer Protocol client.
 
-## **function**
+## function
 
 In bash, the function builtin allows the user to create functions on the
 fly with the syntax
@@ -7683,28 +7683,28 @@ The GNU version of the awk text processing utility. gawk is a program
 that you can use to select particular records in a file and perform
 operations upon them.
 
-## **gedit**
+## gedit
 
 A simple and easy text editor for GNOME. It is UTF-8 compatible,
 provides tools for editing source code and can be extended using
 plugins.
 
-## **globbing**
+## globbing
 
 Referring to a group of files with an abbreviation, such as \"\*\" for
 all of the files in a directory.\
 
-## **GNOME**
+## GNOME
 
 A desktop, set of libraries, and application suite for X.\
 
-## **GNU**
+## GNU
 
 Recursive acronym for GNU\'s Not Unix. It is the Free Software
 Foundation project to create a freely-licensed replacement for the
 proprietary Unix operating system.\
 
-## **GNU/Linux**
+## GNU/Linux
 
 Operating system combining the Linux kernel with GNU software tools.
 
@@ -7713,7 +7713,7 @@ Operating system combining the Linux kernel with GNU software tools.
 User interface offering windows, icons, mouse control, multiple fonts,
 and so on.\
 
-## **grep**
+## grep
 
 The GNU versions of grep pattern matching utilities. Grep searches one
 or more input files for lines containing a match to a specified pattern.
@@ -7727,33 +7727,33 @@ certain system resources all at once, or everybody working on a project
 can gain access to all project files by joining the project group. Each
 user has a group with the same name for that user\'s files.\
 
-## **gzip**
+## gzip
 
 The GNU data compression application. gzip.org
 
-## **history**
+## history
 
 Record of previously executed commands that can be recalled and executed
 again with the up arrow key.\
 
-## **intltool**
+## intltool
 
 Utility for internationalizing various kinds of data files.
 
-## **kernel**
+## kernel
 
 The Linux kernel, core of the GNU/Linux operating system. kernel.org
 
-## **kernel-utils**
+## kernel-utils
 
 Kernel and Hardware related utilities.
 
-## **less**
+## less
 
 A text file browser similar to `more`, but better as it can move back
 and forth through the file.
 
-## **locale**
+## locale
 
 Values of a set of environment variables that store information on the
 user\'s language, country, and character encoding, and options for date
@@ -7767,11 +7767,11 @@ A file, often in the `/var/log` directory, that contains notes made by
 running programs about their progress and about any problems they
 encounter. Vital information whenever something goes wrong.\
 
-## **lsof**
+## lsof
 
 A utility which lists open files on a GNU/Linux system.
 
-## **lynx**
+## lynx
 
 ###
 
@@ -7787,31 +7787,31 @@ files that come with the source code to see whether it uses this system,
 or has different instructions. Another program with similar functions is
 jhbuild.\
 
-## **man**
+## man
 
 A set of documentation tools: man, apropos and whatis.
 
-## **mc**
+## mc
 
 The Midnight Commander, a user-friendly text console file manager and
 visual shell.
 
-## **more**
+## more
 
 A utility for displaying text files one screenful at a time. See also
 *less*.\
 
-## **openssh**
+## openssh
 
 The OpenSSH implementation of SSH protocol versions 1 and 2.
 
-## **option**
+## option
 
 A value specified to a command using the form `--option` (long option)
 or `-o` (short option). Contrast with **argument**, which is a required
 input.\
 
-## **package manager**
+## package manager
 
 Software to install, remove, and otherwise manage applications as
 packaged by a particular distribution, particularly making sure that
@@ -7819,16 +7819,16 @@ dependencies and compatibilities between software components are
 observed. The two main varieties are Red Hat/Yellow Dog `yum` and Debian
 `apt-get`.
 
-## **parameter**
+## parameter
 
 Argument.\
 
-## **passwd**
+## passwd
 
 The passwd utility for setting/changing passwords using PAM.
 netadmintools.com
 
-## **PATH**
+## PATH
 
 Environment variable specifying where the current shell should look for
 command files.\
@@ -7861,51 +7861,51 @@ use to identify the process in a command.
 
 The text string displayed by a shell when waiting for command input.
 
-## **recursive command execution**
+## recursive command execution
 
 With the `-r` or `-R` options, many commands will act on the current
 directory and any subdirectories. Check command documentation to
 determine the precise syntax.\
 
-## **redirection**
+## redirection
 
 Sending a file or standard output from a command to standard input of a
 command, or sending standard output or error output of a command to
 standard input of another command, or to a file.\
 
-## **regular expression**
+## regular expression
 
 A string such as \"\*.png\" that defines a pattern for matching text or
 filenames using special characters to indicate which alternatives to
 include.\
 
-## **relative path**
+## relative path
 
 A file path starting from the current directory, such as `docs` or
 `../Pictures`. Contrast with **absolute path**.
 
-## **rich text**
+## rich text
 
 Text with formatting, including fonts, multiple type sizes, positioning,
 color, and much more. HTML and word processing files are forms of rich
 text. Contrast with **plain text**.\
 
-## **root**
+## root
 
 1.  root user, or superuser, a required account with permission to do
     anything on a GNU/Linux system.\
 2.  The starting point of the directory tree, written \"/\". All other
     directories are specified by paths from this root directory.
 
-## **script**
+## script
 
 An executable text file.\
 
-## **sed**
+## sed
 
 A GNU stream text editor.
 
-## **shell**
+## shell
 
 A command interpreter such as sh or bash.
 
@@ -7932,7 +7932,7 @@ and  the text message \"No such file or directory.\" Unicode strings can
 include any combination of languages, such as \"Japan (日本) and Korea
 (대한민국)\".
 
-## **sudo**
+## sudo
 
 A command to allow
 
@@ -7943,7 +7943,7 @@ privileges
 `sudoedit` is provided for editing this file. It checks whether the
 edited file is in the correct format.
 
-## **superuser**
+## superuser
 
 The root account, which has all permissions.
 
@@ -7956,27 +7956,27 @@ markup format (HTML, XML, etc.) used. The colors are not stored with the
 file, but computed by the text editor when loading a file and during
 editing.\
 
-## **telnet**
+## telnet
 
 The client program for the telnet remote login protocol.
 
-## **terminal**
+## terminal
 
 Originally, a printing terminal such as a Teletype, or a video terminal.
 Now a virtual terminal in a text or graphics window. In all cases, a
 device or program for typing input and displaying output.\
 
-## **time**
+## time
 
 A GNU utility for monitoring a program\'s use of system resources.
 
-## **Unicode **
+## Unicode
 
 The universal character set, meant to replace the jumble of more than a
 hundred other character set standards for 30 modern writing systems and
 dozens of others.
 
-## **unzip**
+## unzip
 
 A utility for unpacking zip archives.
 
@@ -7986,37 +7986,37 @@ Coordinated Universal Time, or Temps Universel Coordonné, which has
 replaced Greenwich Mean Time as the world standard. The abbreviation UTC
 is a compromise between the English and French names.\
 
-## **vi**
+## vi
 
 Visual editor, a powerful terminal-mode editor.\
 
-## **vim**
+## vim
 
 The VIM editor, an extension of vi.
 
-## **wget**
+## wget
 
 A utility for retrieving files using the HTTP or FTP protocols.
 
-## **which**
+## which
 
 Displays where a particular program in your path is located.
 
-## **wildcard**
+## wildcard
 
 A character that can match more than one string in file globbing or
 regular expression matching.\
 
-## **X**
+## X
 
 The standard windowing system for GNU/Linux.\
 
-## **yum**
+## yum
 
 Yellowdog Update Manager, a package manager used in Red Hat and related
 GNU/Linux distributions that use RPM packages.
 
-## **zip**
+## zip
 
 A file compression and packaging utility compatible with PKZIP.
 
