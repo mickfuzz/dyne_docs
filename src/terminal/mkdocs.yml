@@ -1,0 +1,10 @@
+site_name: How to use a Terminal
+site_url: https://dyne.org/docs/terminal
+
+theme:
+  name: material
+  logo: images/dyneorg.svg
+  favicon: images/favicon.png
+  navigation_depth: 1
+extra_css:
+  - stylesheets/extra.css
