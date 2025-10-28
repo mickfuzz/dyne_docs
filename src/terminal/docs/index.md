@@ -19,7 +19,7 @@ It assumes the reader is familiar with graphical interfaces, and refers
 to one or more free desktop environments where discussions of GUIs are
 necessary.
 
-::: {#main-content}
+
 # Getting Started
 
 Modern computing is highly interactive, and using the command line is
@@ -172,7 +172,7 @@ in the example is printed in bold to indicate that it's something you
 type. The rest is output on the terminal.
 :::
 
-::: {#main-content}
+
 # The Parts of a Command
 
 The first word you type on a line is the command you wish to run.  In
@@ -304,7 +304,7 @@ Each time you press the **Enter** key, you submit the modified command
 to the terminal and it runs exactly as if you had typed it from scratch.
 :::
 
-::: {#main-content}
+
 # Moving Around
 
 Anyone who has used a graphical interface has moved between folders. A
@@ -492,7 +492,7 @@ Try moving around your computer on the command line and you will soon
 get used to it!
 :::
 
-::: {#main-content}
+
 # Basic commands
 
 By now you have some basic knowledge about directories and files and you
@@ -747,7 +747,7 @@ Just as with using `man`, use the arrow keys to navigate, and press
 **q** to quit.
 :::
 
-::: {#main-content}
+
 # More about redirection
 
 How do pipes work? They use three communication channels provided to
@@ -856,7 +856,7 @@ using `>&3` or `>&4`.  Finally, we close them with the `3>&-` and `4>&-`
 syntax.
 :::
 
-::: {#main-content}
+
 # All That Typing...
 
 So, all this typing has got to stop being fun at some point.
@@ -935,7 +935,7 @@ be re-executed. You can edit it first to make it do something
 different.
 :::
 
-::: {#main-content}
+
 # The Superuser (Root)
 
 Some parts of the computer system are thought to require special
@@ -984,7 +984,7 @@ privileges, for this you need to know a little more about System
 Administration.
 :::
 
-::: {#main-content}
+
 # Redirection
 
 Output redirection is one of the very powerful, and easily
@@ -1069,7 +1069,7 @@ terminal.  So if you mistakenly put such a program in the background
 get stuck waiting when it has to accept input.
 :::
 
-::: {#main-content}
+
 # Cheaper by the dozen
 
 After getting used to the command line, you will start looking for ways
@@ -1519,7 +1519,7 @@ with '\'.
 \
 :::
 
-::: {#main-content}
+
 # Searching for Files
 
 When you first get a computer, you tend to place files in just a couple
@@ -1679,7 +1679,7 @@ times, allowing the file\'s name to be easily duplicated.
 Experiment and practice!\
 :::
 
-::: {#main-content}
+
 # Piping hot commands
 
 Pipes let programs work together by connecting the output from one to be
@@ -1902,7 +1902,7 @@ order, you can just add a `sort -nr` to the previous pipeline:\
 Experiment!
 :::
 
-::: {#main-content}
+
 # Processes
 
 Processes are programs in action. Programs in binary/executable form
@@ -2056,7 +2056,7 @@ Firefox is still running, but the second job exited with an error status
 of 2.
 :::
 
-::: {#main-content}
+
 # Files and Directories
 
 Although you\'re most interested in files in your own folder or
@@ -2125,7 +2125,7 @@ why Linux has *both* a */usr/bin* and a */usr/sbin*, for instance.\
 \
 :::
 
-::: {#main-content}
+
 # Command History Shortcuts
 
 The shell lets you bring back old commands and re-enter them, making
@@ -2385,7 +2385,7 @@ Learning these shortcuts can save you a tremendous amount of time so
 please experiment!
 :::
 
-::: {#main-content}
+
 # Permissions
 
 Your computer system stores a lot of information about files that
@@ -2604,7 +2604,7 @@ the permissions be -rw-rw\-\-\--, that gives us 0, 4+2, 4+2 and 0, that
 is 0660.  Can you work out the *mode* (as this is called) for *motd*?
 :::
 
-::: {#main-content}
+
 # Interactive Editing
 
 Many people, especially beginners, use the arrow keys to move the cursor
@@ -2931,7 +2931,7 @@ correct the mistake:
 5.  Finally, press **Enter** to execute the corrected command line.
 :::
 
-::: {#main-content}
+
 # Exit status
 
 When you type commands, you can usually tell whether they worked or not.
@@ -3171,7 +3171,7 @@ of your command and scripts. We hope you leave this chapter with an exit
 status of zero!
 :::
 
-::: {#main-content}
+
 # Command Substitution
 
 In the shell, you can execute one command inside another. Here\'s a
@@ -3243,7 +3243,7 @@ the command in double quotes. The `grep` command in this section, for
 instance, requires the string to be passed as a single argument.
 :::
 
-::: {#main-content}
+
 # Moving Again
 
 So far you have probably already used the `cd` command to change your
@@ -3339,7 +3339,7 @@ effect on the current working directory and their effect on the stack.
 
 :::
 
-::: {#main-content}
+
 # Useful customizations
 
 You can really make the shell your own, adapting every facet to the way
@@ -3891,7 +3891,7 @@ vim that can create plain text files in multiple writing systems, either
 in their own format or in Unicode.\
 :::
 
-::: {#main-content}
+
 # Parameter Substitution
 
 As we saw in the chapter on variables, you can put braces around a
@@ -3947,7 +3947,7 @@ files or tediously long series of options.  Once you understand it,
 it\'s bound to expand your abilities on the command line.\
 :::
 
-::: {#main-content}
+
 # GNU Screen
 
 GNU screen helps you get most out of your desktop\'s real estate, in
@@ -4112,7 +4112,7 @@ prompted for confirmation, and if you select yes, Screen terminates all
 its programs and exits.\
 :::
 
-::: {#main-content}
+
 # SSH
 
 The command line is such a useful tool that it won\'t be long before you
@@ -4251,7 +4251,7 @@ running the following command.
 Remember, the more often you use these commands the more time you save.
 :::
 
-::: {#main-content}
+
 # Installing Software
 
 Installing software on GNU/Linux is a broad subject because each version
@@ -4527,7 +4527,7 @@ so that your operating system knows that there are new library files
 present.
 :::
 
-::: {#main-content}
+
 # Making Your Own Interpreter
 
 The bash shell and many other programs obtain lines of command input
@@ -4750,7 +4750,7 @@ contacting the author.\
 
 :::
 
-::: {#main-content}
+
 # Text Editors
 
 Besides running simple commands like `ls` and `grep`, you can use the
@@ -4875,7 +4875,7 @@ Put this in a startup file such as *./bashrc*, and commands will use
 your chosen editor when they present a file for editing.\
 :::
 
-::: {#main-content}
+
 # Nano
 
 Nano is a simple editor. To open it and begin creating a new text file,
@@ -4926,7 +4926,7 @@ is help available in your nano session by typing **ctrl + g** and to get
 back to your file type **ctrl + x**.\
 :::
 
-::: {#main-content}
+
 # vi and vim
 
 Vi is a very powerful command-line text editor. It\'s used for
@@ -5141,7 +5141,7 @@ be working just as quickly as you would with a mouse in a word editor!
 Practice!
 :::
 
-::: {#main-content}
+
 # Emacs
 
 Emacs is a very powerful text editor.  You can invoke Emacs by typing
@@ -5250,7 +5250,7 @@ official documentation. There is also an abbreviated manual page (type
 learning Emacs is the inbuilt interactive tutorial mentioned above.\
 :::
 
-::: {#main-content}
+
 #  Kedit, KWrite, & Kate
 
 Although Kedit is part of the KDE software suite, which includes the KDE
@@ -5340,7 +5340,7 @@ editing text files. Chances are that all three came pre-installed on any
 system with KDE. Have fun trying them out!
 :::
 
-::: {#main-content}
+
 # Gedit
 
 Gedit, the default GUI editor if you use Gnome, also runs under KDE and
@@ -5383,7 +5383,7 @@ the \"Go to Line\" feature. This can be accessed via the interface
 (**Search -\> Go to Line**) or via the shortcut **ctrl** + **i**.
 :::
 
-::: {#main-content}
+
 # Scripting
 
 If you have a collection of commands you\'d like to run together, you
@@ -5672,7 +5672,7 @@ watch an intro video here:
 \
 :::
 
-::: {#main-content}
+
 # Maintainable Scripts
 
 You are slowly delving into programming by the way of shell scripting.
@@ -6129,7 +6129,7 @@ words: *read a lot of scripts and write a lot of scripts yourself*.
 Happy hacking!\
 :::
 
-::: {#main-content}
+
 # Other scripting languages
 
 The shell is a wonderful friend. If you have read the rest of the book
@@ -6169,7 +6169,7 @@ will encounter many tools and products that provide customization
 through those languages.
 :::
 
-::: {#main-content}
+
 # The Sed Text Processor
 
 Sed (stream editor) is a utility that does transformations on a
@@ -6451,7 +6451,7 @@ whole books have been written about Sed, and there are many excellent
 tutorials about Sed online.
 :::
 
-::: {#main-content}
+
 # Awk
 
 AWK is a programming language designed for processing plain text data.
@@ -6622,7 +6622,7 @@ to read manual (see
 [http://www.gnu.org/software/gawk/manual/](https://web.archive.org/web/20160417194719/http://www.gnu.org/software/gawk/manual/)).\
 :::
 
-::: {#main-content}
+
 # Regular Expressions
 
 When you\'re looking through files or trying to change text, your needs
@@ -6999,7 +6999,7 @@ can help you learn the more complex features and make complex regular
 expressions easier to write.
 :::
 
-::: {#main-content}
+
 # Perl
 
 Perl is a programming language that can be used to perform tasks that
@@ -7111,7 +7111,7 @@ contains an impressive amount of information and documentation about the
 Perl language.
 :::
 
-::: {#main-content}
+
 # Python
 
 Python is a programming language that can be used to perform tasks that
@@ -7229,7 +7229,7 @@ B. Downey and Chris Meyers at
 is a good place to start.
 :::
 
-::: {#main-content}
+
 # Ruby
 
 Ruby is a programming language that can be used to perform tasks that
@@ -7328,7 +7328,7 @@ is the homepage for Ruby, and
 is a great place to find tutorials and documentation.
 :::
 
-::: {#main-content}
+
 # Glossary
 
 ##
