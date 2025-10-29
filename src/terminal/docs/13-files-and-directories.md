@@ -5,7 +5,7 @@ directory, it helps to know what else is on your system. In this chapter
 we\'ll look around a GNU/Linux system.
 
 Here is a list of the most common directories right beneath the root
-directory (the one whose name is just \"/\"):
+directory (the one whose name is just "/"):
 
     /bin     basic programs (Programs that are absolutely needed,
              shell and commands only)

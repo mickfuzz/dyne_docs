@@ -17,21 +17,21 @@ To write a multi-line script in Python that you can run from outside of
 the Python interactive console, put the commands in a file. You can use
 any text editor to create this file \-- Emacs, Vim, Gedit, or whatever
 your favorite is; and call it what you like (often the filename ends
-with \".py\" to help distinguish it in a directory listing). A script
+with ".py" to help distinguish it in a directory listing). A script
 could look like this:
 
     a = 1 + 2
     print a
 
 In this example, we create a variable, *a*, which stores the result of
-\"1 + 2\". It then uses the *print* command to print out the result,
+"1 + 2". It then uses the *print* command to print out the result,
 which should be 3. If we save this file as *first.py*, we can run it
 from the command line.
 
     $ python first.py
     3
 
-The Python program printed out \"3\", just like we expected. We can add
+The Python program printed out "3", just like we expected. We can add
 a first line specifying the python interpreter, make it executable and
 then just type *./first.py* to run it. If we still have the first.pl
 file from the previous chapter, it does exactly the same thing and we
@@ -53,14 +53,14 @@ can look at all the files in the current directory.
     >>> os.listdir('.')
     ['notes.txt', 'readme.txt', 'first.py']
 
-Here we import the standard library \"os\", which has operating
+Here we import the standard library "os", which has operating
 system-like functions in it.  We call the *listdir* function to return a
 list of names of files in the current directory.  We pass the directory
 name as a string (enclosed in single quotes); the single dot refers to
 the current directory.\
 
 Let\'s try doing something with these files \-- here\'s a way to find
-all of the \".py\" files in a directory.
+all of the ".py" files in a directory.
 
     >>> files = os.listdir('.')
     >>> files
@@ -70,7 +70,7 @@ all of the \".py\" files in a directory.
 
 Above we use a powerful construction called a *list comprehension* to
 produce a new list by transforming and filtering a list.  Below is a
-simpler but wordier way to pick out the all of the files with \".txt\"
+simpler but wordier way to pick out the all of the files with ".txt"
 in them.
 
     >>> for file in files:
@@ -87,7 +87,7 @@ last set of three dots to tell the Python interpreter that you\'re done.
 
 We can also use command line code in Python by passing it to the
 *os.system* function. For example, if we wanted to delete all of the
-\".txt\" files, we could use.
+".txt" files, we could use.
 
     >>> for file in files:
     ...     if '.txt' in file:
@@ -96,7 +96,7 @@ We can also use command line code in Python by passing it to the
     ...
 
 Above, we construct a shell command *cmd* as a Python string by
-concatenating (using the \"+\" operator) the strings \"rm \" and the
+concatenating (using the "+" operator) the strings "rm " and the
 filename, then pass it to the *os.system* function.  Now we can check to
 see that the files have been deleted.\
 
@@ -109,7 +109,7 @@ The Python web site at
 [http://www.python.org](https://web.archive.org/web/20160417194719/http://www.python.org/)
 contains an impressive amount of information and documentation about the
 Python language.  If you are just getting started with programming, the
-book \"How to Think Like a Computer Scientist\" by Jeffrey Elkner, Allen
+book "How to Think Like a Computer Scientist" by Jeffrey Elkner, Allen
 B. Downey and Chris Meyers at
 [http://openbookproject.net/thinkCSpy/index.html](https://web.archive.org/web/20160417194719/http://openbookproject.net/thinkCSpy/index.html)
 is a good place to start.

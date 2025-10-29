@@ -15,7 +15,7 @@ This command assumes that your username on the remote machine is the
 same as your username on the local machine at which you type the
 command.  The remote machine prompts you for your password.  If your
 username on the remote machine is different than your username on the
-local machine, use the `-l` (lower-case \"L\") option to indicate your
+local machine, use the `-l` (lower-case "L") option to indicate your
 username on the remote machine.\
 
     $ ssh -l remoteusername othermachine.domain.org
@@ -47,7 +47,7 @@ detached `screen` session will remain running on the remote machine.
 You can also set up your favorite systems to allow you to log in or run
 commands without specifying your password each time. The setup is
 complicated but can save you a lot of typing; try doing some Web
-searches for \"ssh-keygen\", \"ssh-add\", and \"authorized_keys\".
+searches for "ssh-keygen", "ssh-add", and "authorized_keys".
 
 ## scp: file copying
 
@@ -104,7 +104,7 @@ sophisticated checks.\
 
 The `-e` option to `ssh` uses the SSH protocol underneath for
 transmission, as recommended. The `-a` option (which stands for
-\"archive\") copies everything within the specified directory. If you
+"archive") copies everything within the specified directory. If you
 want to delete the files on the local system as they\'re copied, include
 a `--delete` option. See the `rsync` manual page for more details about
 `rsync`.
@@ -128,7 +128,7 @@ this:
     User fc
 
 You can set up multiple hosts like this in your configuration file, and
-after you have saved it, connect to the host you called \"dev\" by
+after you have saved it, connect to the host you called "dev" by
 running the following command.
 
     $ ssh dev

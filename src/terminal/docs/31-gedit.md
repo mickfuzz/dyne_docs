@@ -36,7 +36,7 @@ height="456"}
 
 This can be handy information to know. If you keep track of the line
 numbers you can use these to jump quickly around the text file by using
-the \"Go to Line\" feature. This can be accessed via the interface
+the "Go to Line" feature. This can be accessed via the interface
 (**Search -\> Go to Line**) or via the shortcut **ctrl** + **i**.
 :::
 

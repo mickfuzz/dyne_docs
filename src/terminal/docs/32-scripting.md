@@ -37,12 +37,12 @@ search path. It might look something like this:\
     cd thumbnails
     mogrify -resize 400x300 *.jpg
 
-If the first line begins with #! (pronounced \"shee-bang\"), it tells
+If the first line begins with #! (pronounced "shee-bang"), it tells
 the kernel what interpreter is to be used. (Since bash is usually the
 default, you might omit this line). After this you should put in some
 comments about what the script is for and how to use it . Scripts
-without clear and complete usage instructions often do not \"work
-right\". For bash, comments start with the hash (#) character and may be
+without clear and complete usage instructions often do not "work
+right". For bash, comments start with the hash (#) character and may be
 on the ends of executable lines.\
 
 The file includes commands conforming to the syntax of the interpreter.
@@ -186,7 +186,7 @@ compound command we\'ve already seen, `if`, within the `while` block,
 which allows us to decide whether to finish the `while` block. The
 `break` command ends the `while` block and continues with the rest of
 the script (not shown here). Notice that we use two tests through `-o`,
-which means \"or\". The user can enter **Q** in either lowercase or
+which means "or". The user can enter **Q** in either lowercase or
 uppercase to quit.\
 
     while true
@@ -234,12 +234,12 @@ an example.
     esac
 
 Each case must be followed by the ) character, then a newline, then the
-list of steps to take, then a double semicolon (;;). The \"\*)\"
+list of steps to take, then a double semicolon (;;). The "\*)"
 condition is a catchall, similar to the `default` keyword in some
 languages\' `case` structures. If no other cases match, the shell
 executes this list of statements. Finally, the keyword `esac` ends the
 `case` statement. In the example shown, note the case that matches
-either the string \"sam\" or \"tex\".
+either the string "sam" or "tex".
 
 ### for
 

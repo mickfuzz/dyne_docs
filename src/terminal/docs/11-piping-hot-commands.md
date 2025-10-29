@@ -1,16 +1,16 @@
 # Piping hot commands
 
 Pipes let programs work together by connecting the output from one to be
-the input for another. The term \"output\" has a precise meaning here:
+the input for another. The term "output" has a precise meaning here:
 it is what the program writes to the standard output, via C program
 statements such as printf or the equivalent, and normally it appears on
-the terminal screen. And \"input\" is the standard input, usually coming
-from the keyboard. Pipes are built using a vertical bar (\"\|\") as the
+the terminal screen. And "input" is the standard input, usually coming
+from the keyboard. Pipes are built using a vertical bar ("\|") as the
 pipe symbol.
 
 Say you help your eccentric Aunt Hortense manage her private book
 collection. You have a file named *books* containing a list of her
-holdings, one per line, in the format \"author:title\", something like
+holdings, one per line, in the format "author:title", something like
 this:
 
     $ cat books
@@ -150,7 +150,7 @@ accomplish a complex task.
 To find a particular string in a line of text, use the `grep` command.
 Now remember that when you combine commands, they need to go in the
 proper order. You can\'t run `grep` against the file first, because it
-will match the title \"John Barleycorn\" in addition to authors named
+will match the title "John Barleycorn" in addition to authors named
 John. So add it to the end of the pipeline:
 
     $ cut -d: -f1 books | sort | grep "John"
@@ -163,12 +163,12 @@ John. So add it to the end of the pipeline:
     Mill, John Stuart
     Milton, John
 
-This gets us close, but you don\'t want to get \"Samuel Johnson\" on the
+This gets us close, but you don\'t want to get "Samuel Johnson" on the
 list and make Aunt Hortense angry. Often when working with `grep` you
 will need to refine the matching text to get exactly what you need.
-`grep` happens to offer a `-w` option that will let it match \"John\"
-only when \"John\" is a complete word, not when it\'s part of
-\"Johnson\". But we\'ll solve this particular dilemma by adding a comma
+`grep` happens to offer a `-w` option that will let it match "John"
+only when "John" is a complete word, not when it\'s part of
+"Johnson". But we\'ll solve this particular dilemma by adding a comma
 and space on the front of the string to match, so it will match only
 when John is a first name:
 

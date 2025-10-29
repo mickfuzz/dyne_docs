@@ -6,7 +6,7 @@ by default with most GNU/Linux distributions. Usually, one invokes Perl
 by using a text editor to write a file and then passing it to the `perl`
 program.
 
-Perl scripts can be named anything but conventionally end with \".pl\".
+Perl scripts can be named anything but conventionally end with ".pl".
 You can use any text editor to create this file \-- Emacs, Vim, Gedit,
 or whatever your favorite is. A script could look like this:
 
@@ -15,7 +15,7 @@ or whatever your favorite is. A script could look like this:
 
 In this example, we create a variable (by using *my*) which is called
 *\$a* (the dollar sign is Perl\'s way of denoting a variable), which
-stores the result of \"1 + 2\". It then uses the *print* function to
+stores the result of "1 + 2". It then uses the *print* function to
 print the result, which should be 3. The comma concatenates two or more
 strings together. In this case a newline is appended to the end of the
 printed string. All statements in Perl are terminated with a semicolon,
@@ -25,8 +25,8 @@ we can run it from the command line.
     $ perl first.pl
     3
 
-The Perl program printed out \"3\", just like we expected. If we don\'t
-want to type \"perl\" in order to run the script, we can put this line:
+The Perl program printed out "3", just like we expected. If we don\'t
+want to type "perl" in order to run the script, we can put this line:
 
 #!/usr/bin/perl
 
@@ -50,7 +50,7 @@ look at all the files in the current directory.
     photo.png
 
 Here we use the *opendir* function to open a directory for reading.
-\"DH\", will be our directory handle, how we refer to the open directory
+"DH", will be our directory handle, how we refer to the open directory
 for reading. A directory handle is not declared like a variable, just
 created at the invocation of the *opendir* function. We pass the
 directory name as a string (enclosed in double quotes); the single dot
@@ -60,10 +60,10 @@ string tells Perl what to print as an error message.
 
 Inside the *while* loop, the *readdir* function takes our directory
 handle and returns the next *filename* in the directory, storing it in
-the default variable \"\$\_\".
+the default variable "\$\_".
 
 Let\'s try doing something with these files \-- here\'s a way to find
-all of the \".pl\" files in a directory.
+all of the ".pl" files in a directory.
 
     opendir DH, "." or die "Could not open directory!";
     while( $_ = readdir(DH) ){
@@ -71,10 +71,10 @@ all of the \".pl\" files in a directory.
     }
 
 Above we use a Perl shorthand to compress the print and evaluation into
-one line since both *print* and *if* take the default variable \"\$\_\"
-as their argument if one is not specified. The \"/.pl\$/\" operator
-says: match any word that ends with \".pl\". Below is a simpler but
-wordier way to pick out the all of the files with \".txt\" in them.
+one line since both *print* and *if* take the default variable "\$\_"
+as their argument if one is not specified. The "/.pl\$/" operator
+says: match any word that ends with ".pl". Below is a simpler but
+wordier way to pick out the all of the files with ".txt" in them.
 
     my $filename;
     opendir DH, "." or die "Could not open directory!";
@@ -85,11 +85,11 @@ wordier way to pick out the all of the files with \".txt\" in them.
     }
 
 Perl uses braces ({ }) to group statements in branching and loop
-constructs, such as *if* and *while*. The \"=\~\" operator tells *if*,
-yes, when \".txt\" appears at the end of the variable or string.\
+constructs, such as *if* and *while*. The "=\~" operator tells *if*,
+yes, when ".txt" appears at the end of the variable or string.\
 
 We can also use command line code in Perl by using the *system*
-function. For example, if we wanted to delete all of the \".txt\" files,
+function. For example, if we wanted to delete all of the ".txt" files,
 we could use.
 
     my $dir = "./";
@@ -97,7 +97,7 @@ we could use.
 
 Above, *system* passes its argument to a shell, which executes it
 exactly as it would if we typed it in. Now if we look for any files
-ending in, \".txt\" we won\'t find any.
+ending in, ".txt" we won\'t find any.
 
     system("ls *.txt");
 

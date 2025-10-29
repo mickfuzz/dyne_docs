@@ -3,7 +3,7 @@
 Although Kedit is part of the KDE software suite, which includes the KDE
 desktop environment, it does not require KDE to run. It is just as happy
 under Gnome. KDE has several built-in tools to help you edit text files
-(including scripts). The simplest of these is \"KEdit\", a basic text
+(including scripts). The simplest of these is "KEdit", a basic text
 editor. You can start it from the KDE menu or from the command line, if
 you prefer. For example, you could run:
 
@@ -22,13 +22,13 @@ spell-check your file with the **Tools-\>Spelling\...** menu option.
 At the bottom of the window is some useful information (if you don\'t
 see it, the **Settings-\>Show Statusbar** menu option brings it up). The
 line and column display shows the current position of the cursor. The
-\"INS\" means that you are in *insert mode*, and that if there is text
+"INS" means that you are in *insert mode*, and that if there is text
 to the right of the cursor, it is pushed over as you type. The opposite
-of this is \"OVR\", which stands for *overtype mode*, where text to the
+of this is "OVR", which stands for *overtype mode*, where text to the
 right is replaced by the newly typed text. You can switch between these
 with the **Insert** key on the keyboard.
 
-If you make any changes to the current file, then \"\[modified\]\"
+If you make any changes to the current file, then "\[modified\]"
 appears in the title bar to remind you that you need to save changes
 before exiting.
 
@@ -56,8 +56,8 @@ choose an option under **Tools-\>Highlighting**.
 
 You might have also noticed the little minus symbols and lines in the
 left margin. This is part of what is known as *code folding*. KWrite
-tries to match up \"if\" statements with the corresponding \"fi\",
-\"for\" with \"done\", and so on. Clicking on the minus symbol collapses
+tries to match up "if" statements with the corresponding "fi",
+"for" with "done", and so on. Clicking on the minus symbol collapses
 the block, which can be useful if you are reading through a script and
 are interested in viewing what comes before and after a block, but not
 what\'s inside it. There are many more helpful features that KWrite
@@ -76,9 +76,9 @@ On the left side of the window are tabs that let you view the documents
 open in the current Kate session (KEdit and KWrite open multiple files
 in separate windows, while Kate can open them all in one), or navigate
 through your computer\'s filesystem to open a file. Kate also does
-syntax highlighting like KWrite, but also adds a \"Terminal\" tab at the
+syntax highlighting like KWrite, but also adds a "Terminal" tab at the
 bottom. Clicking on this tab opens and closes a mini-terminal where you
-can enter commands. In this case, if we wanted to see what \"id -u\" in
+can enter commands. In this case, if we wanted to see what "id -u" in
 the script does, and can simply type it in to the terminal to try it
 out.
 

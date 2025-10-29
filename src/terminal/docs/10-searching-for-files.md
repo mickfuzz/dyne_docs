@@ -3,14 +3,14 @@
 When you first get a computer, you tend to place files in just a couple
 folders or directories. But as your list of files grows, you have to
 create some subdirectories and spread the files around in order to keep
-your sanity. Eventually, you forget where files are. \"Where did I store
-those photos I took in Normandy?\"
+your sanity. Eventually, you forget where files are. "Where did I store
+those photos I took in Normandy?"
 
 You could run `ls -R`, as in the following section, and start running
 your finger down the screen, but why? Computers are supposed to be about
 automation. Let the computer figure out where the file is.
 
-If you know your file is named \"somefile\", telling the computer what
+If you know your file is named "somefile", telling the computer what
 to do is pretty easy.
 
     $ find . -name somefile -print
@@ -30,7 +30,7 @@ screen the location of any file that matches the name it was given.
 ## Wildcards with Find
 
 What if you don\'t remember the name of the file you\'re looking for?
-You might only remember that it starts with \"some\".  Luckily, `find`
+You might only remember that it starts with "some".  Luckily, `find`
 can handle that too.
 
     $ find . -name 'some*' -print
@@ -41,9 +41,9 @@ can handle that too.
 This time it found a few more files than you were after but it still
 found the one you wanted.  As you can see, the `find` command can
 process wildcards in much the same way the shell can.  Here you asked it
-to look for anything that starts with the letters \"some\".
+to look for anything that starts with the letters "some".
 
-The \"\*\", \"?\", and \"\[ \]\" wildcards can all be used just as they
+The "\*", "?", and "\[ \]" wildcards can all be used just as they
 would be in the shell.  However, since `find` is using the wildcards you
 have to make sure they remain unaltered by the shell.  To do this you
 can surround the name you\'re searching for, and the wildcards it
@@ -96,7 +96,7 @@ days through:
 
     $ find ~ -mtime -3 -print
 
-Notice the minus sign before the 3, for \"less than.\" If you know you
+Notice the minus sign before the 3, for "less than." If you know you
 created the file yesterday (between 24 and 48 hours ago), you can search
 for an exact day:\
 
@@ -114,7 +114,7 @@ has to match all the criteria you specify in order to be printed.\
     $ find directory_to_backup  -mtime +30  -size +500k  -print
 
 We\'ve specified +500k as our `-size` option. The plus sign means
-\"greater than\" and \"500k\" means \"500 kilobytes in size\".\
+"greater than" and "500k" means "500 kilobytes in size".\
 
 ## Using Find To Run a Command on Multiple Files
 
@@ -135,8 +135,8 @@ to find old, large files in the previous section.
 The `-exec` option is followed by an `rm` command, but there are two odd
 items after it:
 
--   {} is a special convention in the `-exec` option that means \"the
-    current file that was found\"
+-   {} is a special convention in the `-exec` option that means "the
+    current file that was found"
 -   \\; is necessary to tell find what the end of the command is. A
     command can have any number of arguments. Think of `-exec` and \\;
     as surrounding the command you want to execute.

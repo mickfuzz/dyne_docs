@@ -3,10 +3,10 @@
 When you\'re looking through files or trying to change text, your needs
 are often ambiguous or approximate. Typical searches include:
 
--   Finding an indeterminate number of things, such as \"one or more
-    zeroes\".
--   Finding text that can have variants, such as \"color\" and
-    \"colour\", or \"gray\" and \"grey\".
+-   Finding an indeterminate number of things, such as "one or more
+    zeroes".
+-   Finding text that can have variants, such as "color" and
+    "colour", or "gray" and "grey".
 -   Extracting parts of text that forms a pattern. For instance, suppose
     you have a list of email addresses such as
     [somebody@fsf.org](https://web.archive.org/web/20160417194719/mailto:somebody@fsf.org)
@@ -25,7 +25,7 @@ regular expressions apart.
 The easiest way to learn and practice regular expressions is to use the
 simple filters provided with the shell, such as grep, Sed, and AWK. The
 grep command has popped up several times already in this book. In this
-section we\'ll use an \"extended\" version named egrep, because it
+section we\'ll use an "extended" version named egrep, because it
 provides more of the features people use frequently in regular
 expressions. Sed and AWK were introduced in previous sections; we\'ll
 use Sed a lot in this one.
@@ -56,15 +56,15 @@ commands we\'ve shown look for plain text:
     Primary colors blue and green make the colour cyan
     Primary colors red and green make the colour yellow
 
-Because \"colour\" contains no metacharacters the shell would interpret,
+Because "colour" contains no metacharacters the shell would interpret,
 we don\'t need the single quotes, but we\'re using them to get into the
 habit. The egrep commands in this section will use lots of
 metacharacters.
 
 ## Indeterminate quantities
 
-One simple application of regular expressions is to search for \"any
-number\" of something, or a fuzzy amount such as \"3 to 5\" hyphens.
+One simple application of regular expressions is to search for "any
+number" of something, or a fuzzy amount such as "3 to 5" hyphens.
 Here are the metacharacters that support this. For the sake of
 simplicity, we\'ll show some in isolation and then use them in some
 tools.
@@ -84,8 +84,8 @@ subtle differences. Focus on what they mean in regular expressions and
 remember that it is really a separate language from the shell
 metacharacters.
 
-Now we can see how to find both \"color\" and \"colour\" in one search.
-We want either zero or 1 \"u\", so we specify:
+Now we can see how to find both "color" and "colour" in one search.
+We want either zero or 1 "u", so we specify:
 
     $ egrep 'colou?r' color_file
     Primary colors blue and red make the color magenta
@@ -95,7 +95,7 @@ We want either zero or 1 \"u\", so we specify:
 The asterisk (\*) is one of the most common and useful metacharacters in
 regular expressions, but also one of the most confusing and misused.
 Suppose you wanted to remove zeros from a line. You might try to remove
-\"any number of zeros\" through an asterisk:
+"any number of zeros" through an asterisk:
 
     $ echo "There are 40006 items" | sed "s/0*/X/"
 
@@ -104,7 +104,7 @@ But the output is:
     XThere are 40006 items
 
 This happened because Sed replaces the first occurrence of the pattern
-you request. You requested \"zero or more\" and the first occurrence of
+you request. You requested "zero or more" and the first occurrence of
 that is the beginning of the line!\
 
 In this case, you want the plus sign (0+), but many versions of Sed
@@ -113,9 +113,9 @@ don\'t support it. You can work around that with:
     $ echo "There are 40006 items" | sed "s/00*/X/"
     There are 4X6 items
 
-If you put a single digit in the brackets, such as {3}, it means \"match
-this number exactly\". If you include the comma without a second digit,
-such as {3,}, it means \"match any number of three or more.\"
+If you put a single digit in the brackets, such as {3}, it means "match
+this number exactly". If you include the comma without a second digit,
+such as {3,}, it means "match any number of three or more."
 
 ## Indeterminate Matches, Classes, and Ranges
 
@@ -150,13 +150,13 @@ character to escape being treated as a metacharacter, we speak of
 If you find yourself searching for strings that contain punctuation and
 you don\'t want any of the punctuation treated as a metacharacter, it
 can be tiresome and difficult to escape each character. Consider using
-fgrep (which stands for \"fixed grep\") for these strings instead of
+fgrep (which stands for "fixed grep") for these strings instead of
 grep or egrep. The fgrep command looks for exactly what you pass, and
 doesn\'t treat anything as a metacharacter. You still have to use single
 quotes so the shell doesn\'t treat anything as a metacharacter.\
 
 Square brackets let you specify combinations of characters. For
-instance, to search for both \"gray\" and \"grey\" you specify:
+instance, to search for both "gray" and "grey" you specify:
 
     $ egrep "gr[ae]y" color_file
     Black and white make grey
@@ -187,8 +187,8 @@ The line without vowels failed to match.
 Now let\'s look for non-vowel characters. That means not only
 consonants, but punctuation and spaces. We can *invert* the character
 class by putting a caret (\^) at the front. In a character class (and
-nowhere else) the caret means \"everything except the following\".
-We\'ll do that here with five vowels (allowing the \"y\" to be matched
+nowhere else) the caret means "everything except the following".
+We\'ll do that here with five vowels (allowing the "y" to be matched
 because it can also be a consonant):
 
     $ grep '[^eauoi]' letter_file
@@ -250,7 +250,7 @@ trillion, etc. You want to match:
 
 etc.
 
-You can do that by putting the string \",000\" in a group, enclosing it
+You can do that by putting the string ",000" in a group, enclosing it
 in parentheses. Now anything you apply to it\--such as the +
 character\--applies to the whole group:\
 
@@ -266,8 +266,8 @@ looking at a file that repeats some sequences of characters:
     This sentence doesn't appear in the egrep-generated output.
     I want it quick-quick.
 
-The first line contains the word \"tam\", a hyphen, and then \"tam\"
-again. The third line contains \"quick\", a hyphen, and then \"quick\"
+The first line contains the word "tam", a hyphen, and then "tam"
+again. The third line contains "quick", a hyphen, and then "quick"
 again. These lines don\'t actually have strings in common, except for
 the hyphen (which appears in the second line too, so searching for it
 doesn\'t distinguish the first and third lines from the second). What
@@ -295,27 +295,27 @@ Puzzled? The regular expression, broken into pieces, is:
   ----------------------------------- -----------------------------------
 
 The \\1 is a special syntax recognized by tools that allow parentheses
-to capture text. In the first line of the files, it matches \"tam\"
+to capture text. In the first line of the files, it matches "tam"
 because that\'s what \[a-z\]+ matched. In the third line, it matches
-\"quick\" because that\'s what \[a-z\]+ matched. It says, \"whatever you
-found, I want it again.\"
+"quick" because that\'s what \[a-z\]+ matched. It says, "whatever you
+found, I want it again."
 
-To extract the second part of an email address, such as \"fsf.org\" from
-\"[someone@fsf.org](https://web.archive.org/web/20160417194719/mailto:someone@fsf.org)\",
+To extract the second part of an email address, such as "fsf.org" from
+"[someone@fsf.org](https://web.archive.org/web/20160417194719/mailto:someone@fsf.org)",
 use a regular expression such as:
 
     ([a-z._]+)@([a-z._]+)
 
 In this case, \\1 matches the part before the @ sign, while \\2 matches
-the part after the @. So extract \\2 to get \"fsf.org\".
+the part after the @. So extract \\2 to get "fsf.org".
 
 ## Alternation
 
 We saw that a character class matches only one character at a time. If
 you have two or more sequences that can appear in the same place, you
 specify them through *alternation*. This involves separating them with a
-vertical bar (\|). Thus, the following finds an instance of \"FSF\" or
-\"Free Software Foundation\":\
+vertical bar (\|). Thus, the following finds an instance of "FSF" or
+"Free Software Foundation":\
 
     FSF|Free Software Foundation
 
@@ -339,7 +339,7 @@ lowercase letter:\
     ^[a-z]
 
 This use of the caret has nothing to do with the caret that we saw
-before inside of square brackets. A caret means \"beginning of line\"
+before inside of square brackets. A caret means "beginning of line"
 when it\'s the first character of a regular expression, but only in that
 position.
 
@@ -348,7 +348,7 @@ dollar sign (\$) to the end of the regular expression:\
 
     [0-9]$
 
-In the phrase \"I added 3 and 5 to make 8\", the previous regular
+In the phrase "I added 3 and 5 to make 8", the previous regular
 expression will match the 8 because it\'s at the end of the line.
 
 When you\'re searching for lines that match a regular expression exactly
@@ -357,7 +357,7 @@ you want to make sure a line consists only of digits, enter:
 
     ^[0-9]+$
 
-The \[0-9\]+ part specifies \"one or more digits\", and the \^ and \$
+The \[0-9\]+ part specifies "one or more digits", and the \^ and \$
 ensure that the regular expression takes up the whole line.\
 
 We wanted to take you just far enough to get a sense of what regular

@@ -9,7 +9,7 @@ a command fails.
 
 To facilitate this, when a command finishes it returns an *exit status*.
 The exit status is not normally displayed; instead it is placed in a
-variable (a named memory slot) named \"**\$?**\". The exit status is a
+variable (a named memory slot) named "**\$?**". The exit status is a
 number between 0 and 255 (inclusive); zero means success, and any other
 value means a failure.
 
@@ -92,7 +92,7 @@ activating the else clause.
 ## && and ||
 
 The if-then construct is very useful, but rather verbose for chaining
-together dependent commands.  The \"*&&*\" *(and)* and \"*\|\|*\" *(or)*
+together dependent commands.  The "*&&*" *(and)* and "*\|\|*" *(or)*
 operators provide a more compact format.
 
     command1 && command2 [&& command3]...
@@ -135,7 +135,7 @@ isolation, but they can be mixed as well.
       man $1 && echo "you now know more about $1" || apropos $1
     }
 
-As you probably suspect, the \"you now know\...\" echo is not exactly
+As you probably suspect, the "you now know\..." echo is not exactly
 the most useful command.  (It might not even be accurate, perhaps the
 `man` page introduced so many options and confused the poor user).  We
 heartily confess we threw it in just to match the original if-then
@@ -157,7 +157,7 @@ particular values do exist.
 
 For example, if you invoke an inexistent command (e.g. by wrongly typing
 an existing one or by omitting its correct path), you should expect to
-receive the standard notification of \"command not found\" which is
+receive the standard notification of "command not found" which is
 generally associated with the exit status 127.  We encountered this
 value at the very beginning of this chapter:\
 
@@ -166,8 +166,8 @@ value at the very beginning of this chapter:\
     $ echo $?
     127
 
-Another exit status to which attention should be drawn is \"permission
-denied\", usually the code 126.  When you encounter this value, it may
+Another exit status to which attention should be drawn is "permission
+denied", usually the code 126.  When you encounter this value, it may
 be worth enhancing the level of attention.  The command you are trying
 to execute requires permissions you do not have.  There are some
 frequent cases.

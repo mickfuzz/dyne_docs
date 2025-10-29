@@ -131,8 +131,8 @@ Next, let\'s look at the installation process a little more in depth.
 
 ## Unpack the archive
 
-Most software sources come in the form of a compressed \"tape archive\"
-files that usually have a suffix like \".tar\" or \".tgz\". The GNU
+Most software sources come in the form of a compressed "tape archive"
+files that usually have a suffix like ".tar" or ".tgz". The GNU
 `tar` command can automatically uncompress files ending with a *.gz* or
 *.tgz* suffix (which means the distributor used GZIP compression) but if
 other forms of compression were used (such as BZIP2 or LZMA) you have to
@@ -142,11 +142,11 @@ use the appropriate uncompression program to retrieve the *.tar* file
 
     $ tar zxvf packagename.tar.gz
 
-Where \"packagename\" in the example above is the actual name of your
+Where "packagename" in the example above is the actual name of your
 package that you wish to install. The `tar` command followed by the
 parameters `zxvf` uncompresses a *tar.gz* file and creates a new
 directory with all the extracted sources. The \'z\' specifies BZIP
-compression; if the file suffix is \".tgz2\", specifiy BZIP2 compression
+compression; if the file suffix is ".tgz2", specifiy BZIP2 compression
 by using a \'j\'. Don\'t worry\-- if it fails to extract you just get an
 error message. You can remove the *tar.gz* file after it successfully
 unpacks.\
@@ -178,7 +178,7 @@ look for information in the *README* or *INSTALL* file.
 In the command shown, by putting a dot and a slash before the name of
 the script (`./configure`) you are telling GNU/Linux to execute (run) a
 script called `configure` from the current directory (denoted by
-\"`./`\"). The script then does its stuff, checking what kind of a
+"`./`"). The script then does its stuff, checking what kind of a
 computer you have, what you already have installed, what kind of
 GNU/Linux you are running, and so on.
 
@@ -224,7 +224,7 @@ jobs to speed up processing by adding a `-j` option:
 
     $ make -j3
 
-These commands actually make (\"compile\") the software for you. You
+These commands actually make ("compile") the software for you. You
 will then end up with a whole lot of compiled files which in total makes
 up your software. The `make` process can take a while, depending on the
 speed of your machine and the size of the package sources you are
@@ -246,10 +246,10 @@ explains how to write polite and helpful problem reports. But first, see
 if there are log files from the configure and make steps. These may give
 you more information than was presented on the screen, even if you
 managed to see what was on the screen as it all flashed by. You can also
-repeat these steps, adding \" &\> logfile\" to the command in order to
+repeat these steps, adding " &\> logfile" to the command in order to
 capture all output in logfile (use a filename that does not already
-exist). Before repeting the make step you should probably do \"make
-clean\"  in order to remove objects made by previous attempts.\
+exist). Before repeting the make step you should probably do "make
+clean"  in order to remove objects made by previous attempts.\
 
 ## Install the software
 

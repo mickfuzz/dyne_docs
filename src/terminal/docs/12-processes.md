@@ -39,7 +39,7 @@ terminal. The 4 columns have the following interpretation:
 
 Each process has an identifier by which the operating system tracks it.
 This is an integer number that is given to each new process, and is
-called the PID (for \"process ID\"). The gap between the PID 3923 for sh
+called the PID (for "process ID"). The gap between the PID 3923 for sh
 and the PID 3941 for cat merely shows that somebody started processes on
 the machine in between the times these two processes started.
 
@@ -94,14 +94,14 @@ and non-verbose (it doesn\'t tell you what it is doing) by default and
 hence must be used carefully. You can kill only your own processes. Also
 if the program has truly crashed it may not respond to the instruction
 so use the `-9` option in that case. That is the signal number for
-SIGKILL, and if you are really careful you will type \"kill -s SIGKILL
-(pid)\" since it is conceivable that your system has the numbers
+SIGKILL, and if you are really careful you will type "kill -s SIGKILL
+(pid)" since it is conceivable that your system has the numbers
 assigned differently.\
 
 ## Processes and jobs (background)
 
 If you want to run something in the background and return control to
-your terminal, just put an ampersand (\"&\") after the command name.
+your terminal, just put an ampersand ("&") after the command name.
 
     $ firefox &
     [1] 3694
@@ -134,7 +134,7 @@ or as a job number:
     $ fg %1
 
 To distinguish the job number from a process number, you must put a
-percent sign (\"%\") before the job number.\
+percent sign ("%") before the job number.\
 
 If you want to run a process in the background that\'s now running in
 the foreground, type **Ctrl + Z**, which suspends the job, then issue

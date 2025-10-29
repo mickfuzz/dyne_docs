@@ -81,7 +81,7 @@ buffer from the cursor to the end of the line.
 
 ### C-y (yank back line)
 
-This command \"yanks back\" the most recently killed line or set of
+This command "yanks back" the most recently killed line or set of
 lines and pastes it into the current cursor position.\
 
 ## Other Emacs features

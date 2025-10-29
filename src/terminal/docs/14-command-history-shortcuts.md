@@ -40,7 +40,7 @@ recalling the command using the technique in this section.
 ## Recalling a command by a string
 
 The *bang operator*, named after the ! character (an exclamation point,
-or more colloquially \"bang\"), allows you to repeat recent commands in
+or more colloquially "bang"), allows you to repeat recent commands in
 your history.\
 
 *!string* executes the most recent command that starts with *string*.
@@ -51,7 +51,7 @@ Thus, to execute the exact same mv command you did before, enter:
 What if you don\'t want the exact same command? What if you want to edit
 it slightly before executing it? Or just want to look at what the bang
 operator retrieves to make sure that\'s the command you want? You can
-retrieve it without executing it by adding `:p` (for \"print\"):\
+retrieve it without executing it by adding `:p` (for "print"):\
 
     !mv:p
 
@@ -105,8 +105,8 @@ three more commands, you can re-execute the `rm` command through:
 
     !-4
 
-That tells the shell, \"start where I am now, count back four commands,
-and execute the command at that point\".\
+That tells the shell, "start where I am now, count back four commands,
+and execute the command at that point".\
 
 ### Repeating arguments
 
@@ -119,7 +119,7 @@ The three most useful modifiers are: \*, !\^, and !\$, which are
 shortcuts for all, first, and last arguments respectively. Let\'s look
 at these in order.
 
-*\"commandName \*\"* executes the *commandName* with any arguments you
+*"commandName \*"* executes the *commandName* with any arguments you
 used on your last command. This maybe useful if you make a spelling
 mistake. For example, if you typed *emasc* instead of *emacs*:
 
@@ -140,14 +140,14 @@ command-line. It is equivalent to typing:
 emacs /home/fred/mywork.java /tmp/testme.java
 ```
 
-*\"commandName !\^\"* repeats the first argument.
+*"commandName !\^"* repeats the first argument.
 
 ``` SCREEN
 emacs /home/fred/mywork.java /tmp/testme.java
 svn commit !^    # equivalent to: svn commit /home/fred/mywork.java
 ```
 
-*\"commandName !\$\"* repeats the last argument.
+*"commandName !\$"* repeats the last argument.
 
 ``` SCREEN
 mv /home/fred/downloads/sample_screen_config /home/fred/.screenrc
@@ -195,7 +195,7 @@ string within it. For instance, suppose you run a command on *file1*:
          443    1578    9800 file1
 
 Now you want to remove *file2*, which has a name very close to *file1*.
-You can use the last parameter of the previous command through \"!\$\",
+You can use the last parameter of the previous command through "!\$",
 but alter it as follows:
 
     $ rm !$:s/1/2/
@@ -205,8 +205,8 @@ That looks a little complicated, so let\'s take apart the argument:
 
     !$   :   s/1/2/
 
-The \"!\$\" is followed by a colon and then a \"s\" command, standing
-for \"substitute\". Following that is the string you want to replace (1)
+The "!\$" is followed by a colon and then a "s" command, standing
+for "substitute". Following that is the string you want to replace (1)
 and the string you want to put in its place (2) surrounded by slashes.
 The shell prints the command the way it interprets your input, then
 executes it.
@@ -225,7 +225,7 @@ and the string we want to put in its place.\
 
 ## Searching through the Command History
 
-Use the **Ctrl + R** key combination to perform a \"reverse-i-search\".
+Use the **Ctrl + R** key combination to perform a "reverse-i-search".
 For example, if you wanted to use the command you used the last time you
 used `snort`, start by typing **Ctrl + R**. In the terminal window
 you\'ll see:
@@ -234,8 +234,8 @@ you\'ll see:
 
 As you type each letter (s, n, etc.) the shell displays the most recent
 command that has that string somewhere. When you finish typing
-\"snort\", you can use **Ctrl + R** repeatedly to search back through
-all commands containing \"snort.\" When you find the command you\'re
+"snort", you can use **Ctrl + R** repeatedly to search back through
+all commands containing "snort." When you find the command you\'re
 looking for, you can press the right or left arrow keys to place the
 command on an actual command line so you can edit it, or just press
 **Enter** to execute the command.

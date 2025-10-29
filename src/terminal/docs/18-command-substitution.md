@@ -64,7 +64,7 @@ an embedded command takes a long time, the outer command doesn\'t
 execute at all until the embedded one is done.
 
 If the embedded command could produce output that is more than one word
-(such as \"Mar 09\") you can pass it as a single argument by enclosing
+(such as "Mar 09") you can pass it as a single argument by enclosing
 the command in double quotes. The `grep` command in this section, for
 instance, requires the string to be passed as a single argument.
 :::

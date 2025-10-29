@@ -24,7 +24,7 @@ use your favorite editor to save this file as *foo*, then:
          11 2304x3072
          12 3072x2304
 
-What that small monster does is find files that ends with \".jpg\" in a
+What that small monster does is find files that ends with ".jpg" in a
 certain directory, run `identify` on all of them, and report some kind
 of information that someone at some time must have thought very useful.
 If the programmer would only have added some hints as to what the
@@ -61,7 +61,7 @@ character at the end of a line to join it with the next:
 ## Use descriptive names for your scripts
 
 The second thing you might have noticed is that the script is called
-\"foo\".  It\'s short and convenient but it doesn\'t provide a clue as
+"foo".  It\'s short and convenient but it doesn\'t provide a clue as
 to what the program does.  What about this:
 
     $ mv foo list_image_sizes
@@ -215,7 +215,7 @@ That\'s easily fixed:
     fi
 
     if ! test -d $START_DIRECTORY ; then
-        echo \"$START_DIRECTORY\" is not a directory or it does not exist.  Stop.
+        echo "$START_DIRECTORY" is not a directory or it does not exist.  Stop.
         exit
     fi
 
@@ -241,7 +241,7 @@ nice if your program exits with an error code.  Something like this:
     fi
 
     if ! test -d $START_DIRECTORY ; then
-        echo \"$START_DIRECTORY\" is not a directory or it does not exist.  Stop.
+        echo "$START_DIRECTORY" is not a directory or it does not exist.  Stop.
         exit 1
     fi
 
@@ -271,7 +271,7 @@ you to add notes about how your script works.  For example:
     fi
 
     if ! test -d $START_DIRECTORY ; then
-        echo \"$START_DIRECTORY\" is not a directory or it does not exist.  Stop.
+        echo "$START_DIRECTORY" is not a directory or it does not exist.  Stop.
         exit 1
     fi
 
@@ -322,7 +322,7 @@ It\'s magic!
     ...
 
 You have two choices: write a comment and document why it has to be
-\"3\" instead of \"2\" or \"4\" or introduce a variable that explains
+"3" instead of "2" or "4" or introduce a variable that explains
 why by way of its name.  Let\'s try the latter:\
 
     #!/bin/sh
@@ -337,7 +337,7 @@ why by way of its name.  Let\'s try the latter:\
     fi
 
     if ! test -d $START_DIRECTORY ; then
-        echo \"$START_DIRECTORY\" is not a directory or it does not exist.  Stop.
+        echo "$START_DIRECTORY" is not a directory or it does not exist.  Stop.
         exit 1
     fi
 
@@ -376,17 +376,17 @@ let\'s try one last example:\
     fi
 
     if ! test -d "$SRC" ; then
-        echo \"$SRC\" is not a directory or it does not exist.  Stop.
+        echo "$SRC" is not a directory or it does not exist.  Stop.
         exit 1
     fi
 
     if test -e "$DST" ; then
-        echo \"$DST\" already exists.  Stop.
+        echo "$DST" already exists.  Stop.
         exit 1
     fi
 
     if ! mkdir -p "$DST" ; then
-        echo Can\'t create destination directory \"$DST\".  Stop.
+        echo Can\'t create destination directory "$DST".  Stop.
         exit 1
     fi
 
@@ -402,7 +402,7 @@ let\'s try one last example:\
         dir=`dirname "$filename"`
         mkdir -p "$DST/$dir" && cp -a "$filename" "$DST/$filename"
         if test $? -ne 0 ; then
-            echo Can\'t copy \"$filename\" to \"$DST/$filename\"
+            echo Can\'t copy "$filename" to "$DST/$filename"
             echo Abort.
             exit 1
         fi
@@ -417,22 +417,22 @@ example, instead of just calling `mkdir` to check if a program worked,
 it does this:
 
     if ! mkdir -p "$DST" ; then
-        echo Can\'t create destination directory \"$DST\".  Stop.
+        echo Can\'t create destination directory "$DST".  Stop.
         exit 1
     fi
 
 It calls `mkdir` as the condition for `if`.  If `mkdir` encounters an
 error, it will exit with a non-zero status and the `if` clause will
-interpret that as a false condition. The \"!\" is a negation operator
+interpret that as a false condition. The "!" is a negation operator
 that inverts false to true (or vice versa. So the line as a whole
-basically says \"Run the `mkdir` command, turn an error into a true
-value with the \"!\" operator, and take action if it\'s true that
-there\'s an error.\" In short, if `mkdir` encounters an error, the flow
+basically says "Run the `mkdir` command, turn an error into a true
+value with the "!" operator, and take action if it\'s true that
+there\'s an error." In short, if `mkdir` encounters an error, the flow
 will enter the body of the `if`.  This might happen, for example, if the
 user running the script doesn\'t have permissions to create the
 requested directory.\
 
-Note also the usage of \"&&\" to verify error conditions:\
+Note also the usage of "&&" to verify error conditions:\
 
     mkdir -p "$DST/$dir" && cp -a "$filename" "$DST/$filename"
 

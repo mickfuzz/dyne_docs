@@ -8,8 +8,8 @@ and you can accomplish a lot with a few keystrokes. On the other hand
 it\'s also powerful: highly configurable, with many built-in functions.
 
 Vim is an enhanced version of Vi, offering a lot of features that make
-life easier for both the novice and expert (Vim stands for \"Vi
-IMproved\"). On many modern systems, Vim is installed as the default
+life easier for both the novice and expert (Vim stands for "Vi
+IMproved"). On many modern systems, Vim is installed as the default
 version of Vi. So if you invoke the `vi` command you actually run Vim.
 This is usually not confusing, because everything in Vi works in Vim as
 well. We will look at Vim in this chapter, but if your system has Vi you
@@ -65,8 +65,8 @@ should see this on the bottom of the screen:
 
 Whenever this appears on the bottom of the screen, you are in edit mode.
 Whatever you type becomes part of the file. For instance, try entering
-\"This is line 1.\" Then press the **Enter** key and enter \"This is
-line 2\". Here\'s what this fascinating contribution to literature looks
+"This is line 1." Then press the **Enter** key and enter "This is
+line 2". Here\'s what this fascinating contribution to literature looks
 like in Vim:
 
 ![vim_insert](images/IntroCommandLine-nano-vim_insert-en.png "vim_insert"){width="507"
@@ -177,10 +177,10 @@ open up a file foo.txt so that it appears in a tab I would:
 
 To move back and forth between this file and the one you were working on
 previously, use the keys **g** and then **t**. To help remember this key
-combination you can think of \"g\" as in goto and \"t\" as in tab. You
+combination you can think of "g" as in goto and "t" as in tab. You
 can open up as many files as you like into tabs and use **gt** to
-traverse between them. If you have enabled mouse input (see \"Using your
-mouse with Vim\", above) then you can simply click on the tab itself.\
+traverse between them. If you have enabled mouse input (see "Using your
+mouse with Vim", above) then you can simply click on the tab itself.\
 
 You can close a tab in the same way you would a normal file, with
 **:wq** to commit the changes, or just **:q** to close without
@@ -196,13 +196,13 @@ enter. Using the cursor keys (arrow keys) select the text you would like
 to copy or cut. \
 \
 To copy the selected text, hit the **y** key (\'y\' stands for
-\"yank\"). Now, use the cursor keys and move to a new location in your
-document. Now press the **p** key (\'p\' stands for \"put\" but you can
-think of it as \"paste\") to place the text in the given position.
+"yank"). Now, use the cursor keys and move to a new location in your
+document. Now press the **p** key (\'p\' stands for "put" but you can
+think of it as "paste") to place the text in the given position.
 
 To cut the selected text, hit the **x** key (who knows what \'x\' stands
 for!). Now move to a new position in your document and press **p** to
-\"put\" the text in that place.
+"put" the text in that place.
 
 Sometimes it\'s useful to select text in lines or columns. Experiment
 with these other forms of Visual Mode by holding **SHIFT+v** to select

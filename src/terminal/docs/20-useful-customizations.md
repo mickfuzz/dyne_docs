@@ -10,7 +10,7 @@ introduced later.\
 
 Each command-line shell has the concept of a *variable*.  Variables
 consist of two parts: the variable  *name* and the variable *value*.  If
-I were to say \"x=6\", \"x\" is the name of the variable, and \"6\" is
+I were to say "x=6", "x" is the name of the variable, and "6" is
 the value.  To see the value of a variable, one puts a dollar sign in
 front of the variable name.  Here is a very simple example.\
 \
@@ -130,15 +130,15 @@ variable so the shell knows where the variable name ends:\
 
 ## The Search Path
 
-We\'ve looked at several examples of running commands.  If I type \"ls
--l\" on the command line, then my shell runs the `ls` command, which
+We\'ve looked at several examples of running commands.  If I type "ls
+-l" on the command line, then my shell runs the `ls` command, which
 makes a list of files.  The `ls` command is actually a program sitting
 on your computer\'s hard drive.  You can ask your shell where a command
 lives by using the `which` command.   If I type
 
     $ which ls
 
-then my shell responds with \"/bin/ls\", which tells me the `ls` command
+then my shell responds with "/bin/ls", which tells me the `ls` command
 is a program that lives in the */bin* directory of my hard drive.   We
 can even use the `ls` command to look at itself\
 
@@ -175,7 +175,7 @@ that begins with a dot (.) is considered hidden. Your file manager in
 your desktop won\'t show you the files unless you choose a special
 option to display hidden files. Similarly, the shell doesn\'t display
 them by default in an `ls` command. To display them in the shell, add
-the `-a` (for \"all\") option:
+the `-a` (for "all") option:
 
     $ ls -a
     .
@@ -299,7 +299,7 @@ whatever string you pass:\
 Functions can contain compound statements, such as if/then blocks. To
 show how flexible and powerful the combination of functions and compound
 statements can be, we\'ll include here an if/then statement that was
-shown earlier in the section \"Handling command failure\".
+shown earlier in the section "Handling command failure".
 
     function helpme() {
       if man $1
@@ -359,7 +359,7 @@ file, which bash reads whenever it starts up. The default value is
 \\u@\\h:\\w\\\$, specifying username, host, working directory, and
 decorator characters. The following table describes the fields that can
 appear in a prompt, and various other useful characters. The prompt can
-ring the terminal \"bell\", now more usually a beep; it can contain
+ring the terminal "bell", now more usually a beep; it can contain
 multiple lines using \\r for Carriage Return; and it can contain
 embedded terminal control sequences, typically starting with the Escape
 character. We will not attempt to explain all of these options here. See
@@ -367,7 +367,7 @@ character. We will not attempt to explain all of these options here. See
 [http://www.gnu.org/software/bash/manual/](https://web.archive.org/web/20160417194719/http://www.gnu.org/software/bash/manual/)\
 
   ------ ------------------------------------------------------------------------------------ ------- -----------------------------------------------------------------------------------------------------------------------
-   \\a   an ASCII bell character (07)                                                           \\d   the date in \"Weekday Month Date\" format (e.g., \"Tue May 26\")
+   \\a   an ASCII bell character (07)                                                           \\d   the date in "Weekday Month Date" format (e.g., "Tue May 26")
    \\\]  end a sequence of non-printing characters                                              \\e   an ASCII escape character (033)
    \\h   the hostname up to the first \'.\'                                                     \\H   the hostname
    \\j   the number of jobs currently managed by the shell                                      \\l   the basename of the shell\'s terminal device name
@@ -420,7 +420,7 @@ files.
 
 This makes a temporary copy of the file and opens the copy in an editor.
 You can override the default editor by setting the VISUAL or EDITOR
-environment variable to \"vi\", \"emacs\", or whatever you like.
+environment variable to "vi", "emacs", or whatever you like.
 
 Permission lines in */etc/sudoers* identify the user, followed by the
 hosts the user can use `sudo` on, which groups the user can act as a
@@ -471,7 +471,7 @@ example,
 
 The LANG setting **en_US.UTF-8** specifies English as the language, US
 as the country,  and Unicode UTF-8 as the encoding. Money in the US is
-in dollars, \$. Paper is letter, 8.5\" × 11\", as opposed to A4 for most
+in dollars, \$. Paper is letter, 8.5" × 11", as opposed to A4 for most
 of the rest of the world.
 
 You usually specify a language and country when you install your

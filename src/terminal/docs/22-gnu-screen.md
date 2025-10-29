@@ -29,7 +29,7 @@ invoked screen. You are now running within a single session of screen.
 In order to create a second session with its own shell, press **ctrl +
 a** followed by **c** or **ctrl + c**.  All screen commands begin with
 **ctrl + a** but if you need to use that for some other purpose you can
-change that key binding. See the manual (type \"man screen\" at your
+change that key binding. See the manual (type "man screen" at your
 bash prompt) for this and many details we will not present here.\
 
 If you want to run just one command in a new screen and then close the
@@ -42,7 +42,7 @@ screen, specify the command as an argument:
 To switch to the previous shell, enter **ctrl + a** followed by the
 **p** key. To go forward again, enter **ctrl + a** followed by the **n**
 key. You can see a list of all the sessions you have created using
-**ctrl + a** followed by the **\"** key. This presents a scroll-down
+**ctrl + a** followed by the **"** key. This presents a scroll-down
 menu listing all open sessions (very helpful when you have created many
 sessions!). If you want to save even the half second it takes to scroll
 down the menu, while being able to see a list of available sessions and
@@ -54,9 +54,9 @@ list of sessions with a different number for each. Then enter **ctrl + a
 Suppose you created a few sessions under GNU screen. In one session you
 have a Vim editor open, a couple more sessions you use for logging in to
 different remote servers, another session you use to run FTP, and so
-forth. By default, **ctrl + a** **\"** shows the program you used to
+forth. By default, **ctrl + a** **"** shows the program you used to
 start each session. Normally you started it with the shell, so **ctrl +
-a** **\"** shows \"bash\" for each session (or whatever your shell is).
+a** **"** shows "bash" for each session (or whatever your shell is).
 This isn\'t very helpful if you want to quickly find the session that\'s
 running Vim or FTP.
 

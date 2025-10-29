@@ -9,7 +9,7 @@ section discussion ownership and permissions.
 
 First, let\'s see what the system itself can tell us about its files.
 We\'ll execute the familiar `ls` command with an addition `-l` (that\'s
-the lower-case letter \"L\") option for a long listing:\
+the lower-case letter "L") option for a long listing:\
 
     $ ls -l
     total 72
@@ -35,7 +35,7 @@ Every file and directory in the system has an *owner*, belongs to a
 *group*, and has a set of *permissions* associated to it. At the
 simplest level, these permissions define three access levels, one for
 the owner of the file, one for the group that the file belongs to, and
-one for the rest of the world. (Actually, \"world\" just means anyone
+one for the rest of the world. (Actually, "world" just means anyone
 who has the privileges to log on to the system.)\
 
 Let\'s look back at the output shown previously.  The third and fourth
@@ -50,7 +50,7 @@ show the owner permissions, the next three are the group permissions,
 and the last three are the permissions for the rest of the world.
 
 The following table shows what the first character means. The previous
-example showed a \"d\" for directory. Some of the characters are quite
+example showed a "d" for directory. Some of the characters are quite
 rare. All you usually have to think about are the regular file and the
 directory.\
 
@@ -120,7 +120,7 @@ not him.  What\'s your group then?
 That\'s the list of groups you belong to.  If any of those were *root*
 you\'d be able to see the contents of the */bin* directory but not add
 files to it.  But you are not part of the *root* group.  The only option
-left is \"the rest of the world\" and you are included there, so what
+left is "the rest of the world" and you are included there, so what
 you can do is just see the contents of the directory.
 
 Let\'s look at another file:

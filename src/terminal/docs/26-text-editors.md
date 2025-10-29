@@ -20,7 +20,7 @@ manipulate text, like word processors, but there\'s a fundamental
 difference.
 
 -   Word processors store a lot more than a stream of text characters
-    you see on the screen. They want to provide \"rich text,\" with
+    you see on the screen. They want to provide "rich text," with
     italic and bold, numbering and bullets, colors\--you name it. This
     is obviously valuable for many purposes. A plain text resume does
     not impress many employers.\
@@ -112,7 +112,7 @@ same important features for text editing.
 
 Because the terminal and command line are so tied in with the text
 editors, many commands open up a text editor for you. We saw one example
-`sudoedit`, in the \"Useful Customizations\" section. You can set the
+`sudoedit`, in the "Useful Customizations" section. You can set the
 default editor though by setting either the EDITOR or the VISUAL
 environment variable. For instance:\
 

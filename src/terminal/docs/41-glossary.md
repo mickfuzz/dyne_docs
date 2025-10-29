@@ -52,7 +52,7 @@ functions.
 line. Before a special character, escapes that character, so that
 commands can deal with filenames that contain special characters. This
 allows users to search for text containing special characters, for
-example by using \"\\\*\" to search for \"\*\".\
+example by using "\\\*" to search for "\*".\
 
 ## #
 
@@ -146,7 +146,7 @@ A file, usually compressed, containing multiple files.\
 ## argument
 
 An input value required for a command to process. Also called
-\"parameter\". Contrast with **option**.\
+"parameter". Contrast with **option**.\
 
 ## ash
 
@@ -177,7 +177,7 @@ from there.
 
 ## background
 
-By adding an ampersand, \"&\", at the end of a command you tell the
+By adding an ampersand, "&", at the end of a command you tell the
 shell to run the program in the background, without terminal input, and
 to give you a prompt so that you can continue to give commands.\
 
@@ -227,8 +227,8 @@ variable-length UTF-8.
 ## clobber
 
 Overwrite a file with new data. A common result of forgetting to append
-standard output with \"\>\>\" and instead writing a new file with
-\"\>\".\
+standard output with "\>\>" and instead writing a new file with
+"\>".\
 
 ## command
 
@@ -293,8 +293,8 @@ shell.
 
 A character that changes the interpretation of a character or sequence
 of characters that follow it. This is the original use of the Escape
-character. For example, in a text search the character \"\*\" matches a
-wide range of text, while the string \"\\\*\" matches only an asterisk.\
+character. For example, in a text search the character "\*" matches a
+wide range of text, while the string "\\\*" matches only an asterisk.\
 
 ## exit status
 
@@ -360,7 +360,7 @@ plugins.
 
 ## globbing
 
-Referring to a group of files with an abbreviation, such as \"\*\" for
+Referring to a group of files with an abbreviation, such as "\*" for
 all of the files in a directory.\
 
 ## GNOME
@@ -512,7 +512,7 @@ particularly suitable for text processing and manipulation.\
 
 A connection between two commands, so that the standard output of the
 first becomes the input of the second. Indicated with the character
-\"\|\".
+"\|".
 
 ## plain text
 
@@ -544,7 +544,7 @@ standard input of another command, or to a file.\
 
 ## regular expression
 
-A string such as \"\*.png\" that defines a pattern for matching text or
+A string such as "\*.png" that defines a pattern for matching text or
 filenames using special characters to indicate which alternatives to
 include.\
 
@@ -563,7 +563,7 @@ text. Contrast with **plain text**.\
 
 1.  root user, or superuser, a required account with permission to do
     anything on a GNU/Linux system.\
-2.  The starting point of the directory tree, written \"/\". All other
+2.  The starting point of the directory tree, written "/". All other
     directories are specified by paths from this root directory.
 
 ## script
@@ -594,12 +594,12 @@ programs.
 ## string
 
 A [string]{.il} is a [sequence]{.il} of characters in a particular
-character set. Examples in ASCII include the sentence \"Hello, World\",
+character set. Examples in ASCII include the sentence "Hello, World",
 the URL
-\"[http://www.flossmanuals.net/](https://web.archive.org/web/20160417194719/http://www.flossmanuals.net/){target="_blank"}\",
-and  the text message \"No such file or directory.\" Unicode strings can
-include any combination of languages, such as \"Japan (日本) and Korea
-(대한민국)\".
+"[http://www.flossmanuals.net/](https://web.archive.org/web/20160417194719/http://www.flossmanuals.net/){target="_blank"}",
+and  the text message "No such file or directory." Unicode strings can
+include any combination of languages, such as "Japan (日本) and Korea
+(대한민국)".
 
 ## sudo
 

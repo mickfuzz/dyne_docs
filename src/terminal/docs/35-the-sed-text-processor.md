@@ -10,7 +10,7 @@ process output from other programs, such as here:
 ## Basic Syntax and Substitution
 
 A common use of Sed is to change words within a file. You may have used
-\"Find and Replace\" in GUI based editors. Sed can do this much more
+"Find and Replace" in GUI based editors. Sed can do this much more
 powerfully and faster:
 
      $ sed "s/foo/bar/g" inputfile > outputfile
@@ -24,15 +24,15 @@ Sed processes them in order and creates a single stream of output from
 them.\
 
 The expression looks complex but is very simple once you learn to take
-it apart. The initial \"s\" means \"substitute\". This is followed by
+it apart. The initial "s" means "substitute". This is followed by
 the text you want to find and the replacement text, with slashes (/) as
-separators. Thus, here we want to find \"foo\" in the inputfile and put
-\"bar\" in its places. Only the output file is affected; Sed never
+separators. Thus, here we want to find "foo" in the inputfile and put
+"bar" in its places. Only the output file is affected; Sed never
 changes its input files.
 
-Finally, the trailing \"g\" stands for \"global\", meaning to do this
-for the whole line. If you leave off the \"g\" and \"foo\" appears twice
-on the same line, only the first \"foo\" is changed to \"bar\".
+Finally, the trailing "g" stands for "global", meaning to do this
+for the whole line. If you leave off the "g" and "foo" appears twice
+on the same line, only the first "foo" is changed to "bar".
 
     $ cat testfile
     this has foo then bar then foo then bar
@@ -53,7 +53,7 @@ happens.\
     this has bar then bar then foo then bar
     this has bar then bar then bar then foo
 
-Notice that without the \"g\", Sed performed the substitution only the
+Notice that without the "g", Sed performed the substitution only the
 first time it finds a match on each line.
 
 This is all well and good, but what if you wanted to change the second
@@ -80,8 +80,8 @@ what you wish to substitute.
     * matches zero or more occurrences of the previous character
     [ ] any characters within the brackets will be matched
 
-For example, you could change any instance of the words \"cat\",
-\"can\", and \"car\" to \"dog\" by using the following:
+For example, you could change any instance of the words "cat",
+"can", and "car" to "dog" by using the following:
 
      $ sed "s/ca[tnr]/dog/g" inputfile > outputfile
 
@@ -112,8 +112,8 @@ modified.
 
 ## Deletion
 
-The \"d\" command deletes an entire line that contains a matching
-pattern. Unlike the \"s\" (substitute) command, the \"d\" goes after the
+The "d" command deletes an entire line that contains a matching
+pattern. Unlike the "s" (substitute) command, the "d" goes after the
 pattern.\
 
     $ cat testfile
@@ -124,9 +124,9 @@ pattern.\
     $ cat newtestfile
     line with a dog
 
-The regular expression \^\$ means \"match a line that has nothing
-between the beginning and the end\", in other words, a blank line. So
-you can remove all blank lines using the \"d\" command with that regular
+The regular expression \^\$ means "match a line that has nothing
+between the beginning and the end", in other words, a blank line. So
+you can remove all blank lines using the "d" command with that regular
 expression:
 
     $ sed "/^$/d" inputfile > outputfile
@@ -134,14 +134,14 @@ expression:
 ## Controlling Printing
 
 Suppose you want to print certain lines and suppress the rest. That is,
-instead of specifying which lines to delete using \"d\", you want
+instead of specifying which lines to delete using "d", you want
 specify which lines to keep.
 
 This can be done with two features:
 
-Specify the `-n` option, which means \"do not print lines by default\".
+Specify the `-n` option, which means "do not print lines by default".
 
-End the pattern with \"p\" to print the line matched by the pattern.
+End the pattern with "p" to print the line matched by the pattern.
 
 We\'ll show this with a file that contains names:\
 
@@ -150,8 +150,8 @@ We\'ll show this with a file that contains names:\
     Mrs. Jones
     Mrs. Lee                                                                        Mr. Lee
 
-We\'ve decided to standardize on \"Ms\" for women, so we want to change
-\"Mrs.\" to \"Ms\". The pattern is:
+We\'ve decided to standardize on "Ms" for women, so we want to change
+"Mrs." to "Ms". The pattern is:
 
      s/Mrs\./Ms/
 
@@ -192,8 +192,8 @@ operation to lines that have that pattern.
     two: number
 
 The `sed` command in that example had two patterns. The first pattern,
-\"one\", simply controls which lines Sed changes. The second pattern
-replaces \"number\" with \"1\" on those lines.
+"one", simply controls which lines Sed changes. The second pattern
+replaces "number" with "1" on those lines.
 
 This works with multiple patterns as well.\
 
@@ -254,8 +254,8 @@ the like and count the total lines, but you can also use a dollar sign
 
     $ sed "25,$ s/number/1/" < testfile > testchangedfile
 
-The \$ in an address range is Sed\'s way of specifying, \"all the way to
-the end of the file\".
+The \$ in an address range is Sed\'s way of specifying, "all the way to
+the end of the file".
 
 ## Scripting SED commands
 

@@ -7,30 +7,30 @@ default prompt is usually more complex.)
 The rest of the line is the command, with options and arguments. We use
 the following conventions.
 
--   Lines that do not begin with \"\$ \" are responses from the command
+-   Lines that do not begin with "\$ " are responses from the command
     execution.
--   The \"\|\" character pipes the output of any command to another
+-   The "\|" character pipes the output of any command to another
     command.
--   The \"\>\" character redirects the output of any command to a file.
--   To append output to a file, use \"\>\>\".
+-   The "\>" character redirects the output of any command to a file.
+-   To append output to a file, use "\>\>".
 -   Many commands have no output. They succeed or fail silently, but
     return an error code that a script can use to decide what to do
     next.
--   The \";\" character separates commands on the same line. They are
+-   The ";" character separates commands on the same line. They are
     executed in sequence, starting at the left.
--   The \"&\" character at the end of a command line says to execute the
+-   The "&" character at the end of a command line says to execute the
     command in the background, and give the user prompt for the next
     command immediately.
--   The \"\\\" character at the end of a command line says that the
+-   The "\\" character at the end of a command line says that the
     command continues on the next line. Although the examples given in
     this manual are generally quite short, there are cases where
     commands span five or six lines in script files.\
--   In \'*some text with spaces* \' and \"*more text with spaces*\", the
+-   In \'*some text with spaces* \' and "*more text with spaces*", the
     single and double quotes indicate that the text inside is one
     argument, including the trailing space in the first example. Without
     them, the shell would interpret each word as a separate argument and
     discard whitespace.
--   Backticks \"\`\`\" mark commands to be executed. The result is
+-   Backticks "\`\`" mark commands to be executed. The result is
     substituted for the command.
 -   A number of commands have an option, usually written `-r` or `-R`,
     for applying the command to every file in every subdirectory of the
@@ -61,7 +61,7 @@ anywhere in the filesystem that they happen to be.\
 `ls` is the command to list filenames.
 
 It can have options (Flags) added after the command with a minus sign
-\"-\".\
+"-".\
 Arguments (parameters) can also be added.\
 
 +-----------------------------------+-----------------------------------+
@@ -71,13 +71,13 @@ Arguments (parameters) can also be added.\
 |                                   | displays it a page at a time\     |
 +-----------------------------------+-----------------------------------+
 | \$ ls \> filelist                 | redirect listing to file named    |
-|                                   | \"filelist\"                      |
+|                                   | "filelist"                      |
 +-----------------------------------+-----------------------------------+
 | \$ ls -l                          | long file listing (file sizes,    |
 |                                   | change times,..)                  |
 +-----------------------------------+-----------------------------------+
 | \$ ls -a                          | include filenames starting with   |
-|                                   | \".\", normally not listed        |
+|                                   | ".", normally not listed        |
 +-----------------------------------+-----------------------------------+
 | \$ ls -l -a                       | applies both the above options    |
 +-----------------------------------+-----------------------------------+
@@ -85,7 +85,7 @@ Arguments (parameters) can also be added.\
 |                                   | command                           |
 +-----------------------------------+-----------------------------------+
 | \$ ls \*.fort                     | list files called                 |
-|                                   | \"ANYTHING.fort\"                 |
+|                                   | "ANYTHING.fort"                 |
 +-----------------------------------+-----------------------------------+
 | \$ ls -lat \*.fort                | the t means list them in time     |
 |                                   | order, not alphabetically         |
@@ -111,7 +111,7 @@ To list all files under a particular directory, use the `-R` option.\
     ./photos3:
     bayeux_cathedral.jpeg   rouen_cathedral.jpeg    travel.odt
 
-The \"R\" stands for \"recursive.\" Note that the recursive option is
+The "R" stands for "recursive." Note that the recursive option is
 uppercase `-R` in the `ls` command (`-r` is used to reverse the ordering
 the directory contents), but can be either uppercase or lowercase in the
 `rm` command.
@@ -127,8 +127,8 @@ command or the more recently developed `info` command. If the `man`
 command doesn\'t work, it is probably because your shell can\'t find the
 manual pages. This requires you to set the variable MANPATH to the
 correct directories. To find the directories that contain manual pages,
-try the following command. It means \"print directories that have the
-name *man*\":\
+try the following command. It means "print directories that have the
+name *man*":\
 
     $ find / -type d -name man -print
 
@@ -153,16 +153,16 @@ topics without help from `apropos`.
 ## pwd
 
 GNU/Linux has directories to help you organize your files. `pwd` tells
-you your \"current working directory\" or CWD. In directory
-specifications, \".\" stands for the current directory, and \"..\" for
-the parent directory. Paths starting with \"/\" are absolute, with no
-dependence on the current directory. Paths starting without a \"/\" are
+you your "current working directory" or CWD. In directory
+specifications, "." stands for the current directory, and ".." for
+the parent directory. Paths starting with "/" are absolute, with no
+dependence on the current directory. Paths starting without a "/" are
 relative to the current directory.\
 
 An example directory name would be */home/allen/handy/scripts*. The full
-name starts with a slash \"/\" and directory names are separated by
-slashes. This differs from Windows, which uses the backslash \"\\\", and
-Macintosh, which uses \":\".
+name starts with a slash "/" and directory names are separated by
+slashes. This differs from Windows, which uses the backslash "\\", and
+Macintosh, which uses ":".
 
     $ pwd
     /home/myname
@@ -172,7 +172,7 @@ Macintosh, which uses \":\".
 Changes your CWD.
 
   ----------------------------------- -----------------------------------
-  \$ cd                               change to your \"home directory\"
+  \$ cd                               change to your "home directory"
 
   \$ cd  ..                           takes you to the parent directory,
                                       for example from\
@@ -183,7 +183,7 @@ Changes your CWD.
                                       if there is one (uses relative
                                       path)
 
-  \$ cd  /usr/lib                     takes you to the dir \"/usr/lib\"
+  \$ cd  /usr/lib                     takes you to the dir "/usr/lib"
                                       from anywhere (uses absolute\
                                       path)
 
@@ -193,7 +193,7 @@ Changes your CWD.
 
 
 
-Your \"home directory\" is the one you log in to. It is defined in the
+Your "home directory" is the one you log in to. It is defined in the
 file */etc/passwd* (unless some special network system is in use, in
 which case it is found in the output from `ypcat passwd`).
 
@@ -222,7 +222,7 @@ This command removes files (and directories).\
 
 *By default, you get no second chance, and once files are gone they are
 irretrievable.* A nasty joke sometimes played on Newbies is to suggest
-\"`rm -r *`\" as the remedy for whatever problem they have. Don\'t try
+"`rm -r *`" as the remedy for whatever problem they have. Don\'t try
 this unless you want to install a new operating system from scratch
 anyway, and you have a complete, current backup.\
 
@@ -251,30 +251,30 @@ anyway, and you have a complete, current backup.\
 
 ## ln
 
-Make hard links or symbolic (aka \"soft\") links to files. Both hard
+Make hard links or symbolic (aka "soft") links to files. Both hard
 links and soft links are references to other files. If you don\'t know
-what an \"inode\" is, stick with using soft links. (Even if you *do*
+what an "inode" is, stick with using soft links. (Even if you *do*
 know what an inode is, chances are good that you will use soft links the
 vast majority of the time).
 
 A soft link is a special type of file that serves as an alias to another
-file (or directory) \-- same basic concept as \"desktop shortcuts\" in
+file (or directory) \-- same basic concept as "desktop shortcuts" in
 Windows, where you have a shortcut icon on your desktop that points to a
 program, file, or folder that is located elsewhere on your computer.
-The file or directory that the link points to is called the \"target\"
+The file or directory that the link points to is called the "target"
 of the link.
 
 When using `ln`, remember to include the `-s` option to choose soft type
 of link, and put the path to the target *before* the destination path
 for the new link.\
 
-To create a soft link named \"linkname\" pointing to a target named
-\"file\":\
+To create a soft link named "linkname" pointing to a target named
+"file":\
 
     $ ln -s file linkname
 
-To create links in the current directory (also known as \".\") that
-point to files in ending in \".so\" located in the *../lib* directory,
+To create links in the current directory (also known as ".") that
+point to files in ending in ".so" located in the *../lib* directory,
 giving the soft links the same names as the original files:
 
     $ ln -s ../lib/*.so .
@@ -320,7 +320,7 @@ This moves and renames files and directories.
 
 ## whoami
 
-This tells you your id name, for example, \"allen\"
+This tells you your id name, for example, "allen"
 
 So you can type
 
@@ -333,7 +333,7 @@ to see your home directory and some other things.
 The `grep` command is used to search for strings in text files.
 
 The backticks \`\` cause execution of the command inside. The result, in
-this case \"allen\", is substituted in the outer command, exactly as if
+this case "allen", is substituted in the outer command, exactly as if
 the user had typed `grep allen /etc/passwd`.\
 
 The ! in the second field tells the computer that the encrypted password
@@ -425,23 +425,23 @@ file and directory it finds there.\
 
 ## chmod
 
-Every file and directory has a \"filemode\" consisting of a list of
+Every file and directory has a "filemode" consisting of a list of
 attributes.
 
 You can see this with `ls -l`.
 
     $ cd ; ls -la
 
-The \";\" separates two commands on the same line.
+The ";" separates two commands on the same line.
 
 That shows you the modes of the files in your home directory.
 
-Included in the list should be two entries called \".\" and \"..\",
+Included in the list should be two entries called "." and "..",
 which refer to your current directory and its parent.
 
 You will see a set of characters showing the file\'s permissions,
 followed by the owner (your ID, probably, for all except ..) and the
-group (perhaps \"staff\"), a file size, the time and date of the last
+group (perhaps "staff"), a file size, the time and date of the last
 change to the file, and the name. The listing will resemble the
 following:
 
@@ -454,7 +454,7 @@ following:
     -rwxr-----   1 allen    staff        461 Oct 17 12:18 .login
     ...
 
-A \"d\" in column 1 means the entry is a directory. A \"-\" means it is
+A "d" in column 1 means the entry is a directory. A "-" means it is
 a file.
 
 See the manual page for `ls`, under the `-l` option, for other possible
@@ -463,19 +463,19 @@ file types.
 There are 9 other characters in 3 sets of 3.
 
 Columns 2-4  are for the file\'s OWNER.  (named later on the line,
-\"allen\" in this case)
+"allen" in this case)
 
 Columns 5-7  are for the file\'s GROUP.  (named later on the line,
-\"staff\" in this case)
+"staff" in this case)
 
 Columns 8-10 are for everyone else, except the superuser who always has
 all permissions.
 
--   \"r\" grants read permission.
--   \"w\" grants write permission.
--   \"x\" grants execute permission. For a directory, this means search
+-   "r" grants read permission.
+-   "w" grants write permission.
+-   "x" grants execute permission. For a directory, this means search
     permission.
--   \"-\" denies the permission in that location.
+-   "-" denies the permission in that location.
 
 See `man ls` under the `-l` flag for other possible modes. Notice that
 write permission on a directory allows you to remove files from that
@@ -531,7 +531,7 @@ obscured.\
 Disk Free. Show sizes of storage media, space used, and space available.
 Shows sizes in blocks (a size that varies from one filesystem to
 another) by default, so use the `-h` option to get sizes in
-\"human-readable\" form: K for thousands of bytes, M for millions of
+"human-readable" form: K for thousands of bytes, M for millions of
 bytes, and G for billions of bytes.
 
     $ df -h
@@ -614,7 +614,7 @@ possess and can read the source code):
 
     $ find . -name core -exec rm {} \;
 
-To list all files or directories named *\"something*.core\" under the
+To list all files or directories named *"something*.core" under the
 current working directory:
 
     $ find . -name '*.core' -ls
@@ -752,7 +752,7 @@ or
     $ bzip2 file
 
 compresses a file into an archive. The name of the archive file is the
-same as the original file, with the extension \".gz\" or \".bz2\"
+same as the original file, with the extension ".gz" or ".bz2"
 added.
 
     $ gunzip file.gz
@@ -760,7 +760,7 @@ added.
 Decompress the *file.gz* archive to the original file.\
 
 The `gunzip` command is equivalent to `gzip -d`, where the `-d` option
-stands for \"decompress\". Similarly, `bunzip2` is equivalent to
+stands for "decompress". Similarly, `bunzip2` is equivalent to
 `bzip2 -d`.
 
 The `zcat` utility is equivalent to `gunzip  -c`, where the `-c` option
@@ -779,7 +779,7 @@ pipe the output of this command to `grep`, for example. Similarly,
 The World-Wide Web is so widely used that some people think it is the
 entire Internet, but originally the Web was designed to use only text,
 and there are several text browsers for it still in use. Lynx (a pun on
-\"links\") remains popular among those who spend more time at the
+"links") remains popular among those who spend more time at the
 command line or inside Emacs than in a GUI.
 
 A text browser can simply ignore any material marked with HTML tags that

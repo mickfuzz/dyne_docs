@@ -403,7 +403,7 @@ sending it to `ls`.  So after expansion, the command would look like:
 
 If we want `ls` to find an asterisk something different is in order.
 
-The "\", or backslash, tells the shell to treat the following
+The "", or backslash, tells the shell to treat the following
 character as a normal character and do no expansion.
 
     $ ls \*file

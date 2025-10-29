@@ -45,15 +45,15 @@ Try it out!
 The little AWK program that we\'ve just entered on the command line
 consists of two parts:
 
-1.  The part preceding the curly braces (*\$1 \> 1000000*) says \"Do
+1.  The part preceding the curly braces (*\$1 \> 1000000*) says "Do
     this for all lines where the value of field no. 1 is greater than
-    1,000,000.\"
-2.  The part inside the curly braces (*print \$2, \$1*) says \"Print
-    field no. 2, followed by field no. 1.\"\
+    1,000,000."
+2.  The part inside the curly braces (*print \$2, \$1*) says "Print
+    field no. 2, followed by field no. 1."\
 
-What the combined program says is: \"For all lines, if the value of the
+What the combined program says is: "For all lines, if the value of the
 first field is greater than 1,000,000, print the second field of the
-line followed by the first field of the line.\"  (Note that AWK programs
+line followed by the first field of the line."  (Note that AWK programs
 entered on the command line are usually enclosed in single quotation
 marks in order to prevent the shell from interpreting them.)
 
@@ -84,9 +84,9 @@ Let\'s look at another example:
     Rank 5 - Boyer
 
 The program, again consisting of a single statement, may be paraphrased
-like this: \"For each line, if the value of field no. 4 equals 2007,
+like this: "For each line, if the value of field no. 4 equals 2007,
 print the word \'Rank\', followed by the value of the variable \'NR\',
-followed by a dash (\'-\'), followed by field no. 3.\"
+followed by a dash (\'-\'), followed by field no. 3."
 
 So what this little program does is print the surnames of all high score
 holders having set their record in 2007 along with their respective
@@ -118,8 +118,8 @@ have entered on a single command line):
 ### First statement
 
 *pattern*: BEGIN\
-*action*: print \"Together, the five best Donkey Kong players have
-achieved:\"
+*action*: print "Together, the five best Donkey Kong players have
+achieved:"
 
 ### Second statement
 
@@ -130,7 +130,7 @@ achieved:\"
 
 *pattern:* END\
 *action*: print the value of the variable *total*, followed by the
-string \"points\"
+string "points"
 
 OK, now let\'s look at what is new in this short AWK program.
 
@@ -149,12 +149,12 @@ called *total*. AWK variables do not need to be declared explicitly; you
 can introduce new ones by simply using them.  In our example program,
 the value of the variable *total*, starting out at 0 (zero), is
 increased by the value of field no. 1 for each input line. The +=
-operator means \"add the math expression on the right to the variable on
-the left.\"
+operator means "add the math expression on the right to the variable on
+the left."
 
 So after all input lines have been read, *total* contains the sum of all
 field 1 values, that is, the sum of all high scores.  The END statement
-outputs the value of *total* followed by the string \"points\".\
+outputs the value of *total* followed by the string "points".\
 
 ## Where to go from here?
 

@@ -90,7 +90,7 @@ command line even faster:\
    Ctrl + e\                           Move to the end of the line
   ----------------------------------- -----------------------------------
 
-**Hint:** The German word for \"beginning\" is Anfang. Would you ever
+**Hint:** The German word for "beginning" is Anfang. Would you ever
 forget such a strange word? Let\'s hope not, because it can help you
 remember that **Ctrl + a** takes you to the beginning of the command
 line.
@@ -119,27 +119,27 @@ Two of the most commonly used editing commands are the following:
 
 The two commands take a while to get used to, but both are very useful.
 While the main use of **Ctrl + t** is to correct typos, **Alt + t** is
-often used to \"drag\" a word forward on the command line. Have a look
+often used to "drag" a word forward on the command line. Have a look
 at the following command line (the underline marks the position of the
 cursor):
 
     $ echo one two three four
 
 If you press **Alt + t** in this situation, the word before the cursor
-(\"one\") is exchanged with the word after the cursor (\"two\"). Try it
+("one") is exchanged with the word after the cursor ("two"). Try it
 out! The result should look like this:
 
     $ echo two one three four
 
-You will notice two things. First, the order of the words \"one\" and
-\"two\" has been reversed. Second, the cursor has moved forward along
-with the word \"one\". Now, the cool thing about the cursor\'s moving
+You will notice two things. First, the order of the words "one" and
+"two" has been reversed. Second, the cursor has moved forward along
+with the word "one". Now, the cool thing about the cursor\'s moving
 along is that you just need to press **Alt + t** once more in order to
-transpose \"one\" with the following word, \"three\":
+transpose "one" with the following word, "three":
 
     $ echo two three one four
 
-So, by pressing **Alt + t** repeatedly, you can \"drag\" forward the
+So, by pressing **Alt + t** repeatedly, you can "drag" forward the
 word before the cursor until it has reached the end of the command line.
 (Of course, you can do the same with a single character by using
 **Ctrl + t**.)
@@ -166,7 +166,7 @@ Here are some handy commands for deleting/killing text:
 Note that **Alt + d** and **Alt + Backspace** do not delete text, but
 kill it. Killing is different from deleting in that deleted text is
 gone, but killed text may be brought back to life (the term is
-\"yanked\") later on by using the following command:
+"yanked") later on by using the following command:
 
   ----------------------------------- -----------------------------------
    Ctrl + y\                           Reinsert (yank) text that was
@@ -179,18 +179,18 @@ Let\'s see how this works by way of an example:
     $ echo one two
 
 Again, the cursor position is indicated by an underline. If you press
-**Alt + Backspace** in this situation, the word \"two\" as well as the
+**Alt + Backspace** in this situation, the word "two" as well as the
 whitespace after it will be killed, leaving the command line like this:
 
     $ echo one
 
-If you now press **Ctrl + y**, the killed text is \"yanked\" back into
+If you now press **Ctrl + y**, the killed text is "yanked" back into
 the command line. You can do this several times. If you press **Ctrl +
 y** three times, for example, you end up with the following line:\
 
     $ echo one two two two
 
-As you can see, killing text is much like the \"cut\" function of most
+As you can see, killing text is much like the "cut" function of most
 modern text editors. Note that text which is not killed, but deleted (by
 pressing **Ctrl + d**) cannot be reinserted into the command line. The
 only way to get it back is to use the undo function, which will be
@@ -261,7 +261,7 @@ shell and enter the following commands:
 After you have entered these commands, you are left with an empty
 command line waiting for your input. Now, press **Ctrl + p**. You will
 notice that the previously entered command appears on your command line:
-`echo four`. If you press **Ctrl + p** once more, you move \"up\" in the
+`echo four`. If you press **Ctrl + p** once more, you move "up" in the
 history even further, so that `echo three` appears on the command line.
 Now, press **Ctrl + n**, and you will see that you have come back to
 `echo four`: **Ctrl + n** works exactly like **Ctrl + p**, but the other
@@ -284,13 +284,13 @@ searchable. This is most commonly done by using the command **Ctrl +
 R**. Again, let\'s assume that you have entered the commands `echo two`,
 `echo three` and `echo four`. Try pressing **Ctrl + R** now. You will
 notice that a new prompt appears which says something like
-\"reverse-i-search\". If you now enter the letter \"t\", you immediately
-jump back in history to the last command line containing \"t\", which is
+"reverse-i-search". If you now enter the letter "t", you immediately
+jump back in history to the last command line containing "t", which is
 of course **echo three**. From there, you can use **Ctrl + p** and
 **Ctrl + n** to navigate the history as explained above. Or you can
-modify the search by entering a second letter, let\'s say \"w\". You
+modify the search by entering a second letter, let\'s say "w". You
 then jump to the command **echo two**, because it is the nearest command
-in history containing the letter sequence \"tw\". Or you can just cancel
+in history containing the letter sequence "tw". Or you can just cancel
 the search by pressing **Ctrl + g**.
 
 If you feel a bit lost in using the shell\'s history functions, don\'t
@@ -316,11 +316,11 @@ correct the mistake:
     namely the wrongly entered command line.
 2.  Press **Ctrl + a** to move the cursor to the beginning of the line.
 3.  Press **Alt + f** to move the cursor forward by one word. The cursor
-    is now located between the wrongly entered words \"echoo\" and
-    \"ne\".
-4.  Press **Ctrl + t**. You will see that the \"o\" preceding the cursor
-    and the whitespace under the cursor have been transposed: \"echoo
-    ne\" has become \"echo one\".
+    is now located between the wrongly entered words "echoo" and
+    "ne".
+4.  Press **Ctrl + t**. You will see that the "o" preceding the cursor
+    and the whitespace under the cursor have been transposed: "echoo
+    ne" has become "echo one".
 5.  Finally, press **Enter** to execute the corrected command line.
 :::
 
