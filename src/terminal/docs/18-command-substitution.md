@@ -1,6 +1,6 @@
 # Command Substitution
 
-In the shell, you can execute one command inside another. Here\'s a
+In the shell, you can execute one command inside another. Here's a
 simple example:
 
     grep `date +%b` apache_error_log
@@ -9,7 +9,7 @@ The **back-quote** key (also called the backtick) is usually located at
 the same place as the tilde, above the **Tab** key (dependent on your
 keyboard layout).
 
-The command within the backticks \`\` is executed first. The output is
+The command within the backticks (``) is executed first. The output is
 then plugged into the larger command. So first the shell executes:
 
     date +%b
@@ -37,7 +37,7 @@ month:
 So what is the effect of our command? It displays all the log messages
 from *apache_error_log* that were logged during the current month. (Of
 course, if there are multiple years in a single log file, you could get
-messages from March of previous years\--but this example is meant to be
+messages from March of previous years--but this example is meant to be
 simple.) By embedding the `date` command in the `grep` command, we have
 created a command we can store and execute any time without having to
 specify the right month. For instance, we could store this in the
@@ -46,7 +46,7 @@ specify the right month. For instance, we could store this in the
     alias monthlog="grep `date +%b` apache_error_log"
 
 Now we have our very own command, `monthlog`, to display current Apache
-log messages.\
+log messages.
 
 In Bash, you can do the same thing with a syntax many people find
 simpler:
@@ -54,19 +54,16 @@ simpler:
     grep $(date +%b) apache_error_log
 
 Instead of backticks, insert a dollar sign and put the command between
-parentheses.\
+parentheses.
 
-Command substitution is like a pipe (the \| character). But command
+Command substitution is like a pipe (the `|` character). But command
 substitution is more flexible than a pipe because you can put one
 command anywhere you want inside another. There is one other subtle
 difference: a pipe allows both commands to execute at the same time. If
-an embedded command takes a long time, the outer command doesn\'t
+an embedded command takes a long time, the outer command doesn't
 execute at all until the embedded one is done.
 
 If the embedded command could produce output that is more than one word
 (such as "Mar 09") you can pass it as a single argument by enclosing
 the command in double quotes. The `grep` command in this section, for
 instance, requires the string to be passed as a single argument.
-:::
-
-

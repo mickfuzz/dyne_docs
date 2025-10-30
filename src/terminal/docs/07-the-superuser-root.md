@@ -44,6 +44,3 @@ typo. It is much safer to do your home system administration using
 If other people share your system and you want to give someone superuser
 privileges, for this you need to know a little more about System
 Administration.
-:::
-
-

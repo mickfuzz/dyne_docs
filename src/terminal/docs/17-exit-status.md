@@ -9,12 +9,12 @@ a command fails.
 
 To facilitate this, when a command finishes it returns an *exit status*.
 The exit status is not normally displayed; instead it is placed in a
-variable (a named memory slot) named "**\$?**". The exit status is a
+variable (a named memory slot) named "**$?**". The exit status is a
 number between 0 and 255 (inclusive); zero means success, and any other
 value means a failure.
 
 One way to see the exit status of a command is to use the `echo` command
-to display it:\
+to display it:
 
     $ echo "this works fine"
     this works fine
@@ -25,13 +25,13 @@ to display it:\
     $ echo $?
     127
 
-Now we\'ll look at various ways to handle errors.\
+Now we'll look at various ways to handle errors.
 
 ## if/then
 
 Handling an error is an example of something you do conditionally: *if*
 something happens, *then* you want to take action.   The shell provides
-a compound command\--a command that runs other commands\--called `if`.
+a compound command--a command that runs other commands--called `if`.
 The most basic form is:
 
     if
@@ -42,8 +42,8 @@ The most basic form is:
 
 We will start with a basic example, then improve it to make it more
 useful.  After we type `if` and press the **Enter** key, the shell knows
-we\'re in the middle of a compound command, so it displays a different
-prompt (**\>**) to remind us of that.
+we're in the middle of a compound command, so it displays a different
+prompt (**>**) to remind us of that.
 
 ``` SCREEN
 $ if
@@ -71,7 +71,7 @@ Adding an `else` clause allows us to specify what to run on failure:
       <commands-if-failed>
     fi
 
-Let\'s run `apropos` if the `man` command fails.
+Let's run `apropos` if the `man` command fails.
 
 ``` SCREEN
 $ if
@@ -92,7 +92,7 @@ activating the else clause.
 ## && and ||
 
 The if-then construct is very useful, but rather verbose for chaining
-together dependent commands.  The "*&&*" *(and)* and "*\|\|*" *(or)*
+together dependent commands.  The "*&&*" *(and)* and "*||*" *(or)*
 operators provide a more compact format.
 
     command1 && command2 [&& command3]...
@@ -113,7 +113,7 @@ fails, no subsequent command is run.  We take advantage of this property
 to prevent unwanted effects (like creating *mail.log* in the wrong
 directory in the above example).
 
-If *&&* is the equivalent of `then`, the *\|\| operator* is the
+If *&&* is the equivalent of `then`, the *|| operator* is the
 equivalent of `else`.  It provides us a mechanism to specify what
 command to run if the first fails.
 
@@ -135,11 +135,11 @@ isolation, but they can be mixed as well.
       man $1 && echo "you now know more about $1" || apropos $1
     }
 
-As you probably suspect, the "you now know\..." echo is not exactly
+As you probably suspect, the "you now know..." echo is not exactly
 the most useful command.  (It might not even be accurate, perhaps the
 `man` page introduced so many options and confused the poor user).  We
 heartily confess we threw it in just to match the original if-then
-syntax.  Now that we know about the *\|\| operator*, we can simplify the
+syntax.  Now that we know about the *|| operator*, we can simplify the
 function to:
 
     $ function helpme() {
@@ -159,7 +159,7 @@ For example, if you invoke an inexistent command (e.g. by wrongly typing
 an existing one or by omitting its correct path), you should expect to
 receive the standard notification of "command not found" which is
 generally associated with the exit status 127.  We encountered this
-value at the very beginning of this chapter:\
+value at the very beginning of this chapter:
 
     $ hhhhhh
     bash: hhhhhh: command not found
@@ -191,7 +191,7 @@ your system without modifying the system status, so you may think this
 should be possible without the need to be root.  It is often possible,
 but not always.  For example, you may check the status of the `ssh` and
 `at` services: the first one is normally readable while the second one
-may not:\
+may not:
 
     $ /etc/init.d/sshd status
     sshd (pid 1234) is running...
@@ -204,7 +204,7 @@ may not:\
 It may happen that an invoked command takes a long time to complete.  If
 that command is needed to generate or modify information which is
 required by your subsequent commands, then you should check that the
-time-demanding command you\'ve started has not been unexpectedly
+time-demanding command you've started has not been unexpectedly
 terminated its execution.  This is different from checking that the
 command correctly terminated (exit status 0).  That command may
 encounter an error condition and decide to terminate with a non-zero
@@ -213,7 +213,7 @@ cannot choose its exit status because it cannot terminate at all.
 Whether an infinite loop inside the command requires an extern
 intervention or a premature extern intervention overrides the correctly
 running command,  an INT signal (which is a user interrupt) may be sent
-to the command by hitting **ctrl + c** or killing the command via:\
+to the command by hitting **ctrl + c** or killing the command via:
 
     $ kill -int pid-of-the-command
 
@@ -221,7 +221,7 @@ Such kind of termination may alter the expected output of the
 interrupted command and break some subsequent manipulation of that
 output.  When an INT signal terminates a command, a 130 exit status is
 returned.  For instance, consider the `yes` command which requires a
-**ctrl + c** to terminate:\
+**ctrl + c** to terminate:
 
     $ yes
     y
@@ -235,6 +235,3 @@ returned.  For instance, consider the `yes` command which requires a
 That covers the concept of exit status and using it to control the flow
 of your command and scripts. We hope you leave this chapter with an exit
 status of zero!
-:::
-
-

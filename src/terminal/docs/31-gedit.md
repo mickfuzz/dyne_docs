@@ -14,17 +14,17 @@ height="456"}
 This looks like most basic editors on any operating system. You can use
 Gedit through the GUI, and the commands are simple:
 
-**File-\>Open** : Opens an existing file
+**File->Open** : Opens an existing file
 
-**File-\>New** : Creates a new (blank) file
+**File->New** : Creates a new (blank) file
 
-**File-\>Save** : Saves a file
+**File->Save** : Saves a file
 
 **ctrl + c** : copy
 
-**ctrl + v** : paste\
+**ctrl + v** : paste
 
-That\'s all you really need to do. To add text just type!
+That's all you really need to do. To add text just type!
 
 ## Line Numbers
 
@@ -37,7 +37,4 @@ height="456"}
 This can be handy information to know. If you keep track of the line
 numbers you can use these to jump quickly around the text file by using
 the "Go to Line" feature. This can be accessed via the interface
-(**Search -\> Go to Line**) or via the shortcut **ctrl** + **i**.
-:::
-
-
+(**Search -> Go to Line**) or via the shortcut **ctrl** + **i**.

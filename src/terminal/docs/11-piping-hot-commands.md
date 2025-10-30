@@ -5,7 +5,7 @@ the input for another. The term "output" has a precise meaning here:
 it is what the program writes to the standard output, via C program
 statements such as printf or the equivalent, and normally it appears on
 the terminal screen. And "input" is the standard input, usually coming
-from the keyboard. Pipes are built using a vertical bar ("\|") as the
+from the keyboard. Pipes are built using a vertical bar ("|") as the
 pipe symbol.
 
 Say you help your eccentric Aunt Hortense manage her private book
@@ -68,11 +68,11 @@ command:
 A little explanation here. The `-d` option chose a colon as the
 delimiter (separator). This tells `cut` to break up each line wherever a
 delimiter appears, and each separate part of the line is called a field.
-In our format, the author\'s name appears as the first field, so we have
+In our format, the author's name appears as the first field, so we have
 put a 1 with the `-f` option to tell `cut` that we want to see just that
 field.
 
-But you\'ll notice the list is unsorted again. Pipelines to the rescue!
+But you'll notice the list is unsorted again. Pipelines to the rescue!
 
     $ sort books | cut -d: -f1
     Bartlett, John
@@ -89,16 +89,16 @@ But you\'ll notice the list is unsorted again. Pipelines to the rescue!
     Shakespeare, William
     Shakespeare, William
 
-Voila! You\'ve taken the alphabetized list, which is the output of the
-`sort` command, and fed it as input to the `cut` command. Don\'t give
+Voila! You've taken the alphabetized list, which is the output of the
+`sort` command, and fed it as input to the `cut` command. Don't give
 the `cut` command a filename to use, because you want it to operate on
-the text that\'s piped out of the `sort` command.
+the text that's piped out of the `sort` command.
 
-Pipes are just that simple\--text flows down the pipe from one command
-to the next.\
+Pipes are just that simple--text flows down the pipe from one command
+to the next.
 
 How about if you wanted a sorted list of titles instead? Since the title
-is the second field, let\'s try using `-f2` with the `cut` command
+is the second field, let's try using `-f2` with the `cut` command
 instead of `-f1`:
 
     $ sort books | cut -d: -f2
@@ -143,13 +143,13 @@ is probably true. But suppose that Aunt Hortense is in the habit of
 asking odd questions about her collection. For example, she wants to
 know how many books she has from each author named John. A spreadsheet
 or other graphical program may have difficulty handling a request that
-wasn\'t anticipated by the program\'s authors. But the shell offers us
+wasn't anticipated by the program's authors. But the shell offers us
 many small, simple commands that can be combined in unforeseen ways to
 accomplish a complex task.
 
 To find a particular string in a line of text, use the `grep` command.
 Now remember that when you combine commands, they need to go in the
-proper order. You can\'t run `grep` against the file first, because it
+proper order. You can't run `grep` against the file first, because it
 will match the title "John Barleycorn" in addition to authors named
 John. So add it to the end of the pipeline:
 
@@ -163,12 +163,12 @@ John. So add it to the end of the pipeline:
     Mill, John Stuart
     Milton, John
 
-This gets us close, but you don\'t want to get "Samuel Johnson" on the
+This gets us close, but you don't want to get "Samuel Johnson" on the
 list and make Aunt Hortense angry. Often when working with `grep` you
 will need to refine the matching text to get exactly what you need.
 `grep` happens to offer a `-w` option that will let it match "John"
-only when "John" is a complete word, not when it\'s part of
-"Johnson". But we\'ll solve this particular dilemma by adding a comma
+only when "John" is a complete word, not when it's part of
+"Johnson". But we'll solve this particular dilemma by adding a comma
 and space on the front of the string to match, so it will match only
 when John is a first name:
 
@@ -181,7 +181,7 @@ when John is a first name:
     Mill, John Stuart
     Milton, John
 
-Ah, that\'s better. Now you just need to total up the number of books
+Ah, that's better. Now you just need to total up the number of books
 for each author. A little command called `uniq` will work nicely. It
 removes duplicate lines (duplicates must be on consecutive lines, so be
 sure your text is sorted first), and when used with the `-c` option also
@@ -196,7 +196,7 @@ provides a count:
 And there you are! A nicely sorted list of Johns and the number of books
 from each. For our example set this is a simple job, one you could even
 do with pencil and paper. But this very same pipeline can be used to
-process far more data\--it won\'t blink even if Aunt Hortense has
+process far more data -- it won't blink even if Aunt Hortense has
 hundreds of thousands of books stored in the barn.
 
 System administrators often use pipelines like these to deal with log
@@ -209,7 +209,7 @@ A nice thing about building pipelines is that you can do it one command
 at a time, seeing exactly what effect each one has on the output. This
 can help you discover when you might need to tweak options or rearrange
 the order of commands. For instance, to put the authors in ranking
-order, you can just add a `sort -nr` to the previous pipeline:\
+order, you can just add a `sort -nr` to the previous pipeline:
 
     $ cut -d: -f1 books | sort | grep ", John" | uniq -c | sort -nr
           3 Mill, John Stuart
@@ -218,6 +218,3 @@ order, you can just add a `sort -nr` to the previous pipeline:\
           1 Bartlett, John
 
 Experiment!
-:::
-
-

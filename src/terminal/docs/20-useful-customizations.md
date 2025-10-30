@@ -2,9 +2,9 @@
 
 You can really make the shell your own, adapting every facet to the way
 you work (and even the different ways you work from week to week). In
-this section we\'ll look at quick changes you can make. Scripting, a way
+this section we'll look at quick changes you can make. Scripting, a way
 to extend and combine the functions offered by the shell, will be
-introduced later.\
+introduced later.
 
 ## Variables
 
@@ -12,8 +12,8 @@ Each command-line shell has the concept of a *variable*.  Variables
 consist of two parts: the variable  *name* and the variable *value*.  If
 I were to say "x=6", "x" is the name of the variable, and "6" is
 the value.  To see the value of a variable, one puts a dollar sign in
-front of the variable name.  Here is a very simple example.\
-\
+front of the variable name.  Here is a very simple example.
+
 
     $ x=6
     $ echo $x
@@ -24,15 +24,15 @@ Above, the first line *assigns* the value 6 to the variable x and the
 second line asks the shell to display the value of x. Note that we put
 the dollar sign in front of the variable name when we want to see its
 value, but we [never]{.underline} use the dollar sign when assigning the
-value.\
+value.
 
-So anything starting with a dollar sign (\$) is interpreted by the shell
+So anything starting with a dollar sign ($) is interpreted by the shell
 as a variable. One variable sneaked into an earlier section on exit
-status: you saw that **\$?** contains the exit status of the previous
+status: you saw that **$?** contains the exit status of the previous
 command.
 
 Now, what kind of useful things can we do with variables? A common use
-is to save typing. Say that the files for the project you\'re working on
+is to save typing. Say that the files for the project you're working on
 all week are located in a directory called
 */home/jsmith/projects/foo/confoobulator*.
 */home/jsmith/projects/foo/confoobulator* is a lot to type, but you can
@@ -48,7 +48,7 @@ You can remove the value of a variable by setting it to an empty string:
 
     $ VAR=""
 
-or by issuing the `unset` builtin command:\
+or by issuing the `unset` builtin command:
 
     $ unset VAR
 
@@ -71,15 +71,15 @@ be used by any command that my shell runs.
 
 The shell provides a lot of its own variables. For instance, the output
 of the `whoami` command (which was shown near the beginning of the book)
-is the same as \$USER. Your home directory is stored in \$HOME. You can
-see any variable\'s value by echoing it:
+is the same as $USER. Your home directory is stored in $HOME. You can
+see any variable's value by echoing it:
 
     $ echo $HOME
 
 The first dollar sign shown in that example is just a prompt; it has
 nothing to do with variables.
 
-You can see the shell\'s built-in variables (actually a subset known as
+You can see the shell's built-in variables (actually a subset known as
 *environment* variables) through:
 
     $ env
@@ -99,48 +99,48 @@ the same. You will find some of these useful in later work.
     this is the username you typed in.
 -   PATH is a list of directories, separated by colons.  When you run a
     command (like `cat` or `ls`), your shell looks in these directories
-    to find the executable program.  We\'ll talk more about PATH in just
-    a moment.\
+    to find the executable program.  We'll talk more about PATH in just
+    a moment.
 -   PWD is your current working directory (that is, the folder you are
     in).
 -   HOME is your home directory.  You start out in this directory when
     you first log in.
--   \_ is the last executed command. In this case, /usr/bin/env.\
+-   `_` is the last executed command. In this case, /usr/bin/env.
 
 ## Controlling Variable Expansion
 
-If you jam a variable up against other characters, the shell won\'t
-recognize it. For instance, the following won\'t work:
+If you jam a variable up against other characters, the shell won't
+recognize it. For instance, the following won't work:
 
     $ curr=myfile
     $ rm $curr1.jpeg
     rm: .jpeg: No such file or directory
 
-The error message could easily be perplexing. Here\'s what has happened:
-the shell saw a variable named ****\$curr1****. When it couldn\'t find
+The error message could easily be perplexing. Here's what has happened:
+the shell saw a variable named ****$curr1****. When it couldn't find
 any such variable, it substituted an empty string. So you ended up
-trying to execute:\
+trying to execute:
 
     $ rm .jpeg
 
 If you want to remove *myfile1.jpeg*, use curly braces around the
-variable so the shell knows where the variable name ends:\
+variable so the shell knows where the variable name ends:
 
     $ rm ${curr}1.jpeg
 
 ## The Search Path
 
-We\'ve looked at several examples of running commands.  If I type "ls
+We've looked at several examples of running commands.  If I type "ls
 -l" on the command line, then my shell runs the `ls` command, which
 makes a list of files.  The `ls` command is actually a program sitting
-on your computer\'s hard drive.  You can ask your shell where a command
+on your computer's hard drive.  You can ask your shell where a command
 lives by using the `which` command.   If I type
 
     $ which ls
 
 then my shell responds with "/bin/ls", which tells me the `ls` command
 is a program that lives in the */bin* directory of my hard drive.   We
-can even use the `ls` command to look at itself\
+can even use the `ls` command to look at itself
 
     $ ls -l /bin/ls
     -rwxr-xr-x 1 root root 92672 2007-01-30 15:48 /bin/ls
@@ -152,14 +152,14 @@ My shell found the `ls` command by using the PATH environment variable.
 The value of PATH is a list of directories, separated with colons. When
 I typed `ls`, my shell looked for the command in */usr/local/bin/ls*,
 then */usr/bin/ls*, and finally */bin/ls*.  */bin/ls* is where the
-command lives, so my shell was able to run that.  If there wasn\'t a
+command lives, so my shell was able to run that.  If there wasn't a
 */bin/ls*, then my shell would have tried */usr/games/ls*, and then
-given up.\
+given up.
 
 ## Configuration Files
 
-You may have seen a lot of nice customizations in the book\--or even
-better, thought up a few customizations of your own\--and may be ready
+You may have seen a lot of nice customizations in the book--or even
+better, thought up a few customizations of your own--and may be ready
 to save some of them so you can reuse them in every terminal session.
 Anything you define in the shell is lost when you close the terminal
 window. So this is a good time to look at configuration files, which
@@ -172,8 +172,8 @@ chose to put on your desktop.
 
 How are these directories hidden? Through a simple convention: any file
 that begins with a dot (.) is considered hidden. Your file manager in
-your desktop won\'t show you the files unless you choose a special
-option to display hidden files. Similarly, the shell doesn\'t display
+your desktop won't show you the files unless you choose a special
+option to display hidden files. Similarly, the shell doesn't display
 them by default in an `ls` command. To display them in the shell, add
 the `-a` (for "all") option:
 
@@ -189,8 +189,8 @@ the `-a` (for "all") option:
     examplefile
 
 In the previous listing (which will look different on your system) the
-*.bashrc* and *.profile* files are what we\'re particularly interested
-in. These are where you can put your customizations. It doesn\'t matter
+*.bashrc* and *.profile* files are what we're particularly interested
+in. These are where you can put your customizations. It doesn't matter
 much which one you choose. The *.bashrc* file is particular to a type of
 shell (there are many types) called Bash, whereas *.profile* is read by
 other shells in case you decide to use something besides Bash.
@@ -198,8 +198,8 @@ other shells in case you decide to use something besides Bash.
 Bash configuration works in a very simple manner: Bash just executes the
 commands when it starts up, exactly as if you typed them in before you
 did anything else. So anything you see in this section that you
-like\--an alias, a function, a change to an environment variable,
-etc.\--you can put in a configuration file. Entire scripts can be
+like--an alias, a function, a change to an environment variable,
+etc.--you can put in a configuration file. Entire scripts can be
 included.
 
 Your startup files likely have commands in them already. Some are
@@ -207,7 +207,7 @@ installed along with the operating system, while others are added by
 system administrators at workplaces. To change these customizations or
 add your own, check out the section on text editors in this book. Pick
 one editor and learn a dozen or so of its basic commands so you can do
-the minimal editing needed to put in your customizations.\
+the minimal editing needed to put in your customizations.
 
 ## Functions
 
@@ -228,9 +228,9 @@ day:
 
 To save your commands as a function, issue a command named `function`
 followed by the name you want to assign it, and the commands in curly
-braces. Note that we\'ve used hash marks (#) to add some comments so we
+braces. Note that we've used hash marks (#) to add some comments so we
 will remember what the function is for later. The shell ignores the hash
-mark and any text that follows on that line.\
+mark and any text that follows on that line.
 
     function savelog {
     # Add information about this directory a log file, ~/save/log
@@ -252,16 +252,16 @@ complicated command that you run on different files, or other objects.
 For instance, here is a command that shows you the differences between
 the current version of a file and the most recently edited version, if
 you edit with Emacs. Emacs saves an old version of your file by creating
-another file with the same name but an added tilde (\~). In this
+another file with the same name but an added tilde (~). In this
 example, we view the differences between *txtfile* and the back-up
-*txtfile\~* version:
+*txtfile~* version:
 
     $ diff txtfile~ txtfile | less
 
 This is just complicated enough (and common enough) to be worth saving
 as a function. But you want to pass the filename as an argument so you
 can use the function on any file you edit. So specify the argument as
-\$1, a special variable that the function understands:\
+$1, a special variable that the function understands:
 
     function d~ {
     # Compare the Emacs back-up version with the current version.
@@ -273,7 +273,7 @@ can use the function on any file you edit. So specify the argument as
     $ d~ txtfile
 
 As you might guess, a function can take up to nine arguments, which you
-can refer to as \$1, \$2, up to and including \$9. If you want more than
+can refer to as $1, $2, up to and including $9. If you want more than
 nine arguments, you can save an argument and remove it from the list:
 
     function manyargs {
@@ -283,14 +283,14 @@ nine arguments, you can save an argument and remove it from the list:
     }
 
 The first thing this function does is save the first argument in its own
-**\$arg** variable. The `shift` command removes the \$1 argument and
+**$arg** variable. The `shift` command removes the $1 argument and
 shifts all the other arguments over, so that the second argument is now
-\$1. In the section on scripting, you\'ll see how to use loops to
+$1. In the section on scripting, you'll see how to use loops to
 process arguments or other items one by one.
 
-If you want to pass all the arguments to a command, use \$\*. For
+If you want to pass all the arguments to a command, use $*. For
 instance, the following `orth` function runs the spell utility on
-whatever string you pass:\
+whatever string you pass:
 
     function orth () {
       echo $* | spell
@@ -298,7 +298,7 @@ whatever string you pass:\
 
 Functions can contain compound statements, such as if/then blocks. To
 show how flexible and powerful the combination of functions and compound
-statements can be, we\'ll include here an if/then statement that was
+statements can be, we'll include here an if/then statement that was
 shown earlier in the section "Handling command failure".
 
     function helpme() {
@@ -312,7 +312,7 @@ So the following:
 
     $ helpme draw
 
- will now be equivalent to:\
+ will now be equivalent to:
 
       if man draw
         then echo "you now know more about draw"
@@ -320,14 +320,14 @@ So the following:
       fi
 
 As long as you can guess what errors or other conditions will occur, you
-can handle them automatically in a function.\
+can handle them automatically in a function.
 
 ## Sourcing in files
 
 If this chapter has gotten you excited about the possibilities of
 writing up your customizations and saving them in files, good. But you
 will eventually have lots of different functions that fall into various
-categories, and you\'ll find it confusing to keep them all in one file.
+categories, and you'll find it confusing to keep them all in one file.
 At this point, you can start storing commands, variable settings, and
 functions in various files that meet different needs, and read them into
 your *.bashrc* file or any other script. Just use a dot to read a file
@@ -335,7 +335,7 @@ and have its contents executed by the shell:
 
     .  scriptfile
 
-It\'s important to put a space after the dot, before the filename.\
+It's important to put a space after the dot, before the filename.
 
 ## Setting prompts
 
@@ -349,9 +349,9 @@ The default prompt looks something like
 
      user@host:~$
 
-where user is the login name, host is the name of the computer, \~ is
-the working directory, short for the user\'s home, typically in the form
-*/home/user*, and \$ means that the current user is not root.
+where user is the login name, host is the name of the computer, ~ is
+the working directory, short for the user's home, typically in the form
+*/home/user*, and $ means that the current user is not root.
 
 To change the prompt, give a new value to the environment variable PS1.
 To make the change permanent, put the assignment in your *.profile*
@@ -369,8 +369,8 @@ character. We will not attempt to explain all of these options here. See
   ------ ------------------------------------------------------------------------------------ ------- -----------------------------------------------------------------------------------------------------------------------
    \\a   an ASCII bell character (07)                                                           \\d   the date in "Weekday Month Date" format (e.g., "Tue May 26")
    \\\]  end a sequence of non-printing characters                                              \\e   an ASCII escape character (033)
-   \\h   the hostname up to the first \'.\'                                                     \\H   the hostname
-   \\j   the number of jobs currently managed by the shell                                      \\l   the basename of the shell\'s terminal device name
+   \\h   the hostname up to the first '.'                                                     \\H   the hostname
+   \\j   the number of jobs currently managed by the shell                                      \\l   the basename of the shell's terminal device name
    \\n   newline                                                                                \\r   carriage return
    \\s   the name of the shell, the basename of \$0 (the portion following the final slash)     \\t   the current time in 24-hour HH:MM:SS format
    \\T   the current time in 12-hour HH:MM:SS format                                            \\@   the current time in 12-hour am/pm format
@@ -405,10 +405,10 @@ a directory listing (`ls`).
 
 ## Superuser Privileges
 
-Besides the configuration files in each user\'s directory, the system
+Besides the configuration files in each user's directory, the system
 has a lot of configuration files that control system-wide behavior.
-Sometimes you\'ll find it necessary to edit one by hand, using a text
-editor. In this section we\'ll show how to grant someone superuser
+Sometimes you'll find it necessary to edit one by hand, using a text
+editor. In this section we'll show how to grant someone superuser
 privileges, a system-wide issue controlled by a file named
 */etc/sudoers*.
 
@@ -432,10 +432,10 @@ look like this.
     operator       ALL = DUMPS, KILL, SHUTDOWN, HALT, REBOOT, PRINTING,\
                            sudoedit /etc/printcap, /usr/oper/bin/
 
-(The \'\\\' character continues the permissions on the next line.) This
+(The `\` character continues the permissions on the next line.) This
 gives permission to run a specific set of commands, and to edit two
 specific configuration files, but no others. To give someone permission
-to run any superuser command using `sudo`, set the username\'s
+to run any superuser command using `sudo`, set the username's
 permission line to:
 
     username ALL = (ALL) ALL
@@ -546,7 +546,4 @@ European languages.
 If you need to type documents in more than one writing system, you
 probably need to move to X. But there are extended versions of Emacs and
 vim that can create plain text files in multiple writing systems, either
-in their own format or in Unicode.\
-:::
-
-
+in their own format or in Unicode.

@@ -403,7 +403,7 @@ sending it to `ls`.  So after expansion, the command would look like:
 
 If we want `ls` to find an asterisk something different is in order.
 
-The "", or backslash, tells the shell to treat the following
+The "\", or backslash, tells the shell to treat the following
 character as a normal character and do no expansion.
 
     $ ls \*file
@@ -426,7 +426,7 @@ quotes.
     *?****[a-b]
 
 Any string encased in single quotes will not be modified by the shell,
-even when it\'s filled with wildcards.  However, you cannot type a
+even when it's filled with wildcards.  However, you cannot type a
 single quote within the single quotes like this:
 
     $ ls '*?***'*[a-b]'
@@ -443,8 +443,3 @@ this:
 
 Simply to say, replace any occurence of a single quote in the filename
 with '\'.
-
-\
-:::
-
-

@@ -80,6 +80,3 @@ A program running in the background cannot accept input from the
 terminal.  So if you mistakenly put such a program in the background
 (and don't redirect input from a file through the < operator), it will
 get stuck waiting when it has to accept input.
-:::
-
-

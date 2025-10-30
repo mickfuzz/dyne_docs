@@ -127,6 +127,3 @@ around inside a single command.  Combined with the **Backspace** key,
 these let you change parts of the command and turn it into a new one.
 Each time you press the **Enter** key, you submit the modified command
 to the terminal and it runs exactly as if you had typed it from scratch.
-:::
-
-

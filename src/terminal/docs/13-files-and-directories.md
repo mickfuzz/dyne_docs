@@ -1,8 +1,8 @@
 # Files and Directories
 
-Although you\'re most interested in files in your own folder or
+Although you're most interested in files in your own folder or
 directory, it helps to know what else is on your system. In this chapter
-we\'ll look around a GNU/Linux system.
+we'll look around a GNU/Linux system.
 
 Here is a list of the most common directories right beneath the root
 directory (the one whose name is just "/"):
@@ -34,7 +34,7 @@ directory (the one whose name is just "/"):
              share, src, and more)
     /var     variable data preserved between reboots
 
-You don\'t need to know about the directory structure outside your home
+You don't need to know about the directory structure outside your home
 directory in order to run applications, but this knowledge occasionally
 comes in handy. Perhaps the most common uses are when you want to change
 a system-wide configuration file or view log messages. Log files
@@ -42,8 +42,8 @@ generally contain progress information and error reports from programs,
 and may reveal the source of problems (bugs, configuration errors,
 missing or corrupted files) on your system. Many log files are kept in
 the */var/log* directory, but some programs put their log files in
-hidden directories in the user\'s home directory. An example is
-\~/.sugar/default/logs.\
+hidden directories in the user's home directory. An example is
+\~/.sugar/default/logs.
 
 Historically, GNU/Linux system configuration was done through editing
 text files. Today, most popular GNU/Linux systems encourage users to
@@ -61,9 +61,4 @@ one).
 NOTE: For a full description of the file-system structure of a typical
 Linux system, try typing `man hier` in a terminal. This not only gives a
 brief on the above top-level directories, but also gives insight into
-why Linux has *both* a */usr/bin* and a */usr/sbin*, for instance.\
-
-\
-:::
-
-
+why Linux has *both* a */usr/bin* and a */usr/sbin*, for instance.

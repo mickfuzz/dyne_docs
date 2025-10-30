@@ -250,6 +250,3 @@ program:
 
 Just as with using `man`, use the arrow keys to navigate, and press
 **q** to quit.
-:::
-
-

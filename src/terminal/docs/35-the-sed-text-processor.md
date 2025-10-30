@@ -15,13 +15,13 @@ powerfully and faster:
 
      $ sed "s/foo/bar/g" inputfile > outputfile
 
-Let\'s break down this simple command. First we tell the shell to run
+Let's break down this simple command. First we tell the shell to run
 `sed`. The processing we want to do is enclosed in double quotation
-marks; we\'ll come back to that in a moment. We then tell Sed the name
-of the *inputfile* and use standard shell redirection (\>) to the name
+marks; we'll come back to that in a moment. We then tell Sed the name
+of the *inputfile* and use standard shell redirection (>) to the name
 of our *outputfile*. You can specify multiple input files if you want;
 Sed processes them in order and creates a single stream of output from
-them.\
+them.
 
 The expression looks complex but is very simple once you learn to take
 it apart. The initial "s" means "substitute". This is followed by
@@ -42,8 +42,8 @@ on the same line, only the first "foo" is changed to "bar".
     this has bar then bar then bar then bar
     this has bar then bar then bar then bar
 
-Now let\'s try that again without the `/g` on the command and see what
-happens.\
+Now let's try that again without the `/g` on the command and see what
+happens.
 
     $ cat testfile
     this has foo then bar then foo then bar
@@ -85,17 +85,17 @@ For example, you could change any instance of the words "cat",
 
      $ sed "s/ca[tnr]/dog/g" inputfile > outputfile
 
-In the next example, the first \[0-9\] ensures that at least one digit
-must be present to be matched. The second \[0-9\] may be missing or may
-be present any number of times, because it is followed by the \*
+In the next example, the first [0-9] ensures that at least one digit
+must be present to be matched. The second [0-9] may be missing or may
+be present any number of times, because it is followed by the *
 metacharacter. Finally, the digits are removed because there is nothing
 between the second and third slashes where you can put your replacement
 text.
 
      $ sed "s/[0-9][0-9]*//g" inputfile > outputfile
 
-Inside an expression, if the first character is a caret (\^), Sed
-matches only if the text is at the start of the line.\
+Inside an expression, if the first character is a caret (^), Sed
+matches only if the text is at the start of the line.
 
     $ echo dogs cats and dogs | sed "s/^dogs/doggy/"
     doggy cats and dogs
@@ -114,7 +114,7 @@ modified.
 
 The "d" command deletes an entire line that contains a matching
 pattern. Unlike the "s" (substitute) command, the "d" goes after the
-pattern.\
+pattern.
 
     $ cat testfile
     line with a cat
@@ -124,7 +124,7 @@ pattern.\
     $ cat newtestfile
     line with a dog
 
-The regular expression \^\$ means "match a line that has nothing
+The regular expression ^$ means "match a line that has nothing
 between the beginning and the end", in other words, a blank line. So
 you can remove all blank lines using the "d" command with that regular
 expression:
@@ -143,21 +143,21 @@ Specify the `-n` option, which means "do not print lines by default".
 
 End the pattern with "p" to print the line matched by the pattern.
 
-We\'ll show this with a file that contains names:\
+We'll show this with a file that contains names:
 
     $ cat testfile
     Mr. Jones
     Mrs. Jones
     Mrs. Lee                                                                        Mr. Lee
 
-We\'ve decided to standardize on "Ms" for women, so we want to change
+We've decided to standardize on "Ms" for women, so we want to change
 "Mrs." to "Ms". The pattern is:
 
-     s/Mrs\./Ms/
+     s/Mrs./Ms/
 
-and to print only the lines we changed, enter:\
+and to print only the lines we changed, enter:
 
-    $ sed -n "s/Mrs\./Ms/p" testfile
+    $ sed -n "s/Mrs./Ms/p" testfile
 
 ## Multiple Patterns
 
@@ -195,7 +195,7 @@ The `sed` command in that example had two patterns. The first pattern,
 "one", simply controls which lines Sed changes. The second pattern
 replaces "number" with "1" on those lines.
 
-This works with multiple patterns as well.\
+This works with multiple patterns as well.
 
     $ cat testfile
     one: number
@@ -250,18 +250,18 @@ two through three.
 Sometimes you might not know exactly how long a file is, but you want to
 go from a specified line to the end of the file. You could use `wc` or
 the like and count the total lines, but you can also use a dollar sign
-(\$) to represent the last line:
+($) to represent the last line:
 
     $ sed "25,$ s/number/1/" < testfile > testchangedfile
 
-The \$ in an address range is Sed\'s way of specifying, "all the way to
+The $ in an address range is Sed's way of specifying, "all the way to
 the end of the file".
 
 ## Scripting SED commands
 
 By using the `-f` argument to the `sed` command, you can feed Sed a list
 of commands to run. For example, if you put the following patterns in a
-file called *sedcommands*:\
+file called *sedcommands*:
 
     s/foo/bar/g
     s/dog/cat/g
@@ -272,11 +272,8 @@ You can use this on a single file by entering the following:
 
     $ sed -f sedcommands < inputfile > outputfile
 
-Note that each command in the file must be on a separate line.\
+Note that each command in the file must be on a separate line.
 
 There is much more to Sed than can be written in this chapter. In fact,
 whole books have been written about Sed, and there are many excellent
 tutorials about Sed online.
-:::
-
-

@@ -74,6 +74,3 @@ typed. When you navigate to an earlier command this way, it is then just
 necessary to press the **Return** or **Enter** key and the command will
 be re-executed. You can edit it first to make it do something
 different.
-:::
-
-

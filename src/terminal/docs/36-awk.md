@@ -4,7 +4,7 @@ AWK is a programming language designed for processing plain text data.
 It is named after its founders, Alfred **A**ho, Peter **W**einberger and
 Brian **K**ernighan.  AWK is quite a small language and easy to learn,
 making it the ideal tool for quick and easy text processing.  Its prime
-use is to extract data from table-like input.\
+use is to extract data from table-like input.
 
 Since programs written in AWK tend to be rather small, they are mostly
 entered directly on the command line.  Of course, saving larger scripts
@@ -13,7 +13,7 @@ as text files is also possible.
 In the next paragraphs, we present the basics of AWK through three
 simple examples.  All of them will be run on the following text file
 (containing the five highest scores ever achieved in the video game
-Donkey Kong as of March 2009):\
+Donkey Kong as of March 2009):
 
     1050200 Billy Mitchell 2007
     1049100 Steve Wiebe 2007
@@ -31,9 +31,9 @@ examples.
 
 ## Example 1
 
-Let\'s say we want to print only those scores higher than 1,000,000
+Let's say we want to print only those scores higher than 1,000,000
 points. Also, we want only the first names of the persons who have
-achieved the scores.  By using AWK, it\'s easy to extract this
+achieved the scores.  By using AWK, it's easy to extract this
 information:
 
     $ awk '$1 > 1000000 { print $2, $1 }' highscores.txt
@@ -42,14 +42,14 @@ information:
 
 Try it out!
 
-The little AWK program that we\'ve just entered on the command line
+The little AWK program that we've just entered on the command line
 consists of two parts:
 
-1.  The part preceding the curly braces (*\$1 \> 1000000*) says "Do
+1.  The part preceding the curly braces (*$1 > 1000000*) says "Do
     this for all lines where the value of field no. 1 is greater than
     1,000,000."
-2.  The part inside the curly braces (*print \$2, \$1*) says "Print
-    field no. 2, followed by field no. 1."\
+2.  The part inside the curly braces (*print $2, $1*) says "Print
+    field no. 2, followed by field no. 1."
 
 What the combined program says is: "For all lines, if the value of the
 first field is greater than 1,000,000, print the second field of the
@@ -72,11 +72,11 @@ single statement.)  An AWK program basically does the following:
 2.  For each line, AWK carries out all statements whose
     condition/pattern is met.
 
-Simple, isn\'t it?
+Simple, isn't it?
 
 ## Example 2
 
-Let\'s look at another example:
+Let's look at another example:
 
     $ awk '$4 == 2007 { print "Rank", NR, "-", $3 }' highscores.txt
     Rank 1 - Mitchell
@@ -85,8 +85,8 @@ Let\'s look at another example:
 
 The program, again consisting of a single statement, may be paraphrased
 like this: "For each line, if the value of field no. 4 equals 2007,
-print the word \'Rank\', followed by the value of the variable \'NR\',
-followed by a dash (\'-\'), followed by field no. 3."
+print the word 'Rank', followed by the value of the variable 'NR',
+followed by a dash ('-'), followed by field no. 3."
 
 So what this little program does is print the surnames of all high score
 holders having set their record in 2007 along with their respective
@@ -97,42 +97,42 @@ Since the table is sorted, the rank of each high score holder is equal
 to the row number of the entry.  And AWK can access the number of each
 row by means of the built-in variable NR (**N**umber of **R**ow).  AWK
 has quite a lot of useful built-in variables, which you can look up in
-its documentation.\
+its documentation.
 
 ## Example 3
 
 The third and final example is a bit more complex than the other two,
 since it contains three AWK statements in total:
 
-    $ awk 'BEGIN {print "Together, the five best Donkey Kong players have achieved:"}\
+    $ awk 'BEGIN {print "Together, the five best Donkey Kong players have achieved:"}
     {total += $1} END {print total, "points"}' highscores.txt
 
-This will output the following:\
+This will output the following:
 
     Together, the five best Donkey Kong players have achieved:
     4675600 points
 
-Let\'s break up this program into its three parts/statements (which we
+Let's break up this program into its three parts/statements (which we
 have entered on a single command line):
 
 ### First statement
 
-*pattern*: BEGIN\
+*pattern*: BEGIN
 *action*: print "Together, the five best Donkey Kong players have
 achieved:"
 
 ### Second statement
 
-*pattern:* none (= always execute *action*)\
+*pattern:* none (= always execute *action*)
 *action*: add the value of field no. 1 to the variable *total*
 
 ### Third statement
 
-*pattern:* END\
+*pattern:* END
 *action*: print the value of the variable *total*, followed by the
 string "points"
 
-OK, now let\'s look at what is new in this short AWK program.
+OK, now let's look at what is new in this short AWK program.
 
 First of all, the patterns BEGIN and END have a special meaning: the
 action following BEGIN is executed before any input is read and the
@@ -140,7 +140,7 @@ action introduced by END is executed when AWK has finished reading the
 input.
 
 In the second statement, we can observe that an AWK statement does not
-need a pattern, only *action* is obligatory.  If a statement doesn\'t
+need a pattern, only *action* is obligatory.  If a statement doesn't
 contain a pattern, the condition of the statement is always met and AWK
 executes the action for every single input line.
 
@@ -154,7 +154,7 @@ the left."
 
 So after all input lines have been read, *total* contains the sum of all
 field 1 values, that is, the sum of all high scores.  The END statement
-outputs the value of *total* followed by the string "points".\
+outputs the value of *total* followed by the string "points".
 
 ## Where to go from here?
 
@@ -165,7 +165,4 @@ appetizer.  If you want to learn more, we recommend you have a look at
 GAWK, the GNU implementation of AWK.  It is one of the most feature-rich
 implementations of the language, and comes with a comprehensive and easy
 to read manual (see
-[http://www.gnu.org/software/gawk/manual/](https://web.archive.org/web/20160417194719/http://www.gnu.org/software/gawk/manual/)).\
-:::
-
-
+[http://www.gnu.org/software/gawk/manual/](https://web.archive.org/web/20160417194719/http://www.gnu.org/software/gawk/manual/)).

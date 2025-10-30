@@ -23,13 +23,13 @@ command at the command line:
 As you can see, you can use Ruby to do basic mathematics. An important
 note about Ruby is that instead of printing a value only when you use
 *echo* (which is *puts* in Ruby) , Ruby will print out the result of
-whatever command you enter \-- this is what the "=\>" means. When you
+whatever command you enter -- this is what the "=>" means. When you
 enter the "10 + 10" command, the result is "20". Also, remember that
 you can use *exit* to get out of the `irb` program.
 
 To write a multi-line script in Ruby, you create a file and save it with
 a ".rb" at the end. You can use any text editor to create this file
-\-- Emacs, Vim, Gedit, or whatever your favorite is. A script could look
+-- Emacs, Vim, Gedit, or whatever your favorite is. A script could look
 like this:
 
     a = 1 + 2
@@ -57,7 +57,7 @@ Instead of separating them with spaces, we surround them in parenthesis.
 We also need to enclose all words in quotes - not just ones that have
 special characters in them.
 
- Let\'s try doing something with these files \-- here\'s a way to find
+ Let's try doing something with these files -- here's a way to find
 all of the ".rb" files in a directory:
 
     > files = Dir.entries('my-directory')
@@ -94,6 +94,3 @@ If you want to learn more about Ruby,
 is the homepage for Ruby, and
 [http://www.ruby-doc.org](https://web.archive.org/web/20160417194719/http://www.ruby-doc.org/)
 is a great place to find tutorials and documentation.
-:::
-
-

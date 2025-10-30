@@ -183,6 +183,3 @@ The parent directory of the root directory, /.., is root itself.
 
 Try moving around your computer on the command line and you will soon
 get used to it!
-:::
-
-

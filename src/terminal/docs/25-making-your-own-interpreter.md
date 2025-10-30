@@ -12,7 +12,7 @@ to the GUI approach have been discussed elsewhere in this manual. With
 bdc you can recall and re-execute complicated calculations, and you can
 make script files in which such calculations are saved.
 
- This is the source code, written for GNU-Linux:\
+This is the source code, written for GNU-Linux:
 
 
     /* The Brain-Dead Calculator.
@@ -168,12 +168,8 @@ Here are instructions for building and running bdc. We are doing it in
 -   Build the program by running the gcc command shown in the comment at
     top of bdc.c
 -   Run the program by typing **./bdc**
--   Give bdc commands strings at the **bdc\>** prompt, such as *1.23 s
+-   Give bdc commands strings at the **bdc>** prompt, such as *1.23 s
     3 + q*
-
-```{=html}
-<!-- -->
-```
 -   To quit, use the *x* command
 
 The bdc command interpreter starts at the beginning of a command string
@@ -193,7 +189,7 @@ stack and give an input prompt. You can then do more calculations. If
 you make it executable (**chmod +x example.bdc**) you can start bdc from
 the shell by typing **./example.bdc**. This has the same effect as
 typing **./bdc example.bdc**; in both cases the shell starts the bdc
-program and passes "example.bdc" as an argument.\
+program and passes "example.bdc" as an argument.
 
     #!/tmp/bdc
     # Calculate sin(1.5+sqrt(3.14))*7.9
@@ -213,11 +209,6 @@ writes text on a framebuffer screen, using a separate server program. In
 order to see the command line on the graphics screen, characters from
 stdout are packaged into server commands. Some of the command files
 demonstrate the technique of passing arguments to experix by including
-them on the "#!\..." line of the command file. Installation of experix
+them on the "#!..." line of the command file. Installation of experix
 is far from being simple and automated, but help is available by
-contacting the author.\
-
-
-:::
-
-
+contacting the author.

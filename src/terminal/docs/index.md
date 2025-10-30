@@ -148,4 +148,3 @@ You have to know how to interpret examples like the preceding one. All
 you type here is *date*. Then press the **Return** key. The word *date*
 in the example is printed in bold to indicate that it's something you
 type. The rest is output on the terminal.
-:::

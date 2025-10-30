@@ -1,18 +1,18 @@
 # Command Quick Survey
 
-In each of the command examples in this chapter, the dollar sign (\$) at
+In each of the command examples in this chapter, the dollar sign ($) at
 the beginning of the line is a minimal GNU/Linux command prompt. (Your
 default prompt is usually more complex.)
 
 The rest of the line is the command, with options and arguments. We use
 the following conventions.
 
--   Lines that do not begin with "\$ " are responses from the command
+-   Lines that do not begin with "$ " are responses from the command
     execution.
--   The "\|" character pipes the output of any command to another
+-   The "|" character pipes the output of any command to another
     command.
--   The "\>" character redirects the output of any command to a file.
--   To append output to a file, use "\>\>".
+-   The ">" character redirects the output of any command to a file.
+-   To append output to a file, use ">>".
 -   Many commands have no output. They succeed or fail silently, but
     return an error code that a script can use to decide what to do
     next.
@@ -21,25 +21,25 @@ the following conventions.
 -   The "&" character at the end of a command line says to execute the
     command in the background, and give the user prompt for the next
     command immediately.
--   The "\\" character at the end of a command line says that the
+-   The "" character at the end of a command line says that the
     command continues on the next line. Although the examples given in
     this manual are generally quite short, there are cases where
-    commands span five or six lines in script files.\
--   In \'*some text with spaces* \' and "*more text with spaces*", the
+    commands span five or six lines in script files.
+-   In '*some text with spaces* ' and "*more text with spaces*", the
     single and double quotes indicate that the text inside is one
     argument, including the trailing space in the first example. Without
     them, the shell would interpret each word as a separate argument and
     discard whitespace.
--   Backticks "\`\`" mark commands to be executed. The result is
+-   Backticks "``" mark commands to be executed. The result is
     substituted for the command.
 -   A number of commands have an option, usually written `-r` or `-R`,
     for applying the command to every file in every subdirectory of the
     location where the command starts its work. Since these options can
     be and are used for other functions, you should check the
-    documentation on any command where you want to use this capability.\
+    documentation on any command where you want to use this capability.
 
 A change that many people make is to put this command in their their
-startup file, *.bashrc* or *.profile*.\
+startup file, *.bashrc* or *.profile*.
 
     $ PATH=$PATH:.
 
@@ -47,57 +47,57 @@ This adds the current directory (.) to the path, so that you can execute
 your own private commands from one of your directories by changing to
 the directory and typing the command name. Without this, you have to
 type `./command` to execute a command in the current directory. Some
-people consider this a security risk. Some prefer\
+people consider this a security risk. Some prefer
 
     $ PATH=~/bin:$PATH
 
 so that they can execute scripts in a directory of their choosing that
 they own, and those scripts will take precedence over others of the same
 name. However they will not accidentally execute scripts randomly
-anywhere in the filesystem that they happen to be.\
+anywhere in the filesystem that they happen to be.
 
 ## ls
 
 `ls` is the command to list filenames.
 
 It can have options (Flags) added after the command with a minus sign
-"-".\
-Arguments (parameters) can also be added.\
-
+"-".
+Arguments (parameters) can also be added.
+```
 +-----------------------------------+-----------------------------------+
-| \$ ls                             | ordinary file listing             |
+| $ ls                              | ordinary file listing             |
 +-----------------------------------+-----------------------------------+
-| \$ ls \| less                     | pipe listing to less, which       |
-|                                   | displays it a page at a time\     |
+| $ ls | less                       | pipe listing to less, which       |
+|                                   | displays it a page at a time      |
 +-----------------------------------+-----------------------------------+
-| \$ ls \> filelist                 | redirect listing to file named    |
-|                                   | "filelist"                      |
+| $ ls > filelist                   | redirect listing to file named    |
+|                                   | "filelist"                        |
 +-----------------------------------+-----------------------------------+
-| \$ ls -l                          | long file listing (file sizes,    |
+| $ ls -l                           | long file listing (file sizes,    |
 |                                   | change times,..)                  |
 +-----------------------------------+-----------------------------------+
-| \$ ls -a                          | include filenames starting with   |
-|                                   | ".", normally not listed        |
+| $ ls -a                           | include filenames starting with   |
+|                                   | ".", normally not listed          |
 +-----------------------------------+-----------------------------------+
-| \$ ls -l -a                       | applies both the above options    |
+| $ ls -l -a                        | applies both the above options    |
 +-----------------------------------+-----------------------------------+
-| \$ ls -la                         | equivalent to the previous        |
+| $ ls -la                          | equivalent to the previous        |
 |                                   | command                           |
 +-----------------------------------+-----------------------------------+
-| \$ ls \*.fort                     | list files called                 |
-|                                   | "ANYTHING.fort"                 |
+| $ ls *.fort                       | list files called                 |
+|                                   | "ANYTHING.fort"                   |
 +-----------------------------------+-----------------------------------+
-| \$ ls -lat \*.fort                | the t means list them in time     |
+| $ ls -lat *.fort                  | the t means list them in time     |
 |                                   | order, not alphabetically         |
 +-----------------------------------+-----------------------------------+
-
+```
 
 These examples show the main points of all GNU/Linux commands.  They are
 short, they take options, they take parameters, you can user several
 options together, you can chain commands together with pipes, you can
 redirect the output of a command to a file.
 
-To list all files under a particular directory, use the `-R` option.\
+To list all files under a particular directory, use the `-R` option.
 
     $ ls -R
     photos1 photos2 photos3
@@ -124,11 +124,11 @@ they provide.
 
 You can get a summary of almost any GNU/Linux command with the `man`
 command or the more recently developed `info` command. If the `man`
-command doesn\'t work, it is probably because your shell can\'t find the
+command doesn't work, it is probably because your shell can't find the
 manual pages. This requires you to set the variable MANPATH to the
 correct directories. To find the directories that contain manual pages,
 try the following command. It means "print directories that have the
-name *man*":\
+name *man*":
 
     $ find / -type d -name man -print
 
@@ -157,11 +157,11 @@ you your "current working directory" or CWD. In directory
 specifications, "." stands for the current directory, and ".." for
 the parent directory. Paths starting with "/" are absolute, with no
 dependence on the current directory. Paths starting without a "/" are
-relative to the current directory.\
+relative to the current directory.
 
 An example directory name would be */home/allen/handy/scripts*. The full
 name starts with a slash "/" and directory names are separated by
-slashes. This differs from Windows, which uses the backslash "\\", and
+slashes. This differs from Windows, which uses the backslash "\", and
 Macintosh, which uses ":".
 
     $ pwd
@@ -172,22 +172,22 @@ Macintosh, which uses ":".
 Changes your CWD.
 
   ----------------------------------- -----------------------------------
-  \$ cd                               change to your "home directory"
+  $ cd                               change to your "home directory"
 
-  \$ cd  ..                           takes you to the parent directory,
-                                      for example from\
+  $ cd  ..                           takes you to the parent directory,
+                                      for example from
                                       /usr/lib to /usr
 
-  \$ cd Docs                          change to documents directory in
-                                      current directory,\
+  $ cd Docs                          change to documents directory in
+                                      current directory,
                                       if there is one (uses relative
                                       path)
 
-  \$ cd  /usr/lib                     takes you to the dir "/usr/lib"
-                                      from anywhere (uses absolute\
+  $ cd  /usr/lib                     takes you to the dir "/usr/lib"
+                                      from anywhere (uses absolute
                                       path)
 
-  \$ cd /                             The root directory - there are none
+  $ cd /                             The root directory - there are none
                                       above this.
   ----------------------------------- -----------------------------------
 
@@ -218,47 +218,40 @@ is no such file, it is created with nothing in it.
 
 ## rm
 
-This command removes files (and directories).\
+This command removes files (and directories).
 
 *By default, you get no second chance, and once files are gone they are
 irretrievable.* A nasty joke sometimes played on Newbies is to suggest
-"`rm -r *`" as the remedy for whatever problem they have. Don\'t try
+"`rm -r *`" as the remedy for whatever problem they have. Don't try
 this unless you want to install a new operating system from scratch
-anyway, and you have a complete, current backup.\
+anyway, and you have a complete, current backup.
 
+```
 +-----------------------------------+-----------------------------------+
-| \$ rm     filename(s)             |                                   |
+| $ rm     filename(s)              |                                   |
 +-----------------------------------+-----------------------------------+
-| \$ rm -r  filename(s)             | Remove directories and all their  |
+| $ rm -r  filename(s)              | Remove directories and all their  |
 |                                   | contents.                         |
 +-----------------------------------+-----------------------------------+
-| \$ rm -i  filename(s)             | Prompt for a y/n choice before    |
+| $ rm -i  filename(s)              | Prompt for a y/n choice before    |
 |                                   | each file (recommended!)          |
 +-----------------------------------+-----------------------------------+
-| \$ rm -f  filename(s)             | Do not complain if the file does  |
-|                                   | not exist.\                       |
+| $ rm -f  filename(s)              | Do not complain if the file does  |
+|                                   | not exist.                        |
 |                                   | Also overrides the -i flag.       |
 +-----------------------------------+-----------------------------------+
-
-\
-
-\
-\
-\
-\
-\
- \
+```
 
 ## ln
 
 Make hard links or symbolic (aka "soft") links to files. Both hard
-links and soft links are references to other files. If you don\'t know
+links and soft links are references to other files. If you don't know
 what an "inode" is, stick with using soft links. (Even if you *do*
 know what an inode is, chances are good that you will use soft links the
 vast majority of the time).
 
 A soft link is a special type of file that serves as an alias to another
-file (or directory) \-- same basic concept as "desktop shortcuts" in
+file (or directory) -- same basic concept as "desktop shortcuts" in
 Windows, where you have a shortcut icon on your desktop that points to a
 program, file, or folder that is located elsewhere on your computer.
 The file or directory that the link points to is called the "target"
@@ -266,10 +259,10 @@ of the link.
 
 When using `ln`, remember to include the `-s` option to choose soft type
 of link, and put the path to the target *before* the destination path
-for the new link.\
+for the new link.
 
 To create a soft link named "linkname" pointing to a target named
-"file":\
+"file":
 
     $ ln -s file linkname
 
@@ -283,40 +276,30 @@ giving the soft links the same names as the original files:
 
 This command copies files.
 
+```
 +-----------------------------------+-----------------------------------+
-| \$ cp file1 file2                 | Copies file1 over file2, if it    |
-|                                   | exists.\                          |
+| $ cp file1 file2                  | Copies file1 over file2, if it    |
+|                                   | exists.                           |
 |                                   | Creates file2 if it did not       |
-|                                   | exist.\                           |
+|                                   | exist.                            |
 +-----------------------------------+-----------------------------------+
-| \$ cp /etc /home/allen     \      | Copies  /etc to /home/allen/etc   |
+| $ cp /etc /home/allen             | Copies  /etc to /home/allen/etc   |
 +-----------------------------------+-----------------------------------+
-| \$ cp -r mydir mynewdir           | With the -r flag, copies          |
-|                                   | directories too\                  |
+| $ cp -r mydir mynewdir            | With the -r flag, copies          |
+|                                   | directories too                   |
 +-----------------------------------+-----------------------------------+
 
-
-
-
-
-
-
-
-
-
+```
 
 ## mv
 
 This moves and renames files and directories.
 
   ----------------------------------- -----------------------------------
-  \$ mv file2 file3                   Renames a file or directory\
+  $ mv file2 file3                   Renames a file or directory
 
-  \$ mv /home/allen/etc /tmp          Moves a file or directory
+  $ mv /home/allen/etc /tmp          Moves a file or directory
   ----------------------------------- -----------------------------------
-
-\
-\
 
 ## whoami
 
@@ -332,9 +315,9 @@ to see your home directory and some other things.
 
 The `grep` command is used to search for strings in text files.
 
-The backticks \`\` cause execution of the command inside. The result, in
+The backticks `` cause execution of the command inside. The result, in
 this case "allen", is substituted in the outer command, exactly as if
-the user had typed `grep allen /etc/passwd`.\
+the user had typed `grep allen /etc/passwd`.
 
 The ! in the second field tells the computer that the encrypted password
 is held in another file.  This makes it a bit harder for dishonest
@@ -360,8 +343,8 @@ There are restrictions on what you can choose, but they are in
 */etc/security* and so not readable!
 
 Good passwords are hard to guess, but also hard to remember.  It is best
-to use all 8 characters and include at least one of \[a-z\], \[A-Z\] and
-\[0-9\].  There are programs around that guess many passwords, so it is
+to use all 8 characters and include at least one of [a-z], [A-Z] and
+[0-9].  There are programs around that guess many passwords, so it is
 unwise to use any passwords based on names, real words, the user id, the
 hostname, or other guessable strings.
 
@@ -380,7 +363,7 @@ GNU/Linux, and vary greatly.
 
 Get a list of running processes. By default, `ps` lists only processes
 in the current shell. To get a list of all of your processes, use
-`ps -e`.\
+`ps -e`.
 
     $ ps
       PID TTY          TIME CMD
@@ -396,21 +379,21 @@ which it does not receive or process keyboard input.
     $ kill 29477
 
 Kills the process with Process ID 29477. In the `ps` example above, this
-would be the current shell.\
+would be the current shell.
 
 ## chown
 
 Every file has an owner and a group, as you can see with the `ls`
 command. You should have a group named the same as your account. The
 Change Owner command, `chown`, lets you set these ownership attributes
-for files that you have the right to write.\
+for files that you have the right to write.
 
 You can give an entire group permission to read, write, or execute files
 with one command. If you want to keep files private, set the group to
 consist only of you, and use `chmod` (below) to restrict access by
 others. The following assumes that, when your user account was created,
 a group just for you with the same name was created. This is true on
-many modern systems, but not on all.\
+many modern systems, but not on all.
 
     $ chown user:user myfile
 
@@ -418,8 +401,8 @@ If you have imported some directories that came in with the wrong
 ownership, you can change them all with one command. Just `cd` to the
 top directory, and execute this command, with the appropriate user and
 group names. The `-R` option tells `chown` to go through every
-subdirectory, and the \* wildcard tells it to change ownership of every
-file and directory it finds there.\
+subdirectory, and the * wildcard tells it to change ownership of every
+file and directory it finds there.
 
     $ chown -R user:group *
 
@@ -439,7 +422,7 @@ That shows you the modes of the files in your home directory.
 Included in the list should be two entries called "." and "..",
 which refer to your current directory and its parent.
 
-You will see a set of characters showing the file\'s permissions,
+You will see a set of characters showing the file's permissions,
 followed by the owner (your ID, probably, for all except ..) and the
 group (perhaps "staff"), a file size, the time and date of the last
 change to the file, and the name. The listing will resemble the
@@ -462,10 +445,10 @@ file types.
 
 There are 9 other characters in 3 sets of 3.
 
-Columns 2-4  are for the file\'s OWNER.  (named later on the line,
+Columns 2-4  are for the file's OWNER.  (named later on the line,
 "allen" in this case)
 
-Columns 5-7  are for the file\'s GROUP.  (named later on the line,
+Columns 5-7  are for the file's GROUP.  (named later on the line,
 "staff" in this case)
 
 Columns 8-10 are for everyone else, except the superuser who always has
@@ -488,7 +471,7 @@ directory *even if you do not own the files.*
 
 ## more, less, pg, cat
 
-These commands allow you to look at text files.\
+These commands allow you to look at text files.
 
     $ more .bashrc
     $ less /etc/motd
@@ -518,13 +501,13 @@ described in another section of this manual, provide methods for
 specifying text patterns. Options permit searching groups of files,
 including all subdirectories of the starting point. One of the most
 common uses of grep is to find lines in configuration and log files
-specific to one user or one program.\
+specific to one user or one program.
 
     $ grep `whoami` /etc/passwd
 
 looks for the result of the `whoami` command in the password file,
-returning the user\'s account information, though with the password
-obscured.\
+returning the user's account information, though with the password
+obscured.
 
 ## df
 
@@ -557,7 +540,7 @@ useful in scripts.
 ## file
 
 This makes an attempt to recognize files, classifying them as English
-Text or executable or data.\
+Text or executable or data.
 type
 
     $ file * | less
@@ -586,7 +569,7 @@ files differ.
 
 This says that line 23 was added (in this case, to support typing in
 multiple languages and character sets), and shows the new contents of
-the line.\
+the line.
 
 ## wc
 
@@ -598,7 +581,7 @@ Word counts, plus line and character counts.
 This *.login* file has 6 lines, 7 words, and 461 characters.
 
 The program counts any string of printing characters between whitespace
-as a word, which can give strange results by human standards.\
+as a word, which can give strange results by human standards.
 
 ## find
 
@@ -612,7 +595,7 @@ To remove all files named *core* under the current working directory
 a programming error, but the files are of little value to you unless you
 possess and can read the source code):
 
-    $ find . -name core -exec rm {} \;
+    $ find . -name core -exec rm {} ;
 
 To list all files or directories named *"something*.core" under the
 current working directory:
@@ -626,16 +609,16 @@ To name all directories called *man* under */usr*:
 The next 2 examples are useful for removing temporary files you no
 longer want.
 
-    $ find /tmp /var/tmp -mtime +3 -type f -user allen -exec rm {} \;
-    $ find /var/preserve -mtime +8 -type f -user allen -exec rm {} \;
+    $ find /tmp /var/tmp -mtime +3 -type f -user allen -exec rm {} ;
+    $ find /var/preserve -mtime +8 -type f -user allen -exec rm {} ;
 
 The next example names files and directories which *either* have changed
 in the last 2 days, *or* have execute permission for the owner.
 
-    $ find . \( -mtime -2  -o -perm -100 \) -print
+    $ find . ( -mtime -2  -o -perm -100 ) -print
 
 Checking what has changed during the last few days is a great way to
-find out why your computer isn\'t working any more!\
+find out why your computer isn't working any more!
 
 ## ftp
 
@@ -647,23 +630,23 @@ to connect to the ftp archive at *hostname*. The FTP protocol specifies
 how to log in, navigate directories on the archive, upload and download
 files or groups of files, and much more. This summary gives you enough
 commands to navigate an archive and to download files (and upload them,
-if you have permission).\
+if you have permission).
 
-When you connect to a repository, you will see a \> prompt where you can
+When you connect to a repository, you will see a > prompt where you can
 enter commands.
 
     > binary
 
 Set to binary mode, which passes every byte of the file unchanged. This
 should be the first command you give, unless you are absolutely certain
-that you will download only text files.\
+that you will download only text files.
 
     > ascii
 
 Set to text mode, which converts line ends. This is the default when FTP
 starts. It is safe for text in ASCII, other 8-bit encodings, and Unicode
 UTF-8. **Do not use for programs, images, music, and other binary
-files.**\
+files.**
 
     > dir
 
@@ -671,7 +654,7 @@ List files in the current directory on the remote host.
 
     > cd directory-name
 
-Change directory.\
+Change directory.
 
     > cdup
 
@@ -680,15 +663,15 @@ host.
 
     > get remote-file [local-file]
 
- Download a file and optionally rename it.\
+ Download a file and optionally rename it.
 
     > put local-file [remote-file]
 
-Upload a file and optionally rename it.\
+Upload a file and optionally rename it.
 
     > bye
 
-End the `ftp` session.\
+End the `ftp` session.
 
 ## wget
 
@@ -708,7 +691,7 @@ contents of one or more files, or extracts files from a tar file.
 Although originally designed to produce combinations of files for backup
 to tape, it is still the standard utility for packing together files so
 you can move them around as a unit. As an option, the files can be
-compressed in a tgz file.\
+compressed in a tgz file.
 
     $ tar -cf foo.tar foo/
 
@@ -716,7 +699,7 @@ Store contents of folder *foo* in *foo.tar*. The `-c` option creates a
 tar file. The `-f` option says to use the filename given. Without `-f`,
 the result would go to standard output. You can use this form in a
 pipeline to use a different compression method, such as bzip2, described
-below.\
+below.
 
     $ tar -cvfz foo.tgz foo/
 
@@ -726,14 +709,14 @@ verbose output is available with the `vv` option.
 
     $ tar -xf foo.tar
 
-Extract *foo.tar* in the current directory.\
-\
+Extract *foo.tar* in the current directory.
+
 
     $ tar -xzf foo.tgz
 
 Extract gzipped *foo.tgz*. The tgz extension is an abbreviation of the
 formerly common .tar.gz, used when combining files and compressing the
-result required piping the output of tar to the input of gzip.\
+result required piping the output of tar to the input of gzip.
 
 ## gzip, gunzip, zcat, bzip2, bunzip2, bzcat
 
@@ -742,8 +725,8 @@ of many ways to make files smaller (originally for transmission over
 slow modem connections), so that the inverse algorithms restore the full
 original files unchanged. Although the bzip2 method achieves better
 compression than zip, it also requires more processor time. For each
-one, we\'ll show a command for compression, decompression, and combining
-multiple files into one. The tar utility can use gzip compression.\
+one, we'll show a command for compression, decompression, and combining
+multiple files into one. The tar utility can use gzip compression.
 
     $ gzip file
 
@@ -757,7 +740,7 @@ added.
 
     $ gunzip file.gz
 
-Decompress the *file.gz* archive to the original file.\
+Decompress the *file.gz* archive to the original file.
 
 The `gunzip` command is equivalent to `gzip -d`, where the `-d` option
 stands for "decompress". Similarly, `bunzip2` is equivalent to
@@ -785,7 +768,7 @@ command line or inside Emacs than in a GUI.
 A text browser can simply ignore any material marked with HTML tags that
 refer to graphical content, or can display the ALT text that is often
 supplied with images, both for the sake of text browsers and for the
-blind and visually impaired.\
+blind and visually impaired.
 
     $ lynx url
 
@@ -797,40 +780,38 @@ The following table gives you enough commands to use Lynx, but there are
 many more.
 
   ----------------------------------- -----------------------------------
-   ?                                   Help\
+   ?                                   Help
 
-   K                                   List commands\
+   K                                   List commands
 
-  \+                                   Scroll down one screen\
+  +                                   Scroll down one screen
 
-   -                                   Scroll up one screen\
+   -                                   Scroll up one screen
 
-   ↓                                   Next link\
+   ↓                                   Next link
 
-   ↑                                   Previous link\
+   ↑                                   Previous link
 
-   Return or →\                        Follow link\
+   Return or →                        Follow link
 
    ←                                   Back
 
-   a                                   Add current link as bookmark\
+   a                                   Add current link as bookmark
 
-   d                                   Download current link to file\
+   d                                   Download current link to file
 
-   g                                   Go to URL\
+   g                                   Go to URL
 
-   o                                   Set options\
+   o                                   Set options
 
    p                                   Print
 
    s                                   Search
 
-   v                                   View bookmarks\
+   v                                   View bookmarks
 
-   q                                   Quit Lynx.\
+   q                                   Quit Lynx.
   ----------------------------------- -----------------------------------
-
-\
 
 ## Midnight Commander
 
@@ -858,7 +839,7 @@ pull-down menus.
 The Left and Right menus let you change views to give different
 information, to enter a regular expression that determines which files
 to display, or to sort in a different order, among other things. You can
-invoke FTP from either of these menus, and use Midnight Commander\'s
+invoke FTP from either of these menus, and use Midnight Commander's
 file commands to upload and download files. The File menu includes
 commands such as chmod and chown, with a visual dialog for selecting
 options and on-screen help, as shown in the screenshot below.
@@ -873,15 +854,15 @@ to useful functions that you might not discover on your own. This one is
 particularly useful. Setting this configuration option lets you use the
 left and right arrow keys to navigate between directories, in the same
 way that Lynx lets you navigate URLs. There are a great many more
-configuration options available.\
+configuration options available.
 
 You can set and access bookmarks on a Directory Hotlist within your file
-system using the **Ctrl + \\** key combination, or by selecting the list
+system using the **Ctrl + \** key combination, or by selecting the list
 on the Commands menu. The dialog lets you create and navigate between
 named bookmark lists.
 
 There is a great deal more to Midnight Commander, of course. You can
-learn about other functions in the Help dialog (**F1**).\
+learn about other functions in the Help dialog (**F1**).
 
 ## emacs, vi, nano, pico
 
@@ -903,19 +884,19 @@ to edit in the form
     $ editor filename
 
 Consult specific program documentation for other command-line options
-and for editing commands and the rest. For example,\
+and for editing commands and the rest. For example,
 
-[http://www.gnu.org/software/emacs/](https://web.archive.org/web/20160417194719/http://www.gnu.org/software/emacs/) \
+[http://www.gnu.org/software/emacs/](https://web.archive.org/web/20160417194719/http://www.gnu.org/software/emacs/)
 
 [http://www.ccsf.edu/Pub/Fac/vi.html](https://web.archive.org/web/20160417194719/http://www.ccsf.edu/Pub/Fac/vi.html)
 
-[http://www.nano-editor.org/](https://web.archive.org/web/20160417194719/http://www.nano-editor.org/) \
+[http://www.nano-editor.org/](https://web.archive.org/web/20160417194719/http://www.nano-editor.org/)
 
-[http://www.itd.umich.edu/itcsdocs/r1168/](https://web.archive.org/web/20160417194719/http://www.itd.umich.edu/itcsdocs/r1168/) \
+[http://www.itd.umich.edu/itcsdocs/r1168/](https://web.archive.org/web/20160417194719/http://www.itd.umich.edu/itcsdocs/r1168/)
 
 ## pr
 
-This adds titles and page numbers to your text files.\
+This adds titles and page numbers to your text files.
 
     $ pr /etc/sendmail.cf | less
 
@@ -932,7 +913,7 @@ understand those formats.
 
 ## split
 
-Suppose you have a 600MB ISO file you\'d like to split into several
+Suppose you have a 600MB ISO file you'd like to split into several
 pieces for easier storage. You can do so with:
 
     $ split -b 200m image.iso image_iso_
@@ -944,7 +925,5 @@ use the command:
     $ cat image.iso_* > new-image.iso
 
 Remember, the more you practice, the easier and more efficient you can
-work. Experiment with these commands \--the only way to get better at
+work. Experiment with these commands --the only way to get better at
 using them is practice!
-:::
-

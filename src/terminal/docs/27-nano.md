@@ -6,15 +6,15 @@ type the following at the command line:
     $ nano filepath
 
 where *filepath* is the path to the file you want to edit (or nothing).
-The screen is taken over by the program as shown in Figure 1.\
+The screen is taken over by the program as shown in Figure 1.
 
 ![nano_openfile](images/IntroCommandLine-nano-nano_openfile-en.png "nano_openfile"){height="341"
 width="507"}
 
- Figure 1. Opening screen for nano\
+ Figure 1. Opening screen for nano
 
 The screen is no longer a place to execute commands; it has *become* a
-text editor.\
+text editor.
 
 ## Exiting nano
 
@@ -25,7 +25,7 @@ altered some text but have not yet saved it, `nano` asks:
     Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?
 
 To save the changes, just type **y** and nano prompts for a destination
-filepath. To abandon your changes, type **n**.\
+filepath. To abandon your changes, type **n**.
 To save changes without exiting, press **ctrl + o**. `nano` asks you for
 the filename in which to save the text:
 
@@ -45,7 +45,4 @@ keys. This is a very fast and responsive way to explore a file.
 
 Be sure to read the man page because it has a lot of good hints. There
 is help available in your nano session by typing **ctrl + g** and to get
-back to your file type **ctrl + x**.\
-:::
-
-
+back to your file type **ctrl + x**.

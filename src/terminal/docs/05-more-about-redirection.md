@@ -104,6 +104,3 @@ The first two lines open connections to two more file descriptors, 3 and
 4.  We can then echo text onto them, redirect programs into them, etc.
 using `>&3` or `>&4`.  Finally, we close them with the `3>&-` and `4>&-`
 syntax.
-:::
-
-

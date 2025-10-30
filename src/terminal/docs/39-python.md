@@ -5,7 +5,7 @@ would be difficult or cumbersome on the command line. Python is included
 by default with most GNU/Linux distributions. Just like the command
 line, you can either use Python by typing commands individually, or you
 can create a script file. If you want to type commands individually,
-start the Python interpreter by typing `python`.\
+start the Python interpreter by typing `python`.
 
     $ python
     >>> 10 + 10
@@ -15,7 +15,7 @@ To exit an interactive Python session, type **Ctrl + d**.
 
 To write a multi-line script in Python that you can run from outside of
 the Python interactive console, put the commands in a file. You can use
-any text editor to create this file \-- Emacs, Vim, Gedit, or whatever
+any text editor to create this file -- Emacs, Vim, Gedit, or whatever
 your favorite is; and call it what you like (often the filename ends
 with ".py" to help distinguish it in a directory listing). A script
 could look like this:
@@ -57,9 +57,9 @@ Here we import the standard library "os", which has operating
 system-like functions in it.  We call the *listdir* function to return a
 list of names of files in the current directory.  We pass the directory
 name as a string (enclosed in single quotes); the single dot refers to
-the current directory.\
+the current directory.
 
-Let\'s try doing something with these files \-- here\'s a way to find
+Let's try doing something with these files -- here's a way to find
 all of the ".py" files in a directory.
 
     >>> files = os.listdir('.')
@@ -83,7 +83,7 @@ in them.
 The indentation is required in Python.  Indentation tells the Python
 interpreter what to include in the *for* loop and what to include in the
 *if* statement.  Also, a you must press an additional **Enter** at the
-last set of three dots to tell the Python interpreter that you\'re done.
+last set of three dots to tell the Python interpreter that you're done.
 
 We can also use command line code in Python by passing it to the
 *os.system* function. For example, if we wanted to delete all of the
@@ -98,7 +98,7 @@ We can also use command line code in Python by passing it to the
 Above, we construct a shell command *cmd* as a Python string by
 concatenating (using the "+" operator) the strings "rm " and the
 filename, then pass it to the *os.system* function.  Now we can check to
-see that the files have been deleted.\
+see that the files have been deleted.
 
     >>> os.system('ls')
     first.py
@@ -113,6 +113,3 @@ book "How to Think Like a Computer Scientist" by Jeffrey Elkner, Allen
 B. Downey and Chris Meyers at
 [http://openbookproject.net/thinkCSpy/index.html](https://web.archive.org/web/20160417194719/http://openbookproject.net/thinkCSpy/index.html)
 is a good place to start.
-:::
-
-

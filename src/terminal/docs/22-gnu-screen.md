@@ -1,6 +1,6 @@
 # GNU Screen
 
-GNU screen helps you get most out of your desktop\'s real estate, in
+GNU screen helps you get most out of your desktop's real estate, in
 cases where you need to work on more than one terminal simultaneously.
 Using GNU screen, you can have as many processes as you need, such as
 editors, web browsers and shells, all within a single terminal window.
@@ -12,7 +12,7 @@ copy-paste mechanism to transfer pieces of text easily within the
 multiplicity of sessions handled by it. It can be used in an ordinary
 text terminal as well as on the desktop, and for most purposes it is an
 alternative to using multiple text terminal sessions and moving between
-them by the **Alt + F#** key combinations.\
+them by the **Alt + F#** key combinations.
 
 Start by typing `screen` in your command prompt.
 
@@ -30,7 +30,7 @@ In order to create a second session with its own shell, press **ctrl +
 a** followed by **c** or **ctrl + c**.  All screen commands begin with
 **ctrl + a** but if you need to use that for some other purpose you can
 change that key binding. See the manual (type "man screen" at your
-bash prompt) for this and many details we will not present here.\
+bash prompt) for this and many details we will not present here.
 
 If you want to run just one command in a new screen and then close the
 screen, specify the command as an argument:
@@ -57,11 +57,11 @@ different remote servers, another session you use to run FTP, and so
 forth. By default, **ctrl + a** **"** shows the program you used to
 start each session. Normally you started it with the shell, so **ctrl +
 a** **"** shows "bash" for each session (or whatever your shell is).
-This isn\'t very helpful if you want to quickly find the session that\'s
+This isn't very helpful if you want to quickly find the session that's
 running Vim or FTP.
 
 It turns out that customizing the display is easy. While you are in a
-session\--say, editing in vim\--press **ctrl + a** A and you get a line
+session--say, editing in vim--press **ctrl + a** A and you get a line
 at the bottom of your window with the name of your session, which you
 can edit to your liking.
 
@@ -69,9 +69,9 @@ can edit to your liking.
 
 You can use the mouse (on systems running gpm) to select text in one
 session and paste it in any session or even another terminal. The screen
-program has its own method for copying text, like this:\
+program has its own method for copying text, like this:
 
-1.  Press **ctrl + a** **\[** to go into *screen copying* mode.
+1.  Press **ctrl + a** **[** to go into *screen copying* mode.
 2.  Navigate through the text anywhere in your window, using arrow keys
     or editor commands or whatever works in that session. At one end of
     the region of interest, press the **spacebar**.
@@ -79,16 +79,16 @@ program has its own method for copying text, like this:\
     as you proceed with your selection).
 4.  Press the **spacebar** again to copy the text to the clipboard.
 5.  Switch to the session where you want to copy the text, navigate to
-    the right place and press **ctrl + a** **\]**. This pastes the
+    the right place and press **ctrl + a** **]**. This pastes the
     selected text into the edit buffer or onto the command line or
     whatever, depending on what that session is doing.
-6.  Repeat step 5 as desired.\
+6.  Repeat step 5 as desired.
 
 With either the mouse method or the screen method, text is taken from
 the video memory, which does not preserve the escape sequences that make
 colors, boldspace and so on. That is probably what you want if you are
 copying examples from a manual onto a command line, but maybe not what
-you want if you are taking exerpts from one file to another.\
+you want if you are taking exerpts from one file to another.
 
 ## Splitting The Screen
 
@@ -97,7 +97,7 @@ programs to share the screen at once.
 
 Use **ctrl + a** **S** (capital S) to divide your screen into two parts.
 Your original session is at the top and a new blank session at the
-bottom. (Be careful you don\'t accidentally press **ctrl + s**. This can
+bottom. (Be careful you don't accidentally press **ctrl + s**. This can
 lock up your terminal. If you do accidentally hit **ctrl + s**, you can
 unlock the terminal with **ctrl + q**.) By default, there is no program
 running in this new region, but you can start one by using **ctrl + a
@@ -106,14 +106,14 @@ tab** to move to that region and then typing **ctrl + a c**.
 Each region acts as an independent session, and you can switch between
 sessions just as in fullscreen mode.
 
-You can remove the current region by using **ctrl + a X**. This won\'t
-destroy the session or what\'s running in it. It just turns the other
+You can remove the current region by using **ctrl + a X**. This won't
+destroy the session or what's running in it. It just turns the other
 session back into a full-sized window.
 
 ## Detaching A Session
 
-One of Screen\'s most powerful features is the ability to halt and
-restore sessions.  Say you\'re doing something really interesting on
+One of Screen's most powerful features is the ability to halt and
+restore sessions.  Say you're doing something really interesting on
 your computer, but you have to leave and go to work.  Now say that while
 away you want to access what you were working on. If both machines are
 accessible through the Internet, you can do that with Screen.  For
@@ -121,10 +121,10 @@ example you may start a session on a remote machine using the `telnet`
 or the safer `ssh` protocol, and then invoke `screen`.  When you have to
 leave, you can safely close the remote Screen session and later restore
 it, maybe accessing the remote machine from the command line of a third
-machine located in another suburb \-- or in another continent.
+machine located in another suburb -- or in another continent.
 
 Type **ctrl + a d** in your screen session. You return to your original
-terminal and the screen exits, printing **\[detached\]**. Now if you
+terminal and the screen exits, printing **[detached]**. Now if you
 execute `ps`, you find that the screen is still running in the
 background. Get a list of all running sessions by passing `screen` the
 `-list` option.
@@ -157,9 +157,6 @@ you log out from the machine.
 
 If you have only a few programs open, you can exit screen simply by
 quitting them all. However, if you have many different application and
-windows open, you can exit them all by typing **ctrl + a \\**. You are
+windows open, you can exit them all by typing **ctrl + a **. You are
 prompted for confirmation, and if you select yes, Screen terminates all
-its programs and exits.\
-:::
-
-
+its programs and exits.

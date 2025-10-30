@@ -12,7 +12,7 @@ Redirect standard output.
 
 ## >>
 
-Append standard output.\
+Append standard output.
 
 ## <
 
@@ -29,12 +29,12 @@ lines after pipe symbols without changing their effect.
 (dot) In a file path, this refers to the current directory. Before a
 shell script name, this means to execute the script as if typed into the
 current shell, rather than starting a new shell and executing the
-command in its environment.\
+command in its environment.
 
 ## ..
 
 (double dot) Parent of the current directory. The parent of the root
-directory `/` is itself.\
+directory `/` is itself.
 
 ## ~
 
@@ -52,7 +52,7 @@ functions.
 line. Before a special character, escapes that character, so that
 commands can deal with filenames that contain special characters. This
 allows users to search for text containing special characters, for
-example by using "\\\*" to search for "\*".\
+example by using "\*" to search for "*".
 
 ## #
 
@@ -62,7 +62,7 @@ example by using "\\\*" to search for "\*".\
 
 (splat) In file globbing, wildcard to match any string. In regular
 expressions, wildcard to match any number of occurrences of the previous
-element.\
+element.
 
 ## ?
 
@@ -87,15 +87,15 @@ negate the result of the following expression. For example,
     $ if ! mkdir -p "$DST" ; then exit 1
 
 attempts to create a new directory, and exits if the directory cannot be
-created.\
+created.
 
 ## {}
 
 In a command following the `-exec` option of the `find` command, this is
 replaced by the name of a file that was found, so that the given command
-is applied to every found file.\
+is applied to every found file.
 
-## \` \`
+## ` `
 
 (backtick backtick) Execute command inline, and replace it with the
 result.
@@ -104,7 +104,7 @@ result.
 
 Execute command inline, and replace it with the result.
 
-## [\$( )]
+## [$( )]
 
 Execute a command within a prompt.
 
@@ -118,12 +118,12 @@ line. Dollar is also usually the last character in a bash prompt.
 ## #!
 
 (hashbang) Marks the beginning of an executable script. Follow with the
-program to execute this file, as in `#!/bin/bash`.\
+program to execute this file, as in `#!/bin/bash`.
 
 ## absolute path
 
 A file path starting from the root directory, such as `/usr/share/doc`.
-Contrast with **relative path**.\
+Contrast with **relative path**.
 
 ## alias
 
@@ -141,17 +141,17 @@ Terminal-mode package manager for Debian-style packages.
 
 ## archive
 
-A file, usually compressed, containing multiple files.\
+A file, usually compressed, containing multiple files.
 
 ## argument
 
 An input value required for a command to process. Also called
-"parameter". Contrast with **option**.\
+"parameter". Contrast with **option**.
 
 ## ash
 
 A smaller version of the Bourne shell (sh). The ash shell is a clone of
-Berkeley\'s Bourne shell (sh). Ash supports all of the standard sh shell
+Berkeley's Bourne shell (sh). Ash supports all of the standard sh shell
 commands, but is considerably smaller than sh. The ash shell lacks some
 Bourne shell features (for example, command-line histories), but it uses
 a lot less memory.
@@ -165,7 +165,7 @@ spell checker.
 ## awk
 
 A scripting language for data extraction and analysis from structured
-text files.\
+text files.
 
 ## auto completion
 
@@ -179,7 +179,7 @@ from there.
 
 By adding an ampersand, "&", at the end of a command you tell the
 shell to run the program in the background, without terminal input, and
-to give you a prompt so that you can continue to give commands.\
+to give you a prompt so that you can continue to give commands.
 
 ## bash
 
@@ -202,7 +202,7 @@ distribution and version, application name and version), what the user
 tried to do and what was the expected result, what happened instead, and
 what the user tried in order to fix it. It is particularly helpful to
 explain how to reproduce the problem, if it is repeatable. Log files of
-the incident should be attached.\
+the incident should be attached.
 
 ## builtin
 
@@ -227,8 +227,8 @@ variable-length UTF-8.
 ## clobber
 
 Overwrite a file with new data. A common result of forgetting to append
-standard output with "\>\>" and instead writing a new file with
-"\>".\
+standard output with ">>" and instead writing a new file with
+">".
 
 ## command
 
@@ -239,7 +239,7 @@ Executable file or shell builtin.
 In bash and other shells typing part of a command or file name that is
 on the path or in the current directory, and then pressing **Tab**,
 often fills in the rest of the name. If not, pressing **Tab** again
-gives a list of names beginning with the characters so far typed.\
+gives a list of names beginning with the characters so far typed.
 
 ## coreutils
 
@@ -269,13 +269,13 @@ data.
 ## directory
 
 A special kind of file that lists specific information on the files it
-contains, including owner, group, and permissions.\
+contains, including owner, group, and permissions.
 
 ## directory stack
 
 A place to store recently used directory paths for easy retrieval with
 the commands `pushd` and `popd`. The command `dirs` displays the
-directory stack.\
+directory stack.
 
 **emacs**
 
@@ -293,13 +293,13 @@ shell.
 
 A character that changes the interpretation of a character or sequence
 of characters that follow it. This is the original use of the Escape
-character. For example, in a text search the character "\*" matches a
-wide range of text, while the string "\\\*" matches only an asterisk.\
+character. For example, in a text search the character "*" matches a
+wide range of text, while the string "\*" matches only an asterisk.
 
 ## exit status
 
 A value returned by a command to the shell, useful in scripting for
-deciding what to do next.\
+deciding what to do next.
 
 ## file
 
@@ -313,7 +313,7 @@ The basic directory layout for a GNU/Linux system.
 
 Command-line program that reads standard input and writes standard
 output so that it is suitable for use in a pipeline, where each command
-performs a specific transformation on the data.\
+performs a specific transformation on the data.
 
 ## findutils
 
@@ -325,11 +325,11 @@ Free/Libre Open Source Software, licensed so as to guarantee the
 essential freedoms of software users to source code and reuse. A
 combination of Free Software and Open Source Software, with Libre added
 in to emphasize that software freedom is essentially a matter of rights,
-not price.\
+not price.
 
 ## folder
 
-The name used in GUIs for directories.\
+The name used in GUIs for directories.
 
 ## fontconfig
 
@@ -360,18 +360,18 @@ plugins.
 
 ## globbing
 
-Referring to a group of files with an abbreviation, such as "\*" for
-all of the files in a directory.\
+Referring to a group of files with an abbreviation, such as "*" for
+all of the files in a directory.
 
 ## GNOME
 
-A desktop, set of libraries, and application suite for X.\
+A desktop, set of libraries, and application suite for X.
 
 ## GNU
 
-Recursive acronym for GNU\'s Not Unix. It is the Free Software
+Recursive acronym for GNU's Not Unix. It is the Free Software
 Foundation project to create a freely-licensed replacement for the
-proprietary Unix operating system.\
+proprietary Unix operating system.
 
 ## GNU/Linux
 
@@ -380,7 +380,7 @@ Operating system combining the Linux kernel with GNU software tools.
 ## Graphical User Interface (GUI)
 
 User interface offering windows, icons, mouse control, multiple fonts,
-and so on.\
+and so on.
 
 ## grep
 
@@ -394,7 +394,7 @@ assign a group owner as well as an individual owner to every file. In
 this way, system operators, for example, can be given control over
 certain system resources all at once, or everybody working on a project
 can gain access to all project files by joining the project group. Each
-user has a group with the same name for that user\'s files.\
+user has a group with the same name for that user's files.
 
 ## gzip
 
@@ -403,7 +403,7 @@ The GNU data compression application. gzip.org
 ## history
 
 Record of previously executed commands that can be recalled and executed
-again with the up arrow key.\
+again with the up arrow key.
 
 ## intltool
 
@@ -425,7 +425,7 @@ and forth through the file.
 ## locale
 
 Values of a set of environment variables that store information on the
-user\'s language, country, and character encoding, and options for date
+user's language, country, and character encoding, and options for date
 and time formatting, money, measurements, and other such information.
 Also the name of the command to display all of these environment
 variables.
@@ -434,7 +434,7 @@ variables.
 
 A file, often in the `/var/log` directory, that contains notes made by
 running programs about their progress and about any problems they
-encounter. Vital information whenever something goes wrong.\
+encounter. Vital information whenever something goes wrong.
 
 ## lsof
 
@@ -451,10 +451,10 @@ A text-based Web browser. lynx.browser.org
 An essential program for installing much unpackaged source code
 software. The developers can write down all of the complex information
 about how to configure, compile, and install their work in make files
-that you usually won\'t have to read. Just check the README or INSTALL
+that you usually won't have to read. Just check the README or INSTALL
 files that come with the source code to see whether it uses this system,
 or has different instructions. Another program with similar functions is
-jhbuild.\
+jhbuild.
 
 ## man
 
@@ -468,7 +468,7 @@ visual shell.
 ## more
 
 A utility for displaying text files one screenful at a time. See also
-*less*.\
+*less*.
 
 ## openssh
 
@@ -478,7 +478,7 @@ The OpenSSH implementation of SSH protocol versions 1 and 2.
 
 A value specified to a command using the form `--option` (long option)
 or `-o` (short option). Contrast with **argument**, which is a required
-input.\
+input.
 
 ## package manager
 
@@ -490,7 +490,7 @@ observed. The two main varieties are Red Hat/Yellow Dog `yum` and Debian
 
 ## parameter
 
-Argument.\
+Argument.
 
 ## passwd
 
@@ -500,26 +500,26 @@ netadmintools.com
 ## PATH
 
 Environment variable specifying where the current shell should look for
-command files.\
+command files.
 
 ## Perl
 
 Practical Extraction and Report Language, or jocularly, Pathologically
 Eclectic Rubbish Lister. Perl is a dynamic programming language
-particularly suitable for text processing and manipulation.\
+particularly suitable for text processing and manipulation.
 
 ## pipe
 
 A connection between two commands, so that the standard output of the
 first becomes the input of the second. Indicated with the character
-"\|".
+"|".
 
 ## plain text
 
 A message or file represented as a sequence of characters in a specific
 character encoding, with no extra formatting information. Contrast with
 **rich text**. HTML files are plain text, but contain markup tags so
-that they represent rich text.\
+that they represent rich text.
 
 ## process
 
@@ -534,19 +534,19 @@ The text string displayed by a shell when waiting for command input.
 
 With the `-r` or `-R` options, many commands will act on the current
 directory and any subdirectories. Check command documentation to
-determine the precise syntax.\
+determine the precise syntax.
 
 ## redirection
 
 Sending a file or standard output from a command to standard input of a
 command, or sending standard output or error output of a command to
-standard input of another command, or to a file.\
+standard input of another command, or to a file.
 
 ## regular expression
 
-A string such as "\*.png" that defines a pattern for matching text or
+A string such as "*.png" that defines a pattern for matching text or
 filenames using special characters to indicate which alternatives to
-include.\
+include.
 
 ## relative path
 
@@ -557,18 +557,18 @@ A file path starting from the current directory, such as `docs` or
 
 Text with formatting, including fonts, multiple type sizes, positioning,
 color, and much more. HTML and word processing files are forms of rich
-text. Contrast with **plain text**.\
+text. Contrast with **plain text**.
 
 ## root
 
 1.  root user, or superuser, a required account with permission to do
-    anything on a GNU/Linux system.\
+    anything on a GNU/Linux system.
 2.  The starting point of the directory tree, written "/". All other
     directories are specified by paths from this root directory.
 
 ## script
 
-An executable text file.\
+An executable text file.
 
 ## sed
 
@@ -582,12 +582,12 @@ A command interpreter such as sh or bash.
 
 A way to keep track of tasks and other information so that the last item
 saved (pushed) on the stack is the first item retrieved (popped) from
-the top of the stack. An example is the bash history stack.\
+the top of the stack. An example is the bash history stack.
 
 ## standard input, standard output, and standard error
 
 Communication channels provided to every running command. If not
-otherwise specified at the command line, they connect to the user\'s
+otherwise specified at the command line, they connect to the user's
 terminal, but they can be redirected to files or through pipes to other
 programs.
 
@@ -623,7 +623,7 @@ names, variable names, strings, and keywords, in distinctive colors
 appropriate to the programming language (bash, Perl, Python, etc.) or
 markup format (HTML, XML, etc.) used. The colors are not stored with the
 file, but computed by the text editor when loading a file and during
-editing.\
+editing.
 
 ## telnet
 
@@ -633,11 +633,11 @@ The client program for the telnet remote login protocol.
 
 Originally, a printing terminal such as a Teletype, or a video terminal.
 Now a virtual terminal in a text or graphics window. In all cases, a
-device or program for typing input and displaying output.\
+device or program for typing input and displaying output.
 
 ## time
 
-A GNU utility for monitoring a program\'s use of system resources.
+A GNU utility for monitoring a program's use of system resources.
 
 ## Unicode
 
@@ -653,11 +653,11 @@ A utility for unpacking zip archives.
 
 Coordinated Universal Time, or Temps Universel Coordonné, which has
 replaced Greenwich Mean Time as the world standard. The abbreviation UTC
-is a compromise between the English and French names.\
+is a compromise between the English and French names.
 
 ## vi
 
-Visual editor, a powerful terminal-mode editor.\
+Visual editor, a powerful terminal-mode editor.
 
 ## vim
 
@@ -674,11 +674,11 @@ Displays where a particular program in your path is located.
 ## wildcard
 
 A character that can match more than one string in file globbing or
-regular expression matching.\
+regular expression matching.
 
 ## X
 
-The standard windowing system for GNU/Linux.\
+The standard windowing system for GNU/Linux.
 
 ## yum
 
@@ -688,4 +688,3 @@ GNU/Linux distributions that use RPM packages.
 ## zip
 
 A file compression and packaging utility compatible with PKZIP.
-

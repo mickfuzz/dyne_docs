@@ -1,6 +1,6 @@
 # SSH
 
-The command line is such a useful tool that it won\'t be long before you
+The command line is such a useful tool that it won't be long before you
 need to have access to the command line on a computer that is not
 sitting in front of you.  In the old days, before security was a
 concern, people used `telnet` to get a command line on a remote
@@ -16,12 +16,12 @@ same as your username on the local machine at which you type the
 command.  The remote machine prompts you for your password.  If your
 username on the remote machine is different than your username on the
 local machine, use the `-l` (lower-case "L") option to indicate your
-username on the remote machine.\
+username on the remote machine.
 
     $ ssh -l remoteusername othermachine.domain.org
 
 Alternatively, you can use email-style notation to indicate a different
-username.\
+username.
 
     $ ssh remoteusername@othermachine.domain.org
 
@@ -30,12 +30,12 @@ from which you can then execute whatever commands that machine provides
 to you.  Sometimes you may want to execute a single command on a remote
 machine, returning afterward to the command line on your local machine.
 This can be achieved by placing the command to be executed by the remote
-machine in single quotes.\
+machine in single quotes.
 
     $ ssh remoteusername@othermachine.domain.org 'mkdir /home/myname/newdir'
 
 `Sometimes` what you need is to execute time consuming commands on a
-remote machine, but you aren\'t sure to have sufficient time during your
+remote machine, but you aren't sure to have sufficient time during your
 current `ssh` session.  If you close the remote connection before a
 command execution has been completed, that command will be aborted.  To
 avoid losing your work, you may start via `ssh` a remote `screen`
@@ -59,11 +59,11 @@ machine.
 
     $ scp myprog.py me@othermachine.domain.org:/home/me/stuff
 
-Be warned that the command will overwrite any file that\'s already
-present with the name */home/me/stuff/myprog.py*. (Or you\'ll get an
-error message if there\'s a file of that name and you don\'t have the
+Be warned that the command will overwrite any file that's already
+present with the name */home/me/stuff/myprog.py*. (Or you'll get an
+error message if there's a file of that name and you don't have the
 privilege to overwrite it.) If */home/me* is your home directory, the
-target directory can be abbreviated.\
+target directory can be abbreviated.
 
     $ scp myprog.py me@othermachine.domain.org:stuff
 
@@ -90,7 +90,7 @@ See the `scp` man page for more options.
 ## rsync: automated bulk transfers and backups
 
 `rsync` is a very useful command that keeps a remote directory in sync
-with a local directory. We mention it here because it\'s a useful
+with a local directory. We mention it here because it's a useful
 command-line way to do networking, like `ssh`, and because the SSH
 protocol is recommended as the underlying transmission for `rsync`.
 
@@ -98,14 +98,14 @@ The following is a simple and useful example. It copies files from your
 local */home/myname/docs* directory to a directory named *backup/* in
 your home directory on the system *quantum.example.edu*. `rsync`
 actually minimizes the amount of copying necessary through various
-sophisticated checks.\
+sophisticated checks.
 
     $ rsync -e ssh -a /home/myname/docs me@quantum.example.edu:backup/
 
 The `-e` option to `ssh` uses the SSH protocol underneath for
 transmission, as recommended. The `-a` option (which stands for
 "archive") copies everything within the specified directory. If you
-want to delete the files on the local system as they\'re copied, include
+want to delete the files on the local system as they're copied, include
 a `--delete` option. See the `rsync` manual page for more details about
 `rsync`.
 
@@ -119,7 +119,7 @@ configuration file.
 
 The configuration file is hidden in your home directory under the
 directory *.ssh* (the full path would be something like
-*/home/jsmith/.ssh/config* \--if this file does not exist you can create
+*/home/jsmith/.ssh/config* --if this file does not exist you can create
 it). Use your favorite editor to open this file and specify hosts like
 this:
 
@@ -134,6 +134,3 @@ running the following command.
     $ ssh dev
 
 Remember, the more often you use these commands the more time you save.
-:::
-
-
