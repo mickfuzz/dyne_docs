@@ -8,3 +8,8 @@ theme:
   navigation_depth: 1
 extra_css:
   - stylesheets/extra.css
+
+plugins:
+  - pandoc:
+      combined: true
+      combined_output_path: docs/combined.epub
